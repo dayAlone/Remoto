@@ -23,9 +23,9 @@ if($result['status'] == 'ok') {
 			'phone'=> 'Phone',
 			'qtype'=> 'Question type',
 			'message'=> 'Message',
-			'website' => 'Website'
-			'customer' => 'Customer base'
-			'coverage' => 'Regions coverage'
+			'website' => 'Website',
+			'customer' => 'Customer base',
+			'coverage' => 'Regions coverage',
 			'type' => 'Type'
 		);
 
