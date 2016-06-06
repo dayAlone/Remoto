@@ -167,7 +167,6 @@ checkScroll = ->
 	$('.block').each (key, el)->
 		if $(el).offset().top <= $('body').scrollTop() && $(el).offset().top + $(el).height() >= $('body').scrollTop()
 			$('.nav__item').mod 'active', false
-			$('.toolbar__trigger').mod 'black', $(el).data('nav') == 'black'
 			$(".nav__item[href*='#{$(el).attr('id')}']").addClass 'nav__item--active'
 
 checkNewsScroll = (e) ->
@@ -189,7 +188,8 @@ moveHighlights = (set = true, type = 'highlights')->
 
 	$('.toolbar__logo').mod 'color', el.data('logo') == 'color'
 	$('.toolbar__nav').toggleClass 'nav--black', el.data('nav') == 'black'
-	$('.toolbar__trigger').mod 'black', el.data('nav') == 'black'
+	if $(window).width() >= 768
+		$('.toolbar__trigger').mod 'black', el.data('nav') == 'black'
 	$(".#{type}__nav").mod 'dark', el.data('nav') == 'black'
 
 	$(".#{type}__items").css
@@ -263,7 +263,9 @@ $(document).ready ->
 
 						$('.toolbar__nav').toggleClass 'nav--black', next.data('nav') == 'black'
 
-						$('.toolbar__trigger').mod 'black', next.data('nav') == 'black'
+						if $(window).width() >= 768
+							$('.toolbar__trigger').mod 'black', next.data('nav') == 'black'
+
 						$('.toolbar__logo').mod 'color', next.data('logo') == 'color'
 
 						$('#pp-nav').toggleClass 'black', next.data('dots') == 'black'
