@@ -212,8 +212,8 @@ $(document).ready ->
 
 	$('.modal').on 'shown.bs.modal', (e)->
 		getCaptcha()
-		$('.form').elem('action').show().removeClass 'hidden'
-		$('.form').elem('success').hide().addClass 'hidden'
+		$('.form__action').hide().addClass 'hidden'
+		$('.form__success').show().removeClass 'hidden'
 
 	$.BEM = new $.BEM.constructor
 		namePattern: '[a-zA-Z0-9-]+',
@@ -369,8 +369,8 @@ $(document).ready ->
 			console.log data
 			data = $.parseJSON(data)
 			if data.status == "ok"
-				$('.form').elem('action').hide().addClass 'hidden'
-				$('.form').elem('success').show().removeClass 'hidden'
+				$('.form__action').hide().addClass 'hidden'
+				$('.form__success').show().removeClass 'hidden'
 			else if data.status == "error"
 				$('input[name=captcha_word]').addClass('parsley-error')
 				getCaptcha()
