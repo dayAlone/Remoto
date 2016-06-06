@@ -14,7 +14,7 @@ false);
         <div class="modal-content">
             <a href="#" data-dismiss="modal" class="modal__close"><img src="/layout/images/svg/close.svg" alt=""></a>
             <h2 class="modal__title">request a proposal</h2>
-            <div class='form__success'>
+            <div class='form__success hidden'>
                 <h3>Thank you for you request.</h3>
             </div>
             <div class='form__action'>
@@ -83,7 +83,7 @@ false);
     <div class="modal-dialog">
         <div class="modal-content"><a href="#" data-dismiss="modal" class="modal__close"><img src="/layout/images/svg/close.svg" alt=""></a>
             <h2 class="modal__title">Feedback</h2>
-            <div class='form__success'>
+            <div class='form__success hidden'>
                 <h3>Thank you for you request.</h3>
             </div>
             <div class='form__action'>
