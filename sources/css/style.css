@@ -3209,6 +3209,7 @@ a.articles__title .articles__name:hover span:hover {
   background-size: contain;
   background-color: #edeef0;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .form__input.parsley-error,
 .form__captcha.parsley-error,
