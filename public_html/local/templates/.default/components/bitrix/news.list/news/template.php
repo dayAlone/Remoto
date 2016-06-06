@@ -12,7 +12,7 @@ Loc::loadMessages(__FILE__);
             <div class="news__item">
               <a href="#Detail" data-toggle='modal' data-link='<?=$item['DETAIL_PAGE_URL']?>' style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="news__image"></a>
               <div class="news__content">
-                <?if(isset($item['ACTIVE_FROM'])):?><div class="news__date"><?=date('d.m.Y', strtotime($item['ACTIVE_FROM']))?></div><?endif;?>
+                <?if(strlen($item['ACTIVE_FROM']) > 0):?><div class="news__date"><?=$item['ACTIVE_FROM']?></div><?endif;?>
                 <a href="#Detail" data-toggle='modal' data-link='<?=$item['DETAIL_PAGE_URL']?>'class="news__text"><?=$item['NAME']?></a>
               </div>
             </div>
