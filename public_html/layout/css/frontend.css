@@ -5234,7 +5234,7 @@ svg g {
   .highlight__image,
   .mno__image {
     position: absolute;
-    bottom: 0;
+    bottom: -15vh;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     left: calc(86.5% - 70px);
