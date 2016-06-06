@@ -30704,8 +30704,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     $('.modal').on('shown.bs.modal', function(e) {
       getCaptcha();
       $('.form__action').show().removeClass('hidden');
-      $('.form__action').reset();
-      return $('.form__success').hide().addClass('hidden');
+      $('.form__success').hide().addClass('hidden');
+      return $('.form__action')[0].reset();
     });
     $.BEM = new $.BEM.constructor({
       namePattern: '[a-zA-Z0-9-]+',
@@ -30863,8 +30863,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         console.log(data);
         data = $.parseJSON(data);
         if (data.status === "ok") {
-          $('.form__action').show().removeClass('hidden');
-          return $('.form__success').hide().addClass('hidden');
+          $('.form__action').hide().addClass('hidden');
+          $('.form__success').show().removeClass('hidden');
+          return $('input[name="captcha_word"]').val('');
         } else if (data.status === "error") {
           $('input[name=captcha_word]').addClass('parsley-error');
           return getCaptcha();
