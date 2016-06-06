@@ -1124,7 +1124,9 @@ svg g {
 @media (min-width: 992px) {
   .highlights__nav,
   .mnos__nav {
-    display: block;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
   }
 }
 @media (min-width: 1600px) {
