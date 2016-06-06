@@ -177,12 +177,13 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                     "SORT_BY1"             => "SORT",
                     "SORT_ORDER1"          => "ASC",
                     "CACHE_TYPE"           => "A",
-                    "SET_TITLE"            => "N"
+                    "SET_TITLE"            => "N",
+                    "INCLUDE_SUBSECTIONS"  => "Y"
                 ),
                 false
             );
           ?>
-          
+
         </div>
         <div id="events" class="block__col hidden-xs">
           <h3 class="hidden-xs">Events</h3>
@@ -197,7 +198,8 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                     "SORT_BY1"             => "SORT",
                     "SORT_ORDER1"          => "ASC",
                     "CACHE_TYPE"           => "A",
-                    "SET_TITLE"            => "N"
+                    "SET_TITLE"            => "N",
+                    "INCLUDE_SUBSECTIONS"  => "Y"
                 ),
                 false
             );
