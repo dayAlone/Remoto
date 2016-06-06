@@ -1927,7 +1927,7 @@ svg g {
 @media (min-width: 768px) {
   .highlight,
   .mno {
-    padding: 100px 40px;
+    padding: 70px 40px;
   }
 }
 @media (min-width: 992px) {
@@ -2206,6 +2206,7 @@ svg g {
     transform: none;
     left: auto;
     right: 0;
+    bottom: 0;
   }
 }
 @media (min-width: 768px) {
