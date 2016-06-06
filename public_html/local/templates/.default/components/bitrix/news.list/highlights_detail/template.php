@@ -60,7 +60,7 @@ $articles = function($a) {
                         </div>
                     </div>
                     <div class="<?=$class?>__nav">
-                        <a href="#" class="<?=$class?>__link <?=$class?>__link--back"><img src="/layout/images/prev.png" alt="" width="24"><span>back to <?=$class?>s</span></a>
+                        <a href="#" class="<?=$class?>__link <?=$class?>__link--back"><img src="/layout/images/prev.png" alt="" width="24"><span>back to <?=$arParams['BACK']?>s</span></a>
                         <a href="#" class="<?=$class?>__link <?=$class?>__link--prev"><img src="/layout/images/left.png" alt="" width="15"><span>previous feature</span></a>
                         <a href="#" class="<?=$class?>__link <?=$class?>__link--next"><span>next feature</span><img src="/layout/images/next.png" alt="" width="15"></a>
                     </div>
