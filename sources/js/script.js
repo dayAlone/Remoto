@@ -353,12 +353,12 @@
     }
     $('.highlight__link, .mno__link').on('click', function(e) {
       var index, type;
-      index = $(this).parents('.highlight').index();
       type = 'highlights';
       if ($(this).parents('.mnos').length > 0) {
         type = 'mnos';
       }
-      console.log(type);
+      index = $(this).parents('.' + type.slice(0, type.length - 1)).index();
+      console.log(type, index);
       if ($(this).hasMod('next')) {
         goToHighlights(index + 1, type);
       } else if ($(this).hasMod('prev')) {
