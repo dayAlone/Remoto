@@ -222,7 +222,9 @@ $(document).ready ->
 		modPrefix: '--'
 		modDlmtr: '--'
 
-	$('.news').mod 'ready', true
+	$('.news').each (key, el) ->
+		if $(el).find('.news__wrap').height() >  $(el).find('.news__scroll').height()
+			$(el).mod 'ready', true
 
 	$('.news__scroll').on 'scroll', _.throttle checkNewsScroll, 300
 
