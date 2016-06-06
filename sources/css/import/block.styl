@@ -29,6 +29,9 @@
         margin-right -10px
         margin-left -10px
         justify-content: space-between
+        display none
+        @media (min-width: scr_md)
+            display block
         @media (min-width: 1600px)
             padding 0 70px
 
@@ -68,9 +71,10 @@
     background-repeat no-repeat
     display: flex !important
     overflow hidden
-    padding: 90px 20px
+
     position relative
     min-height: 100vh
+    padding: 90px 20px
     @media (min-width: scr_sm)
         height: 100vh
         min-height: 600px
@@ -458,15 +462,23 @@
 .highlight, .mno
     transition: .3s transform
     will-change: transform
-    overflow hidden
+
     background-color black
     box-shadow: 0 0 50px alpha(black ,.2)
-    padding: 100px 40px
+
+    overflow auto
+    max-height: 100vh
+    min-width: 100vw
+    padding: 70px 20px
+    @media (min-width: scr_sm)
+        padding: 100px 40px
+    @media (min-width: scr_md)
+        overflow hidden
     @media (min-width: scr_lg)
         padding: 130px 40px
     @media (min-width: 1600px)
         padding: 130px 70px
-    min-width: 100vw
+
     .title
         &:before
             background-color orange
@@ -474,6 +486,9 @@
             color orange
     &__content
         justify-content: space-between
+        margin-bottom 50px
+        @media (min-width: scr_sm)
+            padding-bottom 0
     .text, &__nav
         @media (min-width: scr_md)
             width: 60%
@@ -493,6 +508,7 @@
         display: flex
         align-items: center
         justify-content: space-between
+        min-width: 100%
         @media (min-width: scr_lg)
             height 50px
     &__link
@@ -519,6 +535,11 @@
             ^[0]:last-of-type &
                 display none
         &--next, &--prev
+
+            span
+                display none
+                @media (min-width: scr_md)
+                    display inline
             img
                 width 14px !important
         &--back
@@ -555,12 +576,14 @@
                 border-radius: 50%
                 background-color orange
     &__image
-        position absolute
-        bottom 0
-        transform: translateX(-50%)
-        @media (min-width: scr_md)
+        align-self: center
+        max-width: 75%
+        max-height: 50vh
+        @media (min-width: scr_sm)
+            position absolute
+            bottom 0
+            transform: translateX(-50%)
             left calc(86.5% - 70px)
-
             max-width: 38vw
             max-height: 75vh
         @media (min-width: scr_lg)
@@ -569,18 +592,24 @@
             left calc(85% - 100px)
             max-width: 40vw
         &--center
-            bottom 50%
-            transform: translateY(50%) translateX(-50%)
+            @media (min-width: scr_sm)
+                bottom 50%
+                transform: translateY(50%) translateX(-50%)
         &--right
-            transform none
-            left auto
-            right 0
+
+            @media (max-width: scr_sm - 1px)
+                max-width: calc(100% + 40px)
+            @media (min-width: scr_sm)
+                transform none
+                left auto
+                right 0
         &--bigger
-            max-width: 50vw
-            right 30px
-            left auto
-            bottom 50%
-            transform: translateY(50%)
+            @media (min-width: scr_sm)
+                max-width: 50vw
+                right 30px
+                left auto
+                bottom 50%
+                transform: translateY(50%)
             @media (min-width: 1600px)
                 max-width: 60vw
     &[data-nav='black']

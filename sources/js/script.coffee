@@ -130,7 +130,6 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 	mapElement = document.getElementById('map')
 	map = new window.google.maps.Map(mapElement, mapSettings)
 	coords = $('.map').data 'coords'
-	console.log coords
 	coords.map (el, key) ->
 		c = el.coords
 		marker = new google.maps.Marker({
@@ -275,45 +274,47 @@ $(document).ready ->
 			suppressScrollX: true
 			includePadding: true
 
-		$('.highlight__link, .mno__link').on 'click', (e)->
-			index = $(this).parents('.highlight').index()
-			type = 'highlights'
-			if $(this).parents('.mnos').length > 0
-				type = 'mnos'
 
-			if $(this).hasMod 'next'
-				goToHighlights index + 1, type
-			else if $(this).hasMod 'prev'
-				goToHighlights index - 1, type
-			else if $(this).hasMod 'back'
-				$('.' + type).mod 'active', false
-				$('.toolbar__nav').toggleClass 'nav--black', false
-				$('.toolbar__logo').mod 'color', false
-			e.preventDefault()
-
-		$(".highlights .nav__item").on 'click', (e) ->
-			goToHighlights $(this).index(), 'highlights'
-			e.preventDefault()
-
-		$(".mnos .nav__item").on 'click', (e) ->
-			goToHighlights $(this).index(), 'mnos'
-			e.preventDefault()
-
-		$('a.features__item').on 'click', (e) ->
-			$('.highlights').mod 'active', true
-			goToHighlights $($(this).attr('href')).index(), 'highlights'
-			e.preventDefault()
-
-		$('.articles a').on 'click', (e) ->
-			el = $($(this).attr('href'))
-			if el.hasClass 'mno'
-				$('.mnos').mod 'active', true
-				goToHighlights $($(this).attr('href')).index(), 'mnos'
-				e.preventDefault()
 
 	else
 		$('body').on 'scroll', _.throttle checkScroll, 300
 
+
+	$('.highlight__link, .mno__link').on 'click', (e)->
+		index = $(this).parents('.highlight').index()
+		type = 'highlights'
+		if $(this).parents('.mnos').length > 0
+			type = 'mnos'
+
+		if $(this).hasMod 'next'
+			goToHighlights index + 1, type
+		else if $(this).hasMod 'prev'
+			goToHighlights index - 1, type
+		else if $(this).hasMod 'back'
+			$('.' + type).mod 'active', false
+			$('.toolbar__nav').toggleClass 'nav--black', false
+			$('.toolbar__logo').mod 'color', false
+		e.preventDefault()
+
+	$(".highlights .nav__item").on 'click', (e) ->
+		goToHighlights $(this).index(), 'highlights'
+		e.preventDefault()
+
+	$(".mnos .nav__item").on 'click', (e) ->
+		goToHighlights $(this).index(), 'mnos'
+		e.preventDefault()
+
+	$('a.features__item').on 'click', (e) ->
+		$('.highlights').mod 'active', true
+		goToHighlights $($(this).attr('href')).index(), 'highlights'
+		e.preventDefault()
+
+	$('.articles a').on 'click', (e) ->
+		el = $($(this).attr('href'))
+		if el.hasClass 'mno'
+			$('.mnos').mod 'active', true
+			goToHighlights $($(this).attr('href')).index(), 'mnos'
+			e.preventDefault()
 
 	$('.toolbar .nav__item, .nav--modal .nav__item').on 'click', (e)->
 		if typeof $.fn.pagepiling.moveTo == 'function'

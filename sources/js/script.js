@@ -172,7 +172,6 @@
     mapElement = document.getElementById('map');
     map = new window.google.maps.Map(mapElement, mapSettings);
     coords = $('.map').data('coords');
-    console.log(coords);
     coords.map(function(el, key) {
       var c, marker;
       c = el.coords;
@@ -341,49 +340,49 @@
         suppressScrollX: true,
         includePadding: true
       });
-      $('.highlight__link, .mno__link').on('click', function(e) {
-        var index, type;
-        index = $(this).parents('.highlight').index();
-        type = 'highlights';
-        if ($(this).parents('.mnos').length > 0) {
-          type = 'mnos';
-        }
-        if ($(this).hasMod('next')) {
-          goToHighlights(index + 1, type);
-        } else if ($(this).hasMod('prev')) {
-          goToHighlights(index - 1, type);
-        } else if ($(this).hasMod('back')) {
-          $('.' + type).mod('active', false);
-          $('.toolbar__nav').toggleClass('nav--black', false);
-          $('.toolbar__logo').mod('color', false);
-        }
-        return e.preventDefault();
-      });
-      $(".highlights .nav__item").on('click', function(e) {
-        goToHighlights($(this).index(), 'highlights');
-        return e.preventDefault();
-      });
-      $(".mnos .nav__item").on('click', function(e) {
-        goToHighlights($(this).index(), 'mnos');
-        return e.preventDefault();
-      });
-      $('a.features__item').on('click', function(e) {
-        $('.highlights').mod('active', true);
-        goToHighlights($($(this).attr('href')).index(), 'highlights');
-        return e.preventDefault();
-      });
-      $('.articles a').on('click', function(e) {
-        var el;
-        el = $($(this).attr('href'));
-        if (el.hasClass('mno')) {
-          $('.mnos').mod('active', true);
-          goToHighlights($($(this).attr('href')).index(), 'mnos');
-          return e.preventDefault();
-        }
-      });
     } else {
       $('body').on('scroll', _.throttle(checkScroll, 300));
     }
+    $('.highlight__link, .mno__link').on('click', function(e) {
+      var index, type;
+      index = $(this).parents('.highlight').index();
+      type = 'highlights';
+      if ($(this).parents('.mnos').length > 0) {
+        type = 'mnos';
+      }
+      if ($(this).hasMod('next')) {
+        goToHighlights(index + 1, type);
+      } else if ($(this).hasMod('prev')) {
+        goToHighlights(index - 1, type);
+      } else if ($(this).hasMod('back')) {
+        $('.' + type).mod('active', false);
+        $('.toolbar__nav').toggleClass('nav--black', false);
+        $('.toolbar__logo').mod('color', false);
+      }
+      return e.preventDefault();
+    });
+    $(".highlights .nav__item").on('click', function(e) {
+      goToHighlights($(this).index(), 'highlights');
+      return e.preventDefault();
+    });
+    $(".mnos .nav__item").on('click', function(e) {
+      goToHighlights($(this).index(), 'mnos');
+      return e.preventDefault();
+    });
+    $('a.features__item').on('click', function(e) {
+      $('.highlights').mod('active', true);
+      goToHighlights($($(this).attr('href')).index(), 'highlights');
+      return e.preventDefault();
+    });
+    $('.articles a').on('click', function(e) {
+      var el;
+      el = $($(this).attr('href'));
+      if (el.hasClass('mno')) {
+        $('.mnos').mod('active', true);
+        goToHighlights($($(this).attr('href')).index(), 'mnos');
+        return e.preventDefault();
+      }
+    });
     $('.toolbar .nav__item, .nav--modal .nav__item').on('click', function(e) {
       if (typeof $.fn.pagepiling.moveTo === 'function') {
         $.fn.pagepiling.moveTo($(this).attr('href').split('#')[1]);

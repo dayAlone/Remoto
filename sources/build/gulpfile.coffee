@@ -210,8 +210,6 @@ gulp.task 'ready', ->
 gulp.task 'default', ->
 
 	browserSync.init
-		#server:
-		#	baseDir: './public_html'
 		proxy:
 			target: "http://rmt.local"
 
