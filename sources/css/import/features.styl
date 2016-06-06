@@ -96,7 +96,16 @@
     &__icon
         text-align center
         width 50px
+        display: flex
+        justify-content: center
+        align-items: center
+
         @media (min-width: scr_lg)
             width 90px
         img
+            position relative
+            top -2px
             max-width: 90%
+            max-height: 40px
+            @media (min-width: scr_md)
+                max-height: 60px
