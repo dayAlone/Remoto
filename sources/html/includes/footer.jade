@@ -1,0 +1,34 @@
+- var c = 'page__footer footer'
+- c += fullWidthFooter ? ' footer--fullwidth' : ''
+- c += darkFooter ? ' footer--dark' : ''
+div(class='#{c}')
+    .footer__copyright 
+        | © 2016 АО&nbsp;“ВГС”
+        br
+        br
+    .footer__address
+        | Россия, 452683, Республика Башкортостан, <br/> г.&nbsp;Нефтекамск, ул.&nbsp;Магистральная, д.&nbsp;19
+    .footer__contacts
+        a.footer__link(href='mailto:info@vzgs.ru') info@vzgs.ru
+        br
+        a.footer__link(href='tel:+73478320580') 
+            nobr +7 (34783) 2-05-80
+    .footer__map
+        a.footer__link(href='/sitemap/') Карта сайта
+        br
+        br
+    .footer__certs.certs.certs--small
+        .certs__item.certs__item--api
+            include ../../../public_html/layout/images/svg/cert-1.svg
+        .certs__item.certs__item--iso
+            include ../../../public_html/layout/images/svg/cert-2.svg
+        .certs__item.certs__item--rts
+            include ../../../public_html/layout/images/svg/cert-3.svg
+        .certs__item.certs__item--eac
+            include ../../../public_html/layout/images/svg/cert-4.svg
+    if showRadia
+        a.footer__radia.radia(href="http://radia.ru", target="_blank")
+            .radia__logo
+                include ../../../public_html/layout/images/svg/radia.svg
+            .radia__text
+                | Разработка сайта<br/>RADIA Interactive

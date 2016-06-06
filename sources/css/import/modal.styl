@@ -1,0 +1,109 @@
+.modal
+    color black
+    &-backdrop.in
+        opacity: .7
+    &-dialog
+        @media (min-width: scr_sm)
+            width 740px
+        @media (min-width: scr_md)
+            width 800px
+    &-content
+        padding 35px 40px 30px
+        border-radius: 0
+        background-color #edeef0
+    &__close
+        position absolute
+        top 35px
+        right 35px
+    &__title
+        margin-top 0
+        font-family $gotham
+        text-transform uppercase
+        font-weight 900
+        font-size 45px
+        margin-bottom 35px
+
+.form
+    .parsley-errors-list
+        display none
+    .row
+        margin-right -10px
+        margin-left -10px
+        [class*='col-']
+            padding 0 10px
+    &__refresh
+        svg
+            size 40px
+            margin-top 20px
+            path
+                fill orange
+    &__radio:checked + &__label
+        &:before
+            background-color orange
+    &__radio + &__label
+        margin-right 25px
+        font-size 18px
+        font-weight normal
+        color #636464
+        &:before
+            content ""
+            size 20px
+            border-radius: 20px
+            display inline-block
+            border: 1px solid #b2b6bc
+            vertical-align middle
+            margin-right 10px
+            position relative
+            top -2px
+            box-shadow: inset 0 0 0 3px #edeef0
+            transition: .3s background
+    &__radio
+        display none
+    &__button
+        border 0
+        height: 40px
+        background-color: #e69022
+        border-radius: 20px
+        padding 0 40px
+        color white
+        font-size 20px
+        font-weight bold
+        text-transform uppercase
+        font-family $gotham
+        padding-top 2px
+        margin-top 20px
+        transition: .3s background
+        letter-spacing: 2px
+        &:hover
+            background-color red_orange
+    &__footer
+        margin-top 50px
+    &__textarea
+        min-height: 160px
+    &__select + img
+        position absolute
+        top 15px
+        pointer-events: none
+        right 20px
+    &__input, &__captcha, &__select, &__textarea
+        resize: none
+        height: 40px
+        appearance: none
+        border-radius: 0
+        box-shadow: none
+        border: 1px solid #b2b6bc
+        font-size 18px
+        line-height 42px
+        padding 0px 15px
+        width 100%
+        margin-bottom 20px
+        transition: .3s border
+        background-size contain
+        background-color #edeef0
+        background-position center center
+        &.parsley-error
+            border-color alpha(red, .5)
+        &:focus
+            border-color orange
+            outline: 0
+            background-color #fff

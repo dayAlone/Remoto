@@ -1,0 +1,41 @@
+.title
+    text-transform uppercase
+    font-weight 800
+    font-family $gotham
+    width 100%
+    color white
+    position relative
+    margin-bottom 25px
+    line-height 1
+    font-size 29px
+    @media (min-width: scr_md)
+        font-size 35px
+    @media (min-width: scr_lg)
+        font-size 50px
+    @media (min-width: 1600px)
+        font-size 60px
+    &:before, &:after
+        width: 72px
+        height: 4px
+        content: ""
+        display block
+        background-color: white
+        margin-bottom 20px
+        @media (min-width: scr_md)
+            height: 7px
+            margin-bottom 30px
+    &:after
+        display none
+        margin-top 25px
+    &--bottom
+        &:after
+            display block
+            margin 20px auto 0
+            background-color orange
+            @media (min-width: scr_sm)
+                margin 20px 0
+        &:before
+            display none
+
+    span
+        color black

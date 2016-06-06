@@ -1,0 +1,40 @@
+.button
+
+    font-family $gotham
+    font-weight 900
+
+    text-transform uppercase
+    border 2px solid orange
+    border-radius: 50px
+    display inline-block
+    font-size 11px
+    padding 10px 25px 8px
+    &, &:focus
+        color orange
+    @media (min-width: scr_sm)
+        font-size 13px
+        font-weight bold
+        padding 10px 20px 8px
+    @media (min-width: scr_md)
+        font-size 15px
+        padding 10px 30px 8px
+    @media (min-width: 1600px)
+        font-size 17px
+        padding 12px 30px 8px
+    &:hover
+        background-color orange
+        color white
+    &--white
+        &, &:focus
+            color white
+            border-color: white
+        &:hover
+            border-color orange
+    &--black
+        &, &:focus
+            color black
+            border-color black
+        &:hover
+            background-color white
+            border-color white
+            color black

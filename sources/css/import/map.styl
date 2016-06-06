@@ -1,0 +1,35 @@
+.map
+    background-color #2b2b2b
+    position relative
+    margin-right -20px
+    margin-left -20px
+    @media (min-width: scr_sm)
+        position absolute
+        bottom 0
+        width 100%
+        left 0
+        margin 0
+        height calc(100% - 300px)
+    @media (min-width: 1600px)
+        height calc(100% - 370px)
+    &__block
+        size 100% 350px
+        @media (min-width: scr_sm)
+            position absolute
+            size 100%
+    &__list
+
+        left 0
+        z-index: 20
+        background-color #2b2b2b
+        padding 40px
+        width 100%
+        @media (min-width: scr_sm)
+            width 300px
+            position absolute
+            height 100%
+        @media (min-width: scr_md)
+            width 350px
+        @media (min-width: 1600px)
+            width 450px
+            padding 40px 70px

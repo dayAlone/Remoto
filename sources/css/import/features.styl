@@ -1,0 +1,102 @@
+.features
+    display flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-right -10px
+    margin-left -10px
+    margin-top 15px
+    &__item
+
+        display flex
+        border 1px solid #494c4d
+        margin 10px
+
+        justify-content: space-between
+        align-items: center
+        color white
+        t border
+        padding 17px 15px 13px
+        flex: 1 1 calc(100% - 20px)
+        @media (min-width: scr_sm)
+            flex: 1 1 calc(50% - 20px)
+        @media (min-width: scr_lg)
+            padding 17px 15px
+        &:hover
+            border-color orange
+            color white
+        &--small
+
+            padding 13px 15px
+            @media (min-width: scr_sm)
+                flex: 1 1 calc(33% - 20px)
+            & ^[0]__title
+
+                border 0
+                margin-bottom 0
+                padding-bottom 0
+                width: calc(100% - 50px)
+                margin-top 5px
+                color orange
+                font-size 12px
+                @media (min-width: scr_sm)
+                    font-size 8px
+                @media (min-width: scr_md)
+                    font-size 10px
+            & ^[0]__icon
+                width 36px
+    &__divider
+        flex: 1 1 100%
+        text-align center
+        text-transform uppercase
+        font-family: $gotham
+        font-size 10px
+        letter-spacing: 2px
+        color #a4a4a4
+        padding-top 3px
+        display: flex
+        align-items: center
+        padding 0 10px
+        margin 5px 0
+        &:before, &:after
+            display inline-block
+            content ""
+            border-bottom 1px solid #494c4d
+            flex 1
+        span
+            padding 0 20px
+            position relative
+            top 1px
+    &__title
+        text-transform uppercase
+        font-weight bold
+
+        font-family: $gotham
+        line-height 1
+        font-weight 900
+        font-size 15px
+        @media (min-width: scr_md)
+            font-size 18px
+        @media (min-width: scr_lg)
+            border-bottom 1px solid orange
+            padding-bottom 5px
+            margin-bottom 5px
+            font-size 23px
+    &__text
+        margin-bottom -5px
+        font-size 16px
+        display none
+        @media (min-width: scr_lg)
+            display block
+    &__content
+        max-width: calc(100% - 70px)
+        text-align left
+        width: 100%
+        @media (min-width: scr_lg)
+            max-width: calc(100% - 110px)
+    &__icon
+        text-align center
+        width 50px
+        @media (min-width: scr_lg)
+            width 90px
+        img
+            max-width: 90%

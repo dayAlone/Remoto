@@ -1,0 +1,48 @@
+.list
+    display: flex
+    justify-content: center
+    flex-flow: column
+    &__item
+        margin-bottom 10px
+        &:last-of-type
+            margin-bottom 0
+            & ^[0]__content
+                padding-bottom 0
+        &--active
+            & ^[0]__content
+                display block
+            & ^[0]__title
+                color orange !important
+                span
+                    background-image none !important
+    &__address
+        margin-bottom 15px
+
+    &__content
+        display none
+        padding 25px 0 45px 0
+        margin-top 20px
+        font-size 16px
+        border-top 1px solid orange
+        @media (min-width: scr_lg)
+            font-size 20px
+        a
+            color white
+            border-line(alpha(white, .5))
+            &:hover
+                color orange
+                border-line(alpha(orange, .5))
+    &__title
+        font-weight 900
+        font-size 24px
+        font-family $gotham
+        text-transform uppercase
+        color white
+        @media (min-width: scr_lg)
+            font-size 26px
+        span
+            border-line(alpha(white, .5))
+        &:hover
+            color orange
+            span
+                border-line(alpha(orange, .5))

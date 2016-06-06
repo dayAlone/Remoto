@@ -1,0 +1,135 @@
+.news
+
+    display: flex
+    flex-flow: column
+    position relative
+
+    &__scroll
+        flex 1
+        position relative
+        max-height: 450px
+        overflow auto
+        max-width: 100%
+        -webkit-overflow-scrolling: touch
+        padding-top 10px
+        @media (min-width: 600px)
+            max-height: calc(100vh - 250px)
+            overflow hidden
+            max-width: 95%
+        @media (min-width: scr_lg)
+            max-height: calc(100vh - 280px)
+    &__wrap
+        padding-bottom 0px
+    &:after, &:before
+        height 150px
+        z-index 50
+        right 0px
+        width 100%
+        content ""
+        position absolute
+        opacity 0
+        pointer-events: none
+        t opacity
+    &:after
+        background linear-gradient(to top, #d8e5eb 10%, alpha(#d8e5eb, 0) 100%)
+        bottom 0
+    &:before
+        top 0
+        background linear-gradient(to bottom, #d8e5eb 10%, alpha(#d8e5eb, 0) 100%)
+    &--ready
+        &:after
+            opacity 1
+    &--start
+        &:before
+            opacity 1
+    &--end
+        &:after
+            opacity 0
+    &__item
+        display flex
+        margin-bottom 30px
+        max-width: 95%
+        color black
+        flex-flow: column
+        @media (min-width: scr_sm)
+            flex-flow: row
+    &__date
+        font-size 11px
+        font-family $gotham
+        letter-spacing: 3px
+        font-weight bold
+        margin-bottom 10px
+    &__text
+        font-size 16px
+        line-height 1.2
+        color black
+        &:hover
+            color orange
+    &__content
+        display: flex
+        flex-flow: column
+    &__image
+
+        display block
+        background-size cover
+        background-position center center
+        margin-bottom 20px
+        min-width: 155px
+        height: 107px
+        padding-bottom 50%
+        @media (min-width: scr_sm)
+            padding-bottom 0
+            margin-bottom 0
+            margin-right 20px
+            min-width: 111px
+            height: 77px
+        @media (min-width: scr_md)
+            min-width: 155px
+            height: 107px
+
+.ps-container, .ps-container:hover, .ps-container.ps-in-scrolling
+    > .ps-scrollbar-y-rail
+        right 0px !important
+        background transparent
+        opacity 1
+        border-radius 0
+        width 4px
+        t height
+        .dropdown__frame&
+            background transparent
+        .catalog &
+            @media (max-width: scr_lg)
+                right 7px !important
+        >.ps-scrollbar-y
+            opacity 1
+            t height
+            right 0px
+            width 4px
+            border-radius 0
+            background-color orange !important
+
+.tabs
+    width 100%
+    border-bottom 2px solid orange
+    margin-bottom 20px
+    @media (max-width: scr_sm - 1px)
+        display flex !important
+    &__item
+        width 50%
+        flex 1 1 50%
+        text-transform uppercase
+        height 36px
+        color white
+        font-family $gotham
+        font-weight 900
+        font-size 17px
+        background-color #a3a8af
+        display flex
+        align-items: center
+        padding 6px 20px 0
+        box-shadow: inset 0 -5px 10px 0 alpha(black, .1)
+        &:hover
+            color white
+        &--active
+            box-shadow: none
+            background-color orange

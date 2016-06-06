@@ -1,0 +1,12 @@
+- var nav = [{ name: 'О компании', url: '/about.html' }, { name: 'Продукция', url: '/production.html' }, { name: 'Технологии ПВР', url: '/services.html' }, { name: 'Лицензии и сертификаты', url: '/licenses.html' }, { name: 'Пресс-центр', url: '/press.html' }, { name: 'Партнеры', url: '/partners.html' }, { name: 'Контакты', url: '/contacts.html' }]
+- var className = navType || 'modal'
+div(class="nav nav--#{className}")
+    if !navType
+        .nav__frame
+            each val, key in nav
+                - var c = key == activeNav ? "nav__item--active" : ""
+                a(href="#{val.url}", class="nav__item #{c}")= val.name
+    else
+        each val, key in nav
+            - var c = key == activeNav ? "nav__item--active" : ""
+            a(href="#{val.url}", class="nav__item #{c}")= val.name

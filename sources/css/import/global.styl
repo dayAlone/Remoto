@@ -1,0 +1,60 @@
+html, body
+	height 100%
+body
+	font-family 'Agoda', 'Helvetica Neue', 'Arial', sans-serif
+	min-height 100%
+	color white
+	background #24242e
+	font-variant: normal
+	-webkit-font-smoothing: antialiased
+	-webkit-overflow-scrolling: touch
+	@media (max-width: scr_sm - 1)
+		overflow: auto !important
+	&.open
+		position: fixed;
+		max-width: 100%
+		width: 100%
+a
+	t all
+
+#panel
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 100000000
+
+.container
+	width 990px
+
+svg
+	t fill
+	path, g
+		t fill
+
+.scroll-fix
+	position fixed
+	width 100%
+	height 100%
+	top 0
+	left 0
+	z-index 300000
+	pointer-events none
+	&--on
+		pointer-events initial
+
+#pp-nav.right
+	right 4px !important
+	@media (min-width: 1600px)
+		right 20px !important
+	li span
+		border-color alpha(white, .5) !important
+	li .active span
+		border-color alpha(white, 1) !important
+		background-color #fff
+	&.black
+		li span
+			border-color alpha(black, .5) !important
+		li .active span
+			border-color alpha(black, 1) !important
+			background-color black

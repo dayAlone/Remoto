@@ -1,0 +1,677 @@
+include includes/header
+<body class='page page--index'>
+.toolbar
+    .toolbar__content
+        a.toolbar__logo(href='#home')
+            img(src="/layout/images/logo.white.png", alt="")
+            img(src="/layout/images/logo.color.png", alt="")
+        .toolbar__nav.nav
+            a.nav__item.nav__item--active(href='#home') Main
+            a.nav__item(href='#about') About
+            a.nav__item(href='#highlights') Highlights
+            a.nav__item(href='#mno') Remoto for MNO
+            a.nav__item(href='#specs') Tech specs
+            //a.nav__item(href='#news') News & events
+            a.nav__item(href='#contacts') Contacts
+        a.toolbar__button.hidden-xs(href='#Request', data-toggle='modal') Request a proposal
+        a.toolbar__trigger(href='#')
+            include ../../public_html/layout/images/svg/nav.svg
+.highlights
+    .highlights__nav.nav
+        a.nav__item.nav__item--active(href='#internet') wi-fi 3g/lte hotspot
+        a.nav__item(href='#diagnostics') remote diagnostics
+        a.nav__item(href='#services') location based services
+        a.nav__item(href='#music') cloud music service
+        a.nav__item(href='#comfort') comfort functions
+        a.nav__item(href='#notifications') notifications / alerts
+        a.nav__item(href='#gamefication') gamefication
+    .highlights__wrap
+        .highlights__items
+            #internet.highlight.highlight--internet
+                img.highlight__image.highlight__image--right(src='/layout/images/app.png')
+                .highlight__content
+                    h2.title wi-fi 3g/lte 
+                        span hotspot
+                    .text
+                        .articles.articles--padding.articles--white.articles--half
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h1-1.png')
+                                    .articles__name 
+                                        span Stable, high-speed internet access for all passengers
+                                .articles__description Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h1-2.png')
+                                    .articles__name 
+                                        span Better connection than via a smartphone
+                                .articles__description Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h1-3.png')
+                                    .articles__name 
+                                        span Does not drain the phone battery
+                                .articles__description Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h1-4.png')
+                                    .articles__name 
+                                        span Is already desired by more than 53% of car owners
+                                .articles__description Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                            
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15")
+            
+            #diagnostics.highlight.highlight--diagnostics
+                img.highlight__image.highlight__image--center(src='/layout/images/app2.png')
+                .highlight__content
+                    h2.title remote 
+                        span diagnostics
+                    .text
+                        ul.highlight__list
+                            li Car self-diagnostics – car health control in a hand
+                            li Analyze and predict problems with a car using Remoto DM Logic algorithms 
+                            li Diagnostics result explained like a car service center do
+                            li Automatic call for a road assistance when necessary
+                            li Optional reports of car health to trusted service stations or dealership
+
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                            
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15")
+                
+            #services.highlight.highlight--services
+                img.highlight__image.highlight__image--padding(src='/layout/images/app3.png')
+                .highlight__content
+                    h2.title location based <br/>
+                        span services
+                    .text
+                        .articles.articles--padding.articles--white.articles--full
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h3-1.png')
+                                    .articles__name 
+                                        span Car location – find a car on a map
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h3-2.png')
+                                    .articles__name 
+                                        span Track car movement in a real time
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h3-3.png')
+                                    .articles__name 
+                                        span History of trips
+                                .articles__description All details of every trip. Speeds heat map. Events on the trip. <br/>Can share the trip to social networks or send to a friends.
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                            
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15") 
+                
+            #music.highlight.highlight--music
+                img.highlight__image.highlight__image--center.highlight__image--bigger(src='/layout/images/app5.png')
+                .highlight__content
+                    h2.title cloud music 
+                        span service
+                    .text
+                        .articles.articles--padding.articles--white.articles--full
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h4-1.png')
+                                    .articles__name 
+                                        span Audio streaming services
+                                .articles__description Like Deezer, Spotify or operator’s own.<br/>Consumption grew ~32% since 2012*<br/>
+                                    small *Source: Nelsen & Billboard 2013 US Music Report, 1/14
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h4-2.png')
+                                    .articles__name 
+                                        span Music, radio or audiobooks from the cloud
+                                .articles__description  Google Drive, Dropbox and other
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h4-3.png')
+                                    .articles__name 
+                                        span History of trips
+                                .articles__description All details of every trip. Speeds heat map. Events on the trip. <br/>Can share the trip to social networks or send to a friends.
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                            
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15")
+                
+            #comfort.highlight.highlight--comfort(data-nav='black', data-logo='color')
+                img.highlight__image.highlight__image--padding(src='/layout/images/app6.png')
+                .highlight__content
+                    h2.title comfort 
+                        span functions
+                    .text
+                        .articles.articles--padding.articles--full.articles--dark
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h5-1.png')
+                                    .articles__name 
+                                        span Parking assistance 
+                                .articles__description When you stop your car it helps to check where you park your car. Notice if it is paid parking or you can park here for free.
+
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h5-2.png')
+                                    .articles__name 
+                                        span Valet mode 
+                                .articles__description When you give your car to somebody you can setup an area on a map and speed limit. When area or speed limit will be violated – you will be noticed.
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h5-3.png')
+                                    .articles__name 
+                                        span Check temperature inside the car 
+                                .articles__description You know when it is better to come earlier to pre-cool or pre-heat your car before a trip.
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                            
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15")
+                
+            #notifications.highlight.highlight--notifications(data-nav='black', data-logo='color')
+                img.highlight__image(src='/layout/images/app7.png')
+                .highlight__content
+                    h2.title notifications 
+                        span / alerts
+                    .text
+                        .articles.articles--padding.articles--black.articles--full
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h6-1.png')
+                                    .articles__name 
+                                        span Impact alerts
+                                .articles__description with the impact strength and vehicle location
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h6-2.png')
+                                    .articles__name 
+                                        span SVT notifications
+                                .articles__description  with vehicle locations
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h6-3.png')
+                                    .articles__name 
+                                        span Gelolocation and speeding warnings
+                                .articles__description with vehicle location and speed
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h6-4.png')
+                                    .articles__name 
+                                        span Car health problems notifications
+                    
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                            
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15")
+                
+            #gamefication.highlight.highlight--gamefication(data-nav='black')
+                img.highlight__image.highlight__image--center(src='/layout/images/app8.png')
+                .highlight__content
+                    h2.title Gamification
+                    .text
+                        .articles.articles--padding.articles--dark.articles--half.articles--dark-icons
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h7-1.png')
+                                    .articles__name 
+                                        span Driving style with smart insuarance
+                                .articles__description And help driver save fuel and share driving results with friends
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h7-2.png')
+                                    .articles__name 
+                                        span Hard acceleration count
+                                .articles__description  Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h7-3.png')
+                                    .articles__name 
+                                        span Amout of time speeding 110+ km/h
+                                .articles__description Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                            .articles__item
+                                .articles__title(href='#')
+                                    .articles__icon
+                                        img(src='/layout/images/h7-4.png')
+                                    .articles__name 
+                                        span Hard braking count
+                                .articles__description Fast car Wi-Fi hotspot, cloud music access - Remoto WiFi services and device functions made to generate maximum data traffic providing great services for car deriver and passengers.
+                    .highlight__nav
+                        a.highlight__link.highlight__link--back(href='#')
+                            img(src="/layout/images/prev.png", alt="", width="24")
+                            span back to highlights
+                        a.highlight__link.highlight__link--prev(href='#')
+                            img(src="/layout/images/left.png", alt="", width="15")
+                            span previous feature
+                        a.highlight__link.highlight__link--next(href='#')
+                            span next feature
+                            img(src="/layout/images/next.png", alt="", width="15")
+                
+        
+        
+.blocks
+    #home.block.block--home(data-nav='white', data-logo='white')
+        .block__video
+            video(autoplay='autoplay', loop='')
+                source(src='/layout/video/remotowifi.mp4', type='video/mp4')
+                source(src='/layout/video/remotowifi.ogv', type='video/ogg')
+                source(src='/layout/video/remotowifi.webm', type='video/webm')
+
+        .block__content
+            h3 Boost your business today with 
+            h1 Remoto WiFi
+            p A new mobile traffic, services and revenue growth point <br/>for mobile network operators (telecom operators)
+            a.button(href='#about') learn more
+            .customers
+                .customers__title remoto Worldwide customers
+                .customers__frame
+                    img.customers__item(src='/layout/images/svg/car-1.svg')
+                    img.customers__item(src='/layout/images/svg/car-2.svg')
+                    img.customers__item(src='/layout/images/svg/car-3.svg')
+                    img.customers__item(src='/layout/images/svg/car-4.svg')
+            a(href='http://www.bright-box.eu', target='_blank')
+                img.bright(src='/layout/images/bright.png', width='171')
+    #about.block.block--about(data-nav='white', data-logo='white', data-dots='black')
+        .block__content
+            img.block__image(src="/layout/images/slide-2-image.png", alt="")
+            .text
+                h2.title 
+                    span Now every car<br/>
+                    | can be smart
+                p Remoto WiFi &ndash; a gadget for any car* on the market. It connects a car with a smartphone. It provides Remoto services for car owners. Control the car status. Remote diagnostics. Cloud music. And much more. In addition, it creates WiFi LTE hotspot in the car.
+                a.button.button--white(href='#') how does it work
+                br
+                a.preview(href='#')
+                    .preview__image(style='background-image: url(/layout/images/preview-inf.jpg)')
+                    .preview__text infractructure of&nbsp;remoto wifi
+                //
+                    a.preview(href='#')
+                        .preview__image(style='background-image: url(/layout/images/preview-video.jpg)')
+                        .preview__text video presentation
+    #highlights.block.block--highlights(data-nav='white', data-logo='color')
+        .block__content
+            .text
+                h2.title 
+                    span Main 
+                    | features
+                p Remoto WiFi is a gadget for drivers that provides any car with fast WiFi Internet, music services, and the opportunity to interact with the vehicle remotely using a special app for Android or iPhone (plus smart watches). 
+                h5 click on a feature to see more
+                .features
+                    a.features__item(href='#internet')
+                        .features__icon
+                            img(src='/layout/images/feature-1.png' width='74')
+                        .features__content
+                            .features__title WiFi 3G/LTE hotspot
+                            .features__text for drivers and passengers
+                    a.features__item(href='#diagnostics')
+                        .features__icon
+                            img(src='/layout/images/feature-2.png' width='91')
+                        .features__content
+                            .features__title remote diagnostics
+                            .features__text everything about car status
+                    a.features__item(href='#services')
+                        .features__icon
+                            img(src='/layout/images/feature-3.png' width='61')
+                        .features__content
+                            .features__title Locations based services
+                            .features__text car locations, trip history
+                    a.features__item(href='#music')
+                        .features__icon
+                            img(src='/layout/images/feature-4.png' width='90')
+                        .features__content
+                            .features__title cloud music service
+                            .features__text audio streaming services
+                    .features__divider
+                        span and also
+                    a.features__item.features__item--small(href='#comfort')
+                        .features__icon
+                            img(src='/layout/images/feature-5.png' width='90')
+                        .features__title Comfort functions
+                    a.features__item.features__item--small(href='#notifications')
+                        .features__icon
+                            img(src='/layout/images/feature-6.png' width='90')
+                        .features__title Notifications / Alerts
+                    a.features__item.features__item--small(href='#gamefication')
+                        .features__icon
+                            img(src='/layout/images/feature-7.png' width='90')
+                        .features__title Gamification
+    #mno.block.block--mno(data-nav='white', data-logo='white')
+        .block__content
+            .text
+                .block__frame
+                    h2.title.title--bottom
+                        span Remoto WiFi 
+                        | with your SIM cards and&nbsp
+                        span your brand
+                    h3 white label solution
+                .chip
+                    img(src="/layout/images/chip.png")
+            .articles
+                .articles__item
+                    a.articles__title(href='#')
+                        .articles__icon
+                            img(src='/layout/images/articles-1.png')
+                        .articles__name 
+                            span Your company branding on device
+                    .articles__description Remoto WiFi is a white label solution. Device and mobile applications will be customized with your brand. And integrated with your billing system.
+                .articles__item
+                    a.articles__title(href='#')
+                        .articles__icon
+                            img(src='/layout/images/articles-2.png')
+                        .articles__name 
+                            span Increasing your customer base
+                    .articles__description Connected cars are part of the new IoT market. A huge growth point for mobile network operators.
+                .articles__item
+                    a.articles__title(href='#')
+                        .articles__icon
+                            img(src='/layout/images/articles-3.png')
+                        .articles__name 
+                            span Traffic consumption growth
+                    .articles__description Fast in-car WiFi hotspot, cloud music access &ndash; Remoto WiFi services and device functions are made to generate maximum data traffic providing great services for car drivers and passengers.
+                .articles__item
+                    a.articles__title(href='#')
+                        .articles__icon
+                            img(src='/layout/images/articles-4.png')
+                        .articles__name 
+                            span API for external services and apps
+                    .articles__description Remoto WiFi is prepared to be integrated with MNO's own or popular market services like music, parking, social, file sharing and others.
+    #specs.block.block--specs(data-nav='black', data-logo='color', data-dots='black')
+        .block__content
+            img.block__image(src="/layout/images/device.jpg", alt="")
+            h2.title.hidden-md.hidden-lg technical 
+                span specifications
+            .text
+                h2.title.visible-md.visible-lg technical 
+                    span specifications
+                .spec
+                    .spec__col
+                        .spec__title device
+                        ul.spec__list
+                            li Operational temperature: -40 &ndash; +125 C
+                            li Form-factor: external 3G/LTE+GNSS module and detachable OBD-connector
+                            li Size: L 85 x W 58 x H 30 mm
+                        .spec__title network
+                        ul.spec__list
+                            li Integrated 3G/LTE Wi-Fi router
+                            li Supports GSM 900/1800 MHz, WCDMA, LTE-FDD, LTE-TDD bands
+                            li Wireless access point 802.11 b/g/n
+                            li Over-the-air firmware upgrades
+                        .spec__title extras
+                        ul.spec__list
+                            li OBD connection with CAN bus & K-line monitoring
+                            li Built-in audio card with FM transmitter and AUX 2,5mm
+                            li USB connectors for additional peripherals
+                    .spec__col
+                        .spec__title sensors
+                        ul.spec__list
+                            li Integrated GPS/GLONASS engine and antenna
+                            li Built-in G-sensor (for motion, tilt and towing detection)
+                            li Temperature sensor
+                            li Onboard voltage monitoring
+                        .spec__title status LEDs
+                        ul.spec__list
+                            li Device working mode
+                            li 3G/LTE network registration
+                            li Wireless AP status
+                        .spec__title Memory
+                        ul.spec__list
+                            li 64 Mb embedded DDR2 RAM
+                            li 16 Mb embedded flash
+                            li Internal flash storage 32 Gb
+    //-
+    #news.block.block--news(data-nav='black', data-logo='color', data-dots='black')
+        .block__content
+            h2.title what’s going on
+            .tabs.visible-xs
+                a.tabs__item.tabs__item--active(href='#newsb') News
+                a.tabs__item(href='#events') Events
+            .block__row
+                #newsb.block__col
+                    h3.hidden-xs News
+                    .news
+                        .news__scroll
+                            .news__wrap
+                                - var i = 0
+                                while i < 15
+                                    .news__item
+                                        a.news__image(href='#', style='background-image: url(/layout/images/news.png)')
+                                        .news__content
+                                            .news__date 10.04.2016
+                                            a.news__text(href='#') Это текст - размеры брать отсюда. Остальные блоки на страницы слиты в картинки.
+                                    - i ++
+                #events.block__col.hidden-xs
+                    h3.hidden-xs Events
+                    .news
+                        .news__scroll
+                            .news__wrap
+                                - var i = 0
+                                while i < 15
+                                    .news__item
+                                        a.news__image(href='#', style='background-image: url(/layout/images/news.png)')
+                                        .news__content
+                                            .news__date 10.04.2016
+                                            a.news__text(href='#') Это текст - размеры брать отсюда. Остальные блоки на страницы слиты в картинки.
+                                    - i ++
+                                        
+    #contacts.block.block--contacts(data-nav='white', data-logo='white')
+        .block__content
+            h2.title contact us
+            a.button.button--black(href='#Feedback' data-toggle='modal') feedback
+            .partners
+                .partners__title partners
+                .partners__frame
+                    a(href='http://www.cisco.com', target='_blank')
+                        img.partners__item(src='/layout/images/partner-1.png')
+                    a(href='http://www.jasper.com', target='_blank')
+                        img.partners__item(src='/layout/images/partner-2.png')
+                    a(href='http://www.microsoft.com', target='_blank')
+                        img.partners__item(src='/layout/images/partner-3.png')
+        .map
+            .map__list.list
+                .list__item.list__item--active
+                    a.list__title(href='#')
+                        span AUSTRIA 
+                    .list__content
+                        .list__address Am Gestade 1, 1010 Vienna 
+
+                        .list__phone +43 1 71 728 434 
+                        a.list__email(href='mailto:global@bright-box.eu') global@bright-box.eu
+                .list__item
+                    a.list__title(href='#')
+                        span RUSSIA 
+                    .list__content
+                        .list__address
+                            | Moscow, Ugreshskaya st., 
+                            br
+                            | 2/15, BC "Synthesis"
+
+                        .list__phone +7 (495) 929-70-75 
+                        a.list__email(href='mailto:global@bright-box.eu') global@bright-box.eu
+                .list__item
+                    a.list__title(href='#')
+                        span UAE 
+                    .list__content
+                        .list__address
+                            | 6WA 622, Dubai Airport 
+                            br
+                            | Free Zone Authority, Dubai 
+
+                        .list__phone +971 4 262 4604 
+                        a.list__email(href='mailto:global@bright-box.eu') global@bright-box.eu
+                .list__item
+                    a.list__title(href='#')
+                        span China
+                    .list__content
+                        .list__address
+                            | 201, 1305 South Suzhou Road,
+                            br
+                            | Huangpu District, Shanghai
+
+                        a.list__email(href='mailto:global@bright-box.eu') global@bright-box.eu
+
+            #map.map__block
+
+.nav.nav--modal
+    a.nav__item.nav__item--active(href='#home') Main
+    a.nav__item(href='#about') About
+    a.nav__item(href='#highlights') Highlights
+    a.nav__item(href='#mno') Remoto for MNO
+    a.nav__item(href='#specs') Tech specs
+    //a.nav__item(href='#news') News & events
+    a.nav__item(href='#contacts') Contacts    
+
+#Request.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            a.modal__close(href='#', data-dismiss='modal')
+                img(src="/layout/images/svg/close.svg", alt="")
+            h2.modal__title request a proposal
+            form.form(data-parsley-validate)
+                .row
+                    .col-xs-12
+                        input.form__input(type='text' placeholder='Your name *', name='name', required)
+                .row
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Company *', name='company', required)
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Website *', name='website', required)
+                .row
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Phone *', name='phone', required)
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='email' placeholder='E-mail *', name='email', required)
+                .row
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Customer base', name='customer')
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Regions coverage', name='coverage')
+                .row
+                    .col-xs-12
+                        
+                        input.form__radio(type='radio', name='type', value='4G/LTE', checked, id='r-1')
+                        label.form__label(for='r-1') 4G/LTE
+                        input.form__radio(type='radio', name='type', value='3G only', id='r-2')
+                        label.form__label(for='r-2') 3G only
+                .row.form__footer
+                    .col-xs-9.col-sm-3
+                        .form__label Enter this code
+                        .form__captcha.captcha
+                    .col-xs-3.col-sm-1.center
+                        a.form__refresh(href='#')
+                            include ../../public_html/layout/images/svg/refresh.svg
+                    .col-xs-12.col-sm-3
+                        .form__label into this field
+                        input(type='hidden', name='captcha_sid')
+                        input.form__input(type='text' name='captcha_word', required)
+                    .col-xs-12.col-sm-5.right
+                        button.form__button send
+    
+                .row
+                    .col-xs-12 All fields marked * are have to be filled
+
+#Feedback.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            a.modal__close(href='#', data-dismiss='modal')
+                img(src="/layout/images/svg/close.svg", alt="")
+            h2.modal__title Feedback
+            form.form(data-parsley-validate)
+                .row
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Your name *', name='name', required)
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='email' placeholder='E-mail *', name='email', required)
+                .row
+                    .col-xs-12.col-sm-6
+                        input.form__input(type='text' placeholder='Phone', name='phone')
+                    .col-xs-12.col-sm-6
+                        select.form__select(name='qtype', required)
+                            option(value='') Question type *
+                            option(value='Product') Product
+                            option(value='Partnership') Partnership
+                            option(value='Marketing and Press') Marketing and Press
+                        img(src="/layout/images/svg/arrow.svg", alt="")
+                .row
+                    .col-xs-12
+                        textarea.form__textarea(placeholder='Message *', name='message')
+                
+                .row
+                    .col-xs-9.col-sm-3
+                        .form__label Enter this code
+                        .form__captcha.captcha
+                    .col-xs-3.col-sm-1.center
+                        a.form__refresh(href='#')
+                            include ../../public_html/layout/images/svg/refresh.svg
+                    .col-xs-12.col-sm-3
+                        .form__label into this field
+                        input(type='hidden', name='captcha_sid')
+                        input.form__input(type='text' name='captcha_word', required)
+                    .col-xs-12.col-sm-5.right
+                        button.form__button send
+    
+                .row
+                    .col-xs-12 All fields marked * are have to be filled

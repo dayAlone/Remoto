@@ -1,0 +1,43 @@
+.spec
+    display flex
+
+    flex-wrap: wrap
+    @media (min-width: scr_sm)
+        margin-right -15px
+        margin-left -15px
+    &__col
+
+        flex 1 1 100%
+        @media (min-width: scr_sm)
+            padding: 0 15px
+            flex 1 1 calc(50% - 30px)
+    &__title
+        color orange
+        text-transform uppercase
+        font-family $gotham
+        font-size 16px
+        margin-bottom 5px
+        margin-top 24px
+        @media (min-width: scr_lg)
+            font-size 18px
+        &:first-of-type
+            margin-top 0
+    &__list
+        font-size 13px
+        padding-left 0
+        list-style: none
+        @media (min-width: scr_lg)
+            font-size 14px
+        li
+            margin-bottom 5px
+            padding-left 20px
+            position relative
+            &:before
+                content ""
+                size 6px
+                display inline-block
+                background-color orange
+                border-radius 50%
+                position absolute
+                left 5px
+                top 6px

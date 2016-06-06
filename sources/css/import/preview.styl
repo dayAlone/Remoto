@@ -1,0 +1,25 @@
+.preview
+    display inline-block
+    margin 40px 30px 0 0
+    vertical-align top
+    max-width: calc(50% - 15px)
+    width 139px
+    &:last-of-type
+        margin-right 0
+    @media (min-width: scr_lg)
+        width 161px
+    &__image
+
+        background-size cover
+        margin-bottom 8px
+        background-position center
+        max-width: 100%
+        size 132px 99px
+        @media (min-width: scr_lg)
+            size 161px 120px
+    &__text
+        text-transform uppercase
+        font-size 13px
+        max-width: 100%
+        font-family $gotham
+        color black

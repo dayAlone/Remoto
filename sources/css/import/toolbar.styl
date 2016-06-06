@@ -1,0 +1,93 @@
+.toolbar
+    position fixed
+    top 0
+    left 0
+    width 100%
+    z-index: 400
+    padding 15px 0
+    background-color alpha(black, .7)
+    -webkit-backdrop-filter: blur(20px)
+    box-shadow: 0 10px 25px alpha(black, .3)
+    @media (min-width: scr_sm)
+        padding 30px 0 0
+        -webkit-backdrop-filter: blur(0px)
+        background-color transparent
+        box-shadow: none
+
+    &__logo
+        position relative
+        @media (min-width: scr_sm)
+            top -7px
+        img
+            max-width: 106px
+            @media (min-width: scr_sm)
+                max-width: 144px
+            @media (min-width: 1600px)
+                max-width: 182px
+            &:last-of-type
+                display none
+        &--color
+            img
+                &:last-of-type
+                    display block
+                &:first-of-type
+                    display none
+    &__trigger
+        margin-left 40px
+        @media (min-width: scr_lg)
+            display none
+        svg, &
+            size 35px 22px
+            @media (min-width: scr_sm)
+                size 40px 29px
+        path
+            fill white
+        &--black
+            svg
+                path
+                    fill black
+        path
+            transition: .3s all
+            .open &
+                transition-delay: .7s
+                fill white
+            &:nth-child(2)
+                .open &
+                    opacity: 0
+            &:nth-child(1)
+                transform-origin: top left
+                .open &
+                    transform: rotate(45deg) translateX(8px) translateY(-7px) scale(.9)
+            &:nth-child(3)
+                transform-origin: bottom right
+                .open &
+                    transform: rotate(-45deg) translateX(6px) translateY(-11px) scale(.9)
+    &__nav
+        display none
+        @media (min-width: scr_lg)
+            display block
+
+
+    &__content
+        display: flex
+        width: 100%
+        padding 0 25px
+        margin: 0 auto
+        justify-content: space-between
+        align-items: center
+        @media (min-width: scr_sm)
+            padding 0 40px
+        @media (min-width: 1600px)
+            padding: 0 70px
+    &__button
+        @extends .nav__item
+
+        margin-left auto
+        @media (min-width: scr_lg)
+            margin-left 0
+        &:focus, &
+            background-color red_orange
+            color white
+        &:hover
+            background-color orange
+            color white

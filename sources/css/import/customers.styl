@@ -1,0 +1,55 @@
+.customers, .partners
+    margin 50px 0 30px
+    @media (min-width: scr_sm)
+        position absolute
+        bottom 0
+        right: 0
+        margin-bottom 0
+    &__title
+        text-transform uppercase
+        font-weight 500
+        font-family: $gotham
+        color orange
+        font-size 14px
+        margin-bottom 5px
+        min-width: 100%
+        text-align center
+        @media (min-width: scr_sm)
+            font-size 20px
+            text-align left
+    &__frame
+        border 1px solid alpha(white, .25)
+        padding 15px 5px
+        text-align center
+    &__item
+        max-width: 85px
+
+        margin 0 10px
+        max-width: 50px
+        max-height: 30px
+        @media (min-width: scr_sm)
+            margin 0 14px
+            max-width: 55px
+            max-height: 30px
+        @media (min-width: scr_md)
+            max-width: 85px
+            max-height: 40px
+        @media (min-width: scr_lg)
+            max-width: 120px
+
+.partners
+    position relative
+    @media (max-width: scr_sm - 1px)
+        margin-top 20px
+    &__frame
+        padding 15px
+        @media (min-width: scr_md)
+            padding 15px 25px
+    &__item
+        margin 0 10px
+        @media (min-width: scr_md)
+            margin 0 20px
+    &__title
+        color white
+        font-weight 400
+        font-size 15px
