@@ -1959,7 +1959,7 @@ svg g {
   -o-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 @media (min-width: 768px) {
   .highlight__content,

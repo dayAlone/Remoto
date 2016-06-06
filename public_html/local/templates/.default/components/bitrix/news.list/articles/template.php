@@ -6,7 +6,7 @@
             <div class="articles__icon"><img src="<?=$item['PREVIEW_PICTURE']['SRC']?>"></div>
             <div class="articles__name"> <span><?=$item['NAME']?></span></div>
         </a>
-        <div class="articles__description"><?=$item['PREVIEW_TEXT']?></div>
+        <div class="articles__description"><?=$item['~PREVIEW_TEXT']?></div>
     </div>
     <?endforeach;?>
 </div>

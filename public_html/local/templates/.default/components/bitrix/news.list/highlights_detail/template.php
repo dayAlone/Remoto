@@ -53,7 +53,7 @@ $articles = function($a) {
                                         <div class="articles__name"> <span><?=$feature['NAME']?></span></div>
                                     </div>
                                     <? if (strlen($feature['PREVIEW_TEXT']) > 0):?>
-                                        <div class="articles__description"><?=$feature['PREVIEW_TEXT']?></div>
+                                        <div class="articles__description"><?=$feature['~PREVIEW_TEXT']?></div>
                                     <? endif;?>
                                 </div>
                             <?endforeach;?>
