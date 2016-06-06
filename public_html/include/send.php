@@ -48,6 +48,9 @@ if($result['status'] == 'ok') {
 
 			$emails = COption::GetOptionString("grain.customsettings", 'feedback');
 
+			$rsSites = CSite::GetByID(SITE_ID);
+		    $arSite  = $rsSites->Fetch();
+
 			$mail = new PHPMailer;
 			$mail->isSendmail();
 			$mail->CharSet = 'UTF-8';
