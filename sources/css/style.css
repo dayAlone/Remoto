@@ -2155,12 +2155,20 @@ svg g {
   .highlight__image,
   .mno__image {
     position: absolute;
-    bottom: -15vh;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    bottom: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     left: calc(86.5% - 70px);
     max-width: 38vw;
     max-height: 75vh;
+  }
+}
+@media (min-width: 992px) {
+  .highlight__image,
+  .mno__image {
+    bottom: -10vh;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 @media (min-width: 1170px) {
