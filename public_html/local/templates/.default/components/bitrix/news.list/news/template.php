@@ -4,46 +4,24 @@ use Bitrix\Sale\Location;
 Loc::loadMessages(__FILE__);
 ?>
 <div class="news">
-<?
-$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "years", array(
-    "IBLOCK_TYPE"  => "content",
-    "IBLOCK_ID"    => $arParams["IBLOCK_ID"],
-    "TOP_DEPTH"    => "2",
-    "CACHE_TYPE"   => "A",
-    "CACHE_TIME"   => "36000",
-    "CACHE_NOTES"  => $arParams["PARENT_SECTION"],
-    "CLASS"        => "news__dropdown hidden-lg"
-),
-false);
-?>
-<?
-if (count($arResult['ITEMS']) > 0):
-  foreach ($arResult['ITEMS'] as $key=>$item):?>
+  <div class="news__scroll">
+    <div class="news__wrap">
+        <?
+        if (count($arResult['ITEMS']) > 0):
+          foreach ($arResult['ITEMS'] as $key=>$item):?>
+            <div class="news__item">
+              <a href="#Detail" data-toggle='modal' data-link='<?=$item['DETAIL_PAGE_URL']?>' style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="news__image"></a>
+              <div class="news__content">
+                <?if(isset($item['ACTIVE_FROM'])):?><div class="news__date"><?=date('d.m.Y', strtotime($item['ACTIVE_FROM']))?></div><?endif;?>
+                <a href="#Detail" data-toggle='modal' data-link='<?=$item['DETAIL_PAGE_URL']?>'class="news__text"><?=$item['NAME']?></a>
+              </div>
+            </div>
+          <?endforeach;
+        else:
+        ?><p>В этом разделе еще нет новостей.</p><?
+        endif;
+        ?>
 
-    <a href="<?=$item['DETAIL_PAGE_URL']?>" class="news__item">
-      <?if(isset($item['ACTIVE_FROM'])):?><div class="news__date"><?=$item['ACTIVE_FROM']?></div><?endif;?>
-      <div class="news__title"><?=$item['NAME']?></div>
-    </a>
-
-  <?endforeach;
-else:
-?><p>В этом разделе еще нет новостей.</p><?
-endif;
-?>
+    </div>
+  </div>
 </div>
-<?if($arParams['SHOW_YEARS']=="Y"):
-	$this->SetViewTarget('toolbar');
-		$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "years", array(
-		    "IBLOCK_TYPE"  => "content",
-		    "IBLOCK_ID"    => $arParams["IBLOCK_ID"],
-		    "TOP_DEPTH"    => "2",
-		    "CACHE_TYPE"   => "A",
-		    "CACHE_TIME"   => "36000",
-		    "CACHE_NOTES"  => $arParams["PARENT_SECTION"],
-        "CLASS"        => "toolbar__dropdown visible-lg"
-		),
-		false);
-	$this->EndViewTarget();
-endif;?>
-
-<?=($arParams["DISPLAY_BOTTOM_PAGER"]=="Y" ? $arResult["NAV_STRING"]:"")?>

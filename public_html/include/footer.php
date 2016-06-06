@@ -137,5 +137,15 @@ false);
         </div>
     </div>
 </div>
+<div id="Detail" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <a href="#" data-dismiss="modal" class="modal__close"><img src="/layout/images/svg/close.svg" alt=""></a>
+            <h2 class="modal__title">Detail</h2>
+
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

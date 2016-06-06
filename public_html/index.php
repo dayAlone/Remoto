@@ -166,27 +166,42 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
       <div class="block__row">
         <div id="newsb" class="block__col">
           <h3 class="hidden-xs">News</h3>
-          <div class="news">
-            <div class="news__scroll">
-              <div class="news__wrap">
-                <div class="news__item"><a href="#" style="background-image: url(/layout/images/news.png)" class="news__image"></a>
-                  <div class="news__content">
-                    <div class="news__date">10.04.2016</div><a href="#" class="news__text">Это текст - размеры брать отсюда. Остальные блоки на страницы слиты в картинки.</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?
+            $APPLICATION->IncludeComponent("bitrix:news.list", "news",
+                array(
+                    "IBLOCK_ID"            => "7",
+                    "NEWS_COUNT"           => "99",
+                    "CLASS"                => "mno",
+                    "ACTIVE"               => false,
+                    "PARENT_SECTION_CODE"  => "news",
+                    "SORT_BY1"             => "SORT",
+                    "SORT_ORDER1"          => "ASC",
+                    "CACHE_TYPE"           => "A",
+                    "SET_TITLE"            => "N"
+                ),
+                false
+            );
+          ?>
+          
         </div>
         <div id="events" class="block__col hidden-xs">
           <h3 class="hidden-xs">Events</h3>
-          <div class="news">
-            <div class="news__scroll">
-              <div class="news__wrap">
-
-              </div>
-            </div>
-          </div>
+          <?
+            $APPLICATION->IncludeComponent("bitrix:news.list", "news",
+                array(
+                    "IBLOCK_ID"            => "7",
+                    "NEWS_COUNT"           => "99",
+                    "CLASS"                => "mno",
+                    "ACTIVE"               => false,
+                    "PARENT_SECTION_CODE"  => "events",
+                    "SORT_BY1"             => "SORT",
+                    "SORT_ORDER1"          => "ASC",
+                    "CACHE_TYPE"           => "A",
+                    "SET_TITLE"            => "N"
+                ),
+                false
+            );
+          ?>
         </div>
       </div>
     </div>

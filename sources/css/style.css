@@ -1814,6 +1814,7 @@ svg g {
 .block--news {
   background-color: #d8e5eb;
   padding-top: 100px;
+  color: #000;
 }
 .block--news .title {
   color: #000;
