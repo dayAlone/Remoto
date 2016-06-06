@@ -2819,6 +2819,7 @@ svg g {
   padding: 0 15px;
   font-size: 14px;
   line-height: 1.3;
+  margin-top: 20px;
   -o-box-flex: 1;
   box-flex: 1;
   -ms-flex: 1 1 calc(100% - 40px);
@@ -3169,14 +3170,32 @@ a.articles__title .articles__name:hover span:hover {
   }
 }
 .modal-content {
-  padding: 35px 40px 30px;
+  padding: 55px 20px 30px;
   border-radius: 0;
   background-color: #edeef0;
 }
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 35px 40px 30px;
+  }
+}
 .modal__close {
   position: absolute;
-  top: 35px;
-  right: 35px;
+  top: 20px;
+  right: 15px;
+}
+.modal__close img {
+  max-width: 30px;
+}
+@media (min-width: 768px) {
+  .modal__close img {
+    max-width: none;
+  }
+}
+@media (min-width: 768px) {
+  .modal__close {
+    right: 35px;
+  }
 }
 .modal__title {
   margin-top: 0;
@@ -3261,9 +3280,6 @@ a.articles__title .articles__name:hover span:hover {
   pointer-events: none;
   right: 20px;
 }
-.form__captcha {
-  background-color: #fff;
-}
 .form__input,
 .form__captcha,
 .form__select,
@@ -3299,6 +3315,9 @@ a.articles__title .articles__name:hover span:hover {
 .form__textarea:focus {
   border-color: #fd9127;
   outline: 0;
+  background-color: #fff;
+}
+.form__captcha {
   background-color: #fff;
 }
 .list {

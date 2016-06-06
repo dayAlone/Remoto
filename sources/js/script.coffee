@@ -291,6 +291,8 @@ $(document).ready ->
 		if $(this).parents('.mnos').length > 0
 			type = 'mnos'
 
+		console.log type
+
 		if $(this).hasMod 'next'
 			goToHighlights index + 1, type
 		else if $(this).hasMod 'prev'

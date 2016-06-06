@@ -8,13 +8,21 @@
         @media (min-width: scr_md)
             width 800px
     &-content
-        padding 35px 40px 30px
+        padding 55px 20px 30px
         border-radius: 0
         background-color #edeef0
+        @media (min-width: scr_sm)
+            padding 35px 40px 30px
     &__close
         position absolute
-        top 35px
-        right 35px
+        top 20px
+        right 15px
+        img
+            max-width 30px
+            @media (min-width: scr_sm)
+                max-width: none
+        @media (min-width: scr_sm)
+            right 35px
     &__title
         margin-top 0
         font-family $gotham
@@ -85,8 +93,7 @@
         top 15px
         pointer-events: none
         right 20px
-    &__captcha
-        background-color white
+
     &__input, &__captcha, &__select, &__textarea
         resize: none
         height: 40px
@@ -110,3 +117,5 @@
             border-color orange
             outline: 0
             background-color #fff
+    &__captcha
+        background-color white
