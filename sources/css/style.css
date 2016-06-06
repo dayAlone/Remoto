@@ -2180,6 +2180,7 @@ svg g {
 @media (max-width: 767px) {
   .highlight__image--right,
   .mno__image--right {
+    max-height: none;
     max-width: calc(100% + 40px);
   }
 }
