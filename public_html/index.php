@@ -170,9 +170,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
             $APPLICATION->IncludeComponent("bitrix:news.list", "news",
                 array(
                     "IBLOCK_ID"            => "7",
-                    "NEWS_COUNT"           => "99",
-                    "CLASS"                => "mno",
-                    "ACTIVE"               => false,
+                    "NEWS_COUNT"           => "99999"
                     "PARENT_SECTION_CODE"  => "news",
                     "SORT_BY1"             => "SORT",
                     "SORT_ORDER1"          => "ASC",
@@ -191,9 +189,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
             $APPLICATION->IncludeComponent("bitrix:news.list", "news",
                 array(
                     "IBLOCK_ID"            => "7",
-                    "NEWS_COUNT"           => "99",
-                    "CLASS"                => "mno",
-                    "ACTIVE"               => false,
+                    "NEWS_COUNT"           => "99999"
                     "PARENT_SECTION_CODE"  => "events",
                     "SORT_BY1"             => "SORT",
                     "SORT_ORDER1"          => "ASC",
