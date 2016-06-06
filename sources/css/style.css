@@ -1969,7 +1969,13 @@ svg g {
     padding-bottom: 0;
   }
 }
-@media (min-width: 992px) {
+.highlight .text,
+.mno .text,
+.highlight__nav,
+.mno__nav {
+  width: 100%;
+}
+@media (min-width: 768px) {
   .highlight .text,
   .mno .text,
   .highlight__nav,
@@ -2012,7 +2018,6 @@ svg g {
   -o-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-width: 100%;
 }
 @media (min-width: 1170px) {
   .highlight__nav,
