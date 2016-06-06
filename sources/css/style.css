@@ -2156,8 +2156,8 @@ svg g {
   .mno__image {
     position: absolute;
     bottom: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(50%);
+    transform: translateX(-50%) translateY(50%);
     left: calc(86.5% - 70px);
     max-width: 38vw;
     max-height: 75vh;
