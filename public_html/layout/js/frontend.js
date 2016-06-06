@@ -30855,19 +30855,20 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       return e.preventDefault();
     });
     return $('.form').submit(function(e) {
-      var data, request;
+      var request;
       e.preventDefault();
       request = $(this).serialize();
-      $.post('/include/send.php', request, function(data) {});
-      console.log(data);
-      data = $.parseJSON(data);
-      if (data.status === "ok") {
-        $('.form').elem('action').hide().addClass('hidden');
-        return $('.form').elem('success').show().removeClass('hidden');
-      } else if (data.status === "error") {
-        $('input[name=captcha_word]').addClass('parsley-error');
-        return getCaptcha();
-      }
+      return $.post('/include/send.php', request, function(data) {
+        console.log(data);
+        data = $.parseJSON(data);
+        if (data.status === "ok") {
+          $('.form').elem('action').hide().addClass('hidden');
+          return $('.form').elem('success').show().removeClass('hidden');
+        } else if (data.status === "error") {
+          $('input[name=captcha_word]').addClass('parsley-error');
+          return getCaptcha();
+        }
+      });
     });
   });
 

@@ -365,13 +365,12 @@ $(document).ready ->
 	$('.form').submit (e)->
 		e.preventDefault()
 		request = $(this).serialize()
-		$.post '/include/send.php', request,
-	        (data) ->
-				console.log data
-				data = $.parseJSON(data)
-				if data.status == "ok"
-					$('.form').elem('action').hide().addClass 'hidden'
-					$('.form').elem('success').show().removeClass 'hidden'
-				else if data.status == "error"
-					$('input[name=captcha_word]').addClass('parsley-error')
-					getCaptcha()
+		$.post '/include/send.php', request, (data) ->
+			console.log data
+			data = $.parseJSON(data)
+			if data.status == "ok"
+				$('.form').elem('action').hide().addClass 'hidden'
+				$('.form').elem('success').show().removeClass 'hidden'
+			else if data.status == "error"
+				$('input[name=captcha_word]').addClass('parsley-error')
+				getCaptcha()
