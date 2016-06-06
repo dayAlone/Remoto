@@ -582,11 +582,14 @@
         max-height: 50vh
         @media (min-width: scr_sm)
             position absolute
-            bottom -15vh
-            transform: translateX(-50%)
+            bottom 50%
+            transform: translateX(-50%) translateY(-50%)
             left calc(86.5% - 70px)
             max-width: 38vw
             max-height: 75vh
+        @media (min-width: scr_md)
+            bottom -15vh
+            transform: translateX(-50%)
         @media (min-width: scr_lg)
             left calc(85% - 70px)
         @media (min-width: 1600px)
