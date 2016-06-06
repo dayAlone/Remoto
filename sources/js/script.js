@@ -1,5 +1,24 @@
 (function() {
-  var checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, markers, moveHighlights, setActiveMarker;
+  var checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, markers, moveHighlights, setActiveMarker, spinOptions;
+
+  spinOptions = {
+    lines: 13,
+    length: 21,
+    width: 2,
+    radius: 24,
+    corners: 0,
+    rotate: 0,
+    direction: 1,
+    color: '#fd9127',
+    speed: 1,
+    trail: 68,
+    shadow: false,
+    hwaccel: false,
+    className: 'spinner',
+    zIndex: 2e9,
+    top: '50%',
+    left: '50%'
+  };
 
   markers = [];
 
@@ -287,7 +306,12 @@
       getCaptcha();
       $('.form__action').show().removeClass('hidden');
       $('.form__success').hide().addClass('hidden');
-      return $('.form__action')[0].reset();
+      if ($(this).find('form').length > 0) {
+        $(this).find('form')[0].reset();
+      }
+      if ($(this).attr('id') === 'Detail') {
+        return new Spinner(spinOptions).spin($(this).find('.text')[0]);
+      }
     });
     $.BEM = new $.BEM.constructor({
       namePattern: '[a-zA-Z0-9-]+',

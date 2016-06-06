@@ -25,7 +25,7 @@ watch        = require 'gulp-watch'
 imageop      = require 'gulp-image-optimization'
 browserSync  = require('browser-sync').create()
 
-plugins  = [ 'jquery', 'bootstrap', 'browser', 'bem', 'scrollbar', 'parsley', 'pagePiling', 'lodash', 'owl' ]
+plugins  = [ 'jquery', 'bootstrap', 'browser', 'bem', 'scrollbar', 'parsley', 'pagePiling', 'lodash', 'spin' ]
 
 layout   = 'public_html/layout'
 sources  = 'sources/'
