@@ -30638,6 +30638,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     return $('.block').each(function(key, el) {
       if ($(el).offset().top <= $('body').scrollTop() && $(el).offset().top + $(el).height() >= $('body').scrollTop()) {
         $('.nav__item').mod('active', false);
+        $('.toolbar__trigger').mod('black', $(el).data('nav') === 'black');
         return $(".nav__item[href*='" + ($(el).attr('id')) + "']").addClass('nav__item--active');
       }
     });
