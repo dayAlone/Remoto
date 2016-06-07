@@ -27890,6 +27890,7 @@ $('#el').spin('flower', 'red');
       }
       text = $(this).find('.text');
       if ($(this).attr('id') === 'Detail') {
+        text.html('');
         new Spinner(spinOptions).spin(text[0]);
       }
       url = $(e.relatedTarget).data('link');
