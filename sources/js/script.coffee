@@ -235,8 +235,16 @@ $(document).ready ->
 		if $(this).find('form').length > 0
 			$(this).find('form')[0].reset()
 
+		text = $(this).find('.text')
+
 		if $(this).attr('id') == 'Detail'
-			new Spinner(spinOptions).spin $(this).find('.text')[0]
+			new Spinner(spinOptions).spin text[0]
+
+		url = $(e.relatedTarget).data 'link'
+		if url
+			$.get url, (data) ->
+				text.html data
+
 
 	$.BEM = new $.BEM.constructor
 		namePattern: '[a-zA-Z0-9-]+',
@@ -264,7 +272,6 @@ $(document).ready ->
 
 	$(window).on 'resize', _.throttle initHighlights('highlights')
 	$(window).on 'resize', _.throttle initHighlights('mnos')
-
 
 	$.getScript 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap&language=en'
 
@@ -391,14 +398,12 @@ $(document).ready ->
 				goToHighlights $(hash).index(), 'mnos'
 				$.fn.pagepiling.moveTo 4
 
-
 	$('.tabs__item').on 'click', (e)->
 		e.preventDefault()
 		$('.block__col').addClass 'hidden-xs'
 		$('.tabs__item').mod 'active', false
 		$(this).mod 'active', true
 		$($(this).attr('href')).removeClass 'hidden-xs'
-
 
 	$('.form__refresh').click (e)->
 		getCaptcha()

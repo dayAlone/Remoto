@@ -176,7 +176,8 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                     "SORT_ORDER1"          => "ASC",
                     "CACHE_TYPE"           => "A",
                     "SET_TITLE"            => "N",
-                    "INCLUDE_SUBSECTIONS"  => "Y"
+                    "INCLUDE_SUBSECTIONS"  => "Y",
+                    "DETAIL_URL"            => '/include/news.php?code=#ELEMENT_CODE#',
                 ),
                 false
             );
@@ -195,7 +196,8 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                     "SORT_ORDER1"          => "ASC",
                     "CACHE_TYPE"           => "A",
                     "SET_TITLE"            => "N",
-                    "INCLUDE_SUBSECTIONS"  => "Y"
+                    "INCLUDE_SUBSECTIONS"  => "Y",
+                    "DETAIL_URL"            => '/include/news.php?code=#ELEMENT_CODE#',
                 ),
                 false
             );

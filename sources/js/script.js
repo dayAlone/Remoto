@@ -303,14 +303,22 @@
   $(document).ready(function() {
     var anchors, hash;
     $('.modal').on('shown.bs.modal', function(e) {
+      var text, url;
       getCaptcha();
       $('.form__action').show().removeClass('hidden');
       $('.form__success').hide().addClass('hidden');
       if ($(this).find('form').length > 0) {
         $(this).find('form')[0].reset();
       }
+      text = $(this).find('.text');
       if ($(this).attr('id') === 'Detail') {
-        return new Spinner(spinOptions).spin($(this).find('.text')[0]);
+        new Spinner(spinOptions).spin(text[0]);
+      }
+      url = $(e.relatedTarget).data('link');
+      if (url) {
+        return $.get(url, function(data) {
+          return text.html(data);
+        });
       }
     });
     $.BEM = new $.BEM.constructor({
