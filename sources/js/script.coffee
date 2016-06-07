@@ -270,6 +270,15 @@ $(document).ready ->
 
 	if $(window).width() > 600
 
+		$('.toolbar__logo').on 'click', (e)->
+			if typeof $.fn.pagepiling.moveTo == 'function'
+				$.fn.pagepiling.moveTo 'home'
+
+			$('.highlights').mod 'active', false
+			$('.mnos').mod 'active', false
+
+			e.preventDefault()
+
 		$('.blocks').pagepiling
 			anchors: anchors
 			sectionSelector: '.block'
@@ -368,18 +377,19 @@ $(document).ready ->
 
 	if window.location.hash
 		hash = window.location.hash
-		if $(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo == 'function'
-			$.fn.pagepiling.moveTo hash.split('#')[1]
+		if hash.length > 0
+			if $(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo == 'function'
+				$.fn.pagepiling.moveTo hash.split('#')[1]
 
-		if $(hash).hasClass('highlight')
-			$('.highlights').mod 'active', true
-			goToHighlights $(hash).index(), 'highlights'
-			$.fn.pagepiling.moveTo 3
+			if $(hash).hasClass('highlight')
+				$('.highlights').mod 'active', true
+				goToHighlights $(hash).index(), 'highlights'
+				$.fn.pagepiling.moveTo 3
 
-		if $(hash).hasClass('mno')
-			$('.mnos').mod 'active', true
-			goToHighlights $(hash).index(), 'mnos'
-			$.fn.pagepiling.moveTo 4
+			if $(hash).hasClass('mno')
+				$('.mnos').mod 'active', true
+				goToHighlights $(hash).index(), 'mnos'
+				$.fn.pagepiling.moveTo 4
 
 
 	$('.tabs__item').on 'click', (e)->

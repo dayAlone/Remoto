@@ -52,7 +52,7 @@
                 &:last-of-type
                     margin-bottom 0
             .open &
-                display block
+                display inline-flex
             &--active
                 box-shadow: inset 0 0 0 2px !important
     &__item
@@ -64,8 +64,11 @@
         white-space no-wrap
         padding: 9px 20px 7px
         border-radius: 30px
+        min-height: 36px
+        display: inline-flex
+        justify-content: center
+        flex-direction: column
         @media (min-width: 1600px)
-            padding: 9px 20px 7px
             font-size 14px
         &:hover
             color red_orange
