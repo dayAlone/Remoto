@@ -322,6 +322,9 @@
         });
       }
     });
+    $('.modal').on('hidden.bs.modal', function(e) {
+      return $(this).find('.text').html('');
+    });
     $.BEM = new $.BEM.constructor({
       namePattern: '[a-zA-Z0-9-]+',
       elemPrefix: '__',

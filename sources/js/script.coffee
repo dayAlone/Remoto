@@ -247,6 +247,9 @@ $(document).ready ->
 				text.html data
 
 
+	$('.modal').on 'hidden.bs.modal', (e)->
+		$(this).find('.text').html ''
+
 	$.BEM = new $.BEM.constructor
 		namePattern: '[a-zA-Z0-9-]+',
 		elemPrefix: '__'
