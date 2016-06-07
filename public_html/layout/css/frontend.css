@@ -6672,6 +6672,7 @@ a.articles__title .articles__name:hover span:hover {
 }
 .news__title {
   font-size: 28px;
+  line-height: 1.1;
   font-weight: 500;
   font-family: 'GothamPro';
   margin-bottom: 20px;
