@@ -75,7 +75,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
             <img src="/layout/images/slide-2-image.png" alt="" class="block__image">
             <div class="text">
                 <h2 class="title"> <span>Now every car<br/></span>can be smart</h2>
-                <p>Remoto WiFi &ndash; a gadget for any car* on the market. It connects a car with a smartphone. It provides Remoto services for car owners. Control the car status. Remote diagnostics. Cloud music. And much more. In addition, it creates WiFi LTE hotspot in the car.</p>
+                <p><?=COption::GetOptionString("grain.customsettings","about") ?></p>
                 <a href="#" class="button button--white">how does it work</a>
                 <br>
                 <a href="#" class="preview">
@@ -90,7 +90,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
         <div class="block__content">
             <div class="text">
                 <h2 class="title"> <span>Main </span>features</h2>
-                <p>Remoto WiFi is a gadget for drivers that provides any car with fast WiFi Internet, music services, and the opportunity to interact with the vehicle remotely using a special app for Android or iPhone (plus smart watches). </p>
+                <p><?=COption::GetOptionString("grain.customsettings","features") ?></p>
                 <?
                     $APPLICATION->IncludeComponent("bitrix:news.list", "features",
                         array(
