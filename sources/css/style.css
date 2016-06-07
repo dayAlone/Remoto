@@ -2235,7 +2235,9 @@ svg g {
   }
 }
 .highlight[data-nav='black'] .title,
-.mno[data-nav='black'] .title {
+.mno[data-nav='black'] .title,
+.highlight[data-nav='black'] .text,
+.mno[data-nav='black'] .text {
   color: #000;
 }
 .highlight[data-nav='black'] .highlight__link,
