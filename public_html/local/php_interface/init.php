@@ -177,11 +177,23 @@ AddEventHandler("main", "OnEndBufferContent", "OnEndBufferContentHandler");
 function OnEndBufferContentHandler(&$content)
 {
 	if(!strstr($_SERVER['SCRIPT_NAME'], 'bitrix/admin')):
-	   $pattern = '/{ICON:(.*?)}/i';
-	   if(preg_match_all($pattern, $content, $matches, false, false)):
-	   	foreach ($matches[0] as $key => $val)
-	   		$content = str_replace($val, "<div class='icon'>".svg($matches[1][$key])."</div>", $content);
-	   endif;
+	$pattern = '/{GALLERY:(\d*|\s\d*)}/i';
+	if(preg_match($pattern, $content, $matches, false, false)):
+		ob_start();
+			global $APPLICATION;
+		$APPLICATION->IncludeComponent("bitrix:news.detail","slider", Array(
+			"IBLOCK_ID"     => "8",
+			"ELEMENT_ID"    => $matches[1],
+			"CHECK_DATES"   => "N",
+			"IBLOCK_TYPE"   => "content",
+			"SET_TITLE"     => "N",
+			"PROPERTY_CODE" => Array("IMAGES"),
+			"CACHE_TYPE"    => "A",
+			"CACHE_TIME"    => "3600",
+		));
+			$gallery = ob_get_contents();
+	ob_end_clean();
+		$content = str_replace($matches[0], $gallery, $content);
 	endif;
 }
 ?>

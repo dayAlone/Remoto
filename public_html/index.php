@@ -138,7 +138,9 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
         </div>
     </div>
     <div id="specs" data-nav="black" data-logo="color" data-dots="black" class="block block--specs">
-        <div class="block__content"><img src="/layout/images/device.jpg" alt="" class="block__image">
+        <div class="block__content">
+            {GALLERY:56}
+            
             <h2 class="title hidden-md hidden-lg">technical <span>specifications</span></h2>
             <div class="text">
                 <h2 class="title visible-md visible-lg">technical <span>specifications</span></h2>
@@ -159,53 +161,53 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
             </div>
         </div>
     </div>
-  <div id="news" data-nav="black" data-logo="color" data-dots="black" class="block block--news">
-    <div class="block__content">
-      <h2 class="title">what’s going on</h2>
-      <div class="tabs visible-xs"><a href="#newsb" class="tabs__item tabs__item--active">News</a><a href="#events" class="tabs__item">Events</a></div>
-      <div class="block__row">
-        <div id="newsb" class="block__col">
-          <h3 class="hidden-xs">News</h3>
-          <?
-            $APPLICATION->IncludeComponent("bitrix:news.list", "news",
-                array(
-                    "IBLOCK_ID"            => "7",
-                    "NEWS_COUNT"           => "99999",
-                    "PARENT_SECTION_CODE"  => "news",
-                    "SORT_BY1"             => "SORT",
-                    "SORT_ORDER1"          => "ASC",
-                    "CACHE_TYPE"           => "A",
-                    "SET_TITLE"            => "N",
-                    "INCLUDE_SUBSECTIONS"  => "Y",
-                    "DETAIL_URL"            => '/include/news.php?code=#ELEMENT_CODE#',
-                ),
-                false
-            );
-          ?>
+    <div id="news" data-nav="black" data-logo="color" data-dots="black" class="block block--news">
+        <div class="block__content">
+          <h2 class="title">what’s going on</h2>
+          <div class="tabs visible-xs"><a href="#newsb" class="tabs__item tabs__item--active">News</a><a href="#events" class="tabs__item">Events</a></div>
+          <div class="block__row">
+            <div id="newsb" class="block__col">
+              <h3 class="hidden-xs">News</h3>
+              <?
+                $APPLICATION->IncludeComponent("bitrix:news.list", "news",
+                    array(
+                        "IBLOCK_ID"            => "7",
+                        "NEWS_COUNT"           => "99999",
+                        "PARENT_SECTION_CODE"  => "news",
+                        "SORT_BY1"             => "SORT",
+                        "SORT_ORDER1"          => "ASC",
+                        "CACHE_TYPE"           => "A",
+                        "SET_TITLE"            => "N",
+                        "INCLUDE_SUBSECTIONS"  => "Y",
+                        "DETAIL_URL"            => '/include/news.php?code=#ELEMENT_CODE#',
+                    ),
+                    false
+                );
+              ?>
 
+            </div>
+            <div id="events" class="block__col hidden-xs">
+              <h3 class="hidden-xs">Events</h3>
+              <?
+                $APPLICATION->IncludeComponent("bitrix:news.list", "news",
+                    array(
+                        "IBLOCK_ID"            => "7",
+                        "NEWS_COUNT"           => "99999",
+                        "PARENT_SECTION_CODE"  => "events",
+                        "SORT_BY1"             => "SORT",
+                        "SORT_ORDER1"          => "ASC",
+                        "CACHE_TYPE"           => "A",
+                        "SET_TITLE"            => "N",
+                        "INCLUDE_SUBSECTIONS"  => "Y",
+                        "DETAIL_URL"            => '/include/news.php?code=#ELEMENT_CODE#',
+                    ),
+                    false
+                );
+              ?>
+            </div>
+          </div>
         </div>
-        <div id="events" class="block__col hidden-xs">
-          <h3 class="hidden-xs">Events</h3>
-          <?
-            $APPLICATION->IncludeComponent("bitrix:news.list", "news",
-                array(
-                    "IBLOCK_ID"            => "7",
-                    "NEWS_COUNT"           => "99999",
-                    "PARENT_SECTION_CODE"  => "events",
-                    "SORT_BY1"             => "SORT",
-                    "SORT_ORDER1"          => "ASC",
-                    "CACHE_TYPE"           => "A",
-                    "SET_TITLE"            => "N",
-                    "INCLUDE_SUBSECTIONS"  => "Y",
-                    "DETAIL_URL"            => '/include/news.php?code=#ELEMENT_CODE#',
-                ),
-                false
-            );
-          ?>
-        </div>
-      </div>
     </div>
-  </div>
 
     <div id="contacts" data-nav="white" data-logo="white" class="block block--contacts">
         <div class="block__content">
