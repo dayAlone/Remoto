@@ -4594,12 +4594,19 @@ svg g {
   }
 }
 .block--highlights h5 {
-  font-size: 11px;
   text-transform: uppercase;
   color: #fd9127;
   letter-spacing: 5px;
   margin: 25px 0 20px;
   font-family: 'GothamPro';
+  font-size: 9px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .block--highlights h5 {
+    font-size: 11px;
+    text-align: left;
+  }
 }
 .block--highlights p {
   font-size: 16px;
@@ -5004,15 +5011,15 @@ svg g {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 @media (min-width: 768px) {
   .highlight,
   .mno {
     padding: 70px 40px;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
   }
 }
 @media (min-width: 992px) {
