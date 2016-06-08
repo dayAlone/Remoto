@@ -1322,6 +1322,13 @@ svg g {
   min-height: -moz-min-content;
   min-height: min-content;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .block__content,
+  .highlight__content,
+  .mno__content {
+    max-height: 600px;
+  }
+}
 .block__image,
 .highlight__image,
 .mno__image {
@@ -2389,11 +2396,16 @@ svg g {
 @media (min-width: 768px) {
   .highlight__image--right,
   .mno__image--right {
+    left: auto;
+    right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .highlight__image--right,
+  .mno__image--right {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
-    left: auto;
-    right: 0;
     bottom: 0;
   }
 }

@@ -99,6 +99,8 @@
         position relative
         align-items: flex-start
         min-height: min-content
+        @media (min-width: scr_sm) and (max-width: scr_md - 1px)
+            max-height: 600px
     &__image
         max-width: 100%
         @media (min-width: scr_sm)
@@ -642,9 +644,12 @@
                 max-height: none
                 max-width: calc(100% + 40px)
             @media (min-width: scr_sm)
-                transform none
                 left auto
                 right 0
+            @media (min-width: scr_md)
+                transform none
+
+
                 bottom 0
         &--bigger
             @media (min-width: scr_sm)
