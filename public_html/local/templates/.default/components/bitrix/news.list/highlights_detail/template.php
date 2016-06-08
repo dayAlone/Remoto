@@ -52,10 +52,16 @@ $articles = function($a) {
                         <div class="articles articles--padding <?=implode(' ', array_map($articles, $item['PROPERTIES']['FEATURES_TYPES']['VALUE_XML_ID']));?>">
                             <?foreach($item['PROPERTIES']['FEATURES']['VALUE'] as $feature):
                                 $feature = $arResult['FEATURES'][$feature];
+                                $big = CFile::GetPath($feature['PREVIEW_PICTURE']);
+                                $small = CFile::ResizeImageGet($feature['PREVIEW_PICTURE'], Array("width" => 40, "height" => 40), BX_RESIZE_IMAGE_PROPORTIONAL, false, false, false, 70);
                                 ?>
                                 <div class="articles__item">
                                     <div href="#" class="articles__title">
-                                        <div class="articles__icon"><img src="<?=CFile::GetPath($feature['PREVIEW_PICTURE'])?>"></div>
+                                        <div class="articles__icon">
+                                            <img
+                                                src="<?=$small['src']?>"
+                                                srcset="<?=$small['src']?> 1x, <?=$big?> 2x">
+                                        </div>
                                         <div class="articles__name"> <span><?=$feature['NAME']?></span></div>
                                     </div>
                                     <? if (strlen($feature['PREVIEW_TEXT']) > 0):?>
