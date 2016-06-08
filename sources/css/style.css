@@ -3692,6 +3692,9 @@ a.articles__title .articles__name:hover span:hover {
   line-height: 1.2;
   color: #000;
 }
+.news__text:focus {
+  color: #000;
+}
 .news__text:hover {
   color: #fd9127;
 }
