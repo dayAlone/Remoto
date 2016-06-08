@@ -1526,6 +1526,11 @@ svg g {
     align-items: center;
   }
 }
+@media (min-width: 1600px) {
+  .block--about .block__image {
+    max-width: 35%;
+  }
+}
 .block--about .text {
   color: #000;
 }
@@ -1538,6 +1543,56 @@ svg g {
 @media (min-width: 1170px) {
   .block--about .text {
     max-width: 45%;
+  }
+}
+@media (min-width: 1600px) {
+  .block--about .text {
+    width: 65%;
+    max-width: 65%;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .block--about .text__content {
+    -o-box-flex: 3;
+    box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+  }
+  .block--about .text .previews {
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -o-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-left: 1px solid #ffc993;
+    padding-left: 35px;
+  }
+  .block--about .text .previews .preview {
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    max-width: 161px;
+    margin-top: 0;
+  }
+  .block--about .text .previews .preview + .preview {
+    margin-top: 30px;
   }
 }
 .block--about .text p {

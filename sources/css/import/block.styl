@@ -226,6 +226,9 @@
             @media (min-width: scr_sm)
                 flex-direction: row
                 align-items: center
+        & ^[0]__image
+            @media (min-width: 1600px)
+                max-width: 35%
         .text
             color black
             @media (min-width: scr_sm)
@@ -233,14 +236,36 @@
                 padding-left 40px
             @media (min-width: scr_lg)
                 max-width: 45%
+            @media (min-width: 1600px)
+                width: 65%
+                max-width: 65%
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &__content
+                    flex: 3
+                .previews
+                    flex: 1
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    border-left 1px solid #ffc993
+                    padding-left 35px
+                    .preview
+                        flex 1
+                        width 100%
+                        max-width: 161px
+                        margin-top 0
+                        & + .preview
+                            margin-top 30px
             p
-
                 font-size 16px
                 margin-bottom 25px
                 @media (min-width: scr_sm)
                     margin-bottom 40px
                 @media (min-width: scr_lg)
                     font-size 20px
+
     &--highlights
         background-color #0c0d0d
         background-image url(/layout/images/highlights-image.jpg)

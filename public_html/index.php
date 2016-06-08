@@ -74,15 +74,18 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
         <div class="block__content">
             <img src="/layout/images/slide-2-image.png" alt="" class="block__image">
             <div class="text">
-                <h2 class="title"> <span>Now every car<br/></span>can be smart</h2>
-                <p><?=COption::GetOptionString("grain.customsettings","about") ?></p>
-                <a href="#" class="button button--white">how does it work</a>
-                <br>
-                <a href="#" class="preview">
-                    <div style="background-image: url(/layout/images/preview-inf.jpg)" class="preview__image"></div>
-                    <div class="preview__text">infractructure of&nbsp;remoto wifi</div>
-                </a>
-
+                <div class='text__content'>
+                    <h2 class="title"> <span>Now every car<br/></span>can be smart</h2>
+                    <p><?=COption::GetOptionString("grain.customsettings","about") ?></p>
+                    <a href="#" class="button button--white">how does it work</a>
+                    <br>
+                </div>
+                <div class='previews'>
+                    <a href="#" class="preview">
+                        <div style="background-image: url(/layout/images/preview-inf.jpg)" class="preview__image"></div>
+                        <div class="preview__text">infractructure of&nbsp;remoto wifi</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -140,7 +143,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
     <div id="specs" data-nav="black" data-logo="color" data-dots="black" class="block block--specs">
         <div class="block__content">
             {GALLERY:56}
-            
+
             <h2 class="title hidden-md hidden-lg">technical <span>specifications</span></h2>
             <div class="text">
                 <h2 class="title visible-md visible-lg">technical <span>specifications</span></h2>
