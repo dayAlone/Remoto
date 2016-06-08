@@ -4069,7 +4069,13 @@ svg g {
     padding: 0 70px;
   }
 }
-@media (min-width: 992px) and (max-height: 760px) {
+@media (min-width: 992px) and (max-height: 780px) {
+  .highlights__nav,
+  .mnos__nav {
+    display: none;
+  }
+}
+@media (min-width: 1600px) and (max-height: 830px) {
   .highlights__nav,
   .mnos__nav {
     display: none;
@@ -4705,6 +4711,7 @@ svg g {
 @media (min-width: 1170px) {
   .block--mno .chip {
     width: 480px;
+    max-width: 40%;
     margin-right: 40px;
   }
 }
@@ -5566,7 +5573,7 @@ svg g {
 }
 @media (min-width: 1170px) {
   .title {
-    font-size: 50px;
+    font-size: 46px;
   }
 }
 @media (min-width: 1600px) {
