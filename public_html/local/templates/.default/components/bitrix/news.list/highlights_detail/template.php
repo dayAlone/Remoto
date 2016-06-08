@@ -31,9 +31,15 @@ $articles = function($a) {
                         echo "background-color: ".$item['PROPERTIES']['BG_COLOR']['VALUE'].";";
                     endif;
                 ?>">
-                <img src="<?=$item['DETAIL_PICTURE']['SRC']?>" class="<?=$class?>__image hidden-xs <?=implode(' ', array_map($image, $item['PROPERTIES']['IMAGE']['VALUE_XML_ID']));?>">
+                <img
+                    src="<?=$item['DETAIL_PICTURE']['SMALL']?>"
+                    srcset="<?=$item['DETAIL_PICTURE']['SMALL']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"
+                    class="<?=$class?>__image hidden-xs <?=implode(' ', array_map($image, $item['PROPERTIES']['IMAGE']['VALUE_XML_ID']));?>">
                 <div class="<?=$class?>__content">
-                    <img src="<?=$item['DETAIL_PICTURE']['SRC']?>" class="<?=$class?>__image visible-xs <?=implode(' ', array_map($image, $item['PROPERTIES']['IMAGE']['VALUE_XML_ID']));?>">
+                    <img
+                        src="<?=$item['DETAIL_PICTURE']['SMALL']?>"
+                        srcset="<?=$item['DETAIL_PICTURE']['SMALL']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"
+                        class="<?=$class?>__image visible-xs <?=implode(' ', array_map($image, $item['PROPERTIES']['IMAGE']['VALUE_XML_ID']));?>">
                     <h2 class="title" style="<?
                         if (strlen($item['PROPERTIES']['TITLE_COLOR']['VALUE']) > 0):
                             echo "color: ".$item['PROPERTIES']['TITLE_COLOR']['VALUE'].";";
