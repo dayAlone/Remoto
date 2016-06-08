@@ -136,7 +136,7 @@ gulp.task 'css_stylus', ->
 	.pipe stylus
 		use: nib()
 	.pipe autoprefixer
-        browsers: ['last 2 versions'],
+        browsers: ['last 4 versions'],
         cascade: false
 	.pipe gulp.dest path.css.sources
 
