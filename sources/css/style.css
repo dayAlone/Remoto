@@ -1257,6 +1257,14 @@ svg g {
   display: -ms-flexbox !important;
   display: box !important;
   display: flex !important;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   overflow: hidden;
   position: relative;
   min-height: 100vh;
