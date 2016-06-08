@@ -8,6 +8,7 @@ coffee       = require 'gulp-coffee'
 concat       = require 'gulp-concat'
 cssmin       = require 'gulp-cssnano'
 data         = require 'gulp-data'
+csso         = require 'gulp-csso'
 gutil        = require 'gulp-util'
 livereload   = require 'gulp-livereload'
 less         = require 'gulp-less'
@@ -147,13 +148,8 @@ gulp.task 'css_front', ['css_stylus'], ->
 
 gulp.task 'css_mini', ->
 	gulp.src [ "#{path.css.frontend}/frontend.css"]
+	.pipe(csso())
 	.pipe gulp.dest path.css.frontend
-
-	.pipe csscomb()
-
-    .pipe cmq
-      log: true
-	#.pipe cssmin()
 
 
 

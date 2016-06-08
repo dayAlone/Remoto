@@ -146,6 +146,8 @@ if (typeof Symbol !== "function") {
     if (supportsAccessors) {
       defProp(SymbolProto, xSymbol.toStringTag, defValue("Symbol", { c: true }));
     }
+
+    var Symbol = xSymbol;
 }
 
 /*!
