@@ -1558,6 +1558,7 @@ svg g {
     -o-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding-right: 35px;
   }
   .block--about .text__content {
     -o-box-flex: 3;
