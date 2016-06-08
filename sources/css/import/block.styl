@@ -74,8 +74,7 @@
     background-position center center
     background-repeat no-repeat
     display: flex !important
-    flex-direction: column
-    justify-content: center
+
     overflow hidden
 
     position relative
@@ -99,8 +98,7 @@
         position relative
         align-items: flex-start
         min-height: min-content
-        @media (min-width: scr_sm) and (max-width: scr_md - 1px)
-            max-height: 600px
+
     &__image
         max-width: 100%
         @media (min-width: scr_sm)
@@ -508,6 +506,8 @@
     max-height: 100vh
     min-width: 100vw
     padding: 70px 20px
+    flex-direction: column
+    justify-content: center
     @media (min-width: scr_sm)
         padding: 70px 40px
     @media (min-width: scr_md)
@@ -528,6 +528,8 @@
         @media (min-width: scr_sm)
             margin-bottom 0
             padding-bottom 0
+        @media (min-width: scr_sm) and (max-width: scr_md - 1px)
+            max-height: 600px
     .text, &__nav
         width: 100%
         @media (min-width: scr_sm)
