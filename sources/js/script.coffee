@@ -321,8 +321,6 @@ $(document).ready ->
 			suppressScrollX: true
 			includePadding: true
 
-
-
 	else
 		$('body').on 'scroll', _.throttle checkScroll, 300
 

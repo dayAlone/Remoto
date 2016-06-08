@@ -1,4 +1,7 @@
 {
+    "symbol":{
+       "js":"/es-symbol/dist/symbol.js"
+    },
    "bem":{
       "js":"/jquery.bem/jquery.bem.js"
    },
