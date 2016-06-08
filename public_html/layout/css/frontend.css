@@ -5259,7 +5259,7 @@ svg g {
     -webkit-transform: translateX(-50%) translateY(50%);
     -ms-transform: translateX(-50%) translateY(50%);
     transform: translateX(-50%) translateY(50%);
-    left: calc(86.5% - 70px);
+    left: calc(89% - 70px);
     max-width: 38vw;
     max-height: 75vh;
   }
@@ -5307,6 +5307,9 @@ svg g {
   .mno__image--right {
     left: auto;
     right: 0;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
   }
 }
 @media (min-width: 992px) {
