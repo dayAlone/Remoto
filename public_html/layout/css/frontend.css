@@ -4437,7 +4437,7 @@ svg g {
 }
 @media (min-width: 1600px) {
   .block--about .block__image {
-    max-width: 35%;
+    max-width: 40%;
   }
 }
 .block--about .text {
@@ -4456,8 +4456,8 @@ svg g {
 }
 @media (min-width: 1600px) {
   .block--about .text {
-    width: 65%;
-    max-width: 65%;
+    width: 60%;
+    max-width: 60%;
     display: -ms-flexbox;
     display: box;
     display: flex;
@@ -4491,6 +4491,7 @@ svg g {
     justify-content: center;
     border-left: 1px solid #ffc993;
     padding-left: 35px;
+    min-width: 161px;
   }
   .block--about .text .previews .preview {
     -o-box-flex: 1;
