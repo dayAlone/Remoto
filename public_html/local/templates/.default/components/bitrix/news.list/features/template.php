@@ -11,7 +11,7 @@
         <div class="features__icon">
             <img
                 src="<?=$item['PREVIEW_PICTURE']['SMALL']['src']?>"
-                srcset="<?=$item['PREVIEW_PICTURE']['SMALL']['src']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"/>
+                srcset="<?=$item['PREVIEW_PICTURE']['SMALL']['src']?> 1x, <?=$item['PREVIEW_PICTURE']['SRC']?> 2x"/>
         </div>
         <? if (strlen($item['PREVIEW_TEXT']) > 0): ?>
         <div class="features__content">
