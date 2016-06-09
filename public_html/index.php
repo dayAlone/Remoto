@@ -77,11 +77,11 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                 <div class='text__content'>
                     <h2 class="title"> <span>Now every car<br/></span>can be smart</h2>
                     <p><?=COption::GetOptionString("grain.customsettings","about") ?></p>
-                    <a href="#" class="button button--white">how does it work</a>
+                    <a href="#How" data-toggle='modal' class="button button--white">how does it work</a>
                     <br>
                 </div>
                 <div class='previews'>
-                    <a href="#" class="preview">
+                    <a href="#Infractructure" data-toggle='modal' class="preview">
                         <div style="background-image: url(/layout/images/preview-inf.jpg)" class="preview__image"></div>
                         <div class="preview__text">infractructure of&nbsp;remoto wifi</div>
                     </a>
