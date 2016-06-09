@@ -367,13 +367,14 @@ $(document).ready ->
 	$('.toolbar .nav__item, .nav--modal .nav__item').on 'click', (e)->
 		if typeof $.fn.pagepiling.moveTo == 'function'
 			$.fn.pagepiling.moveTo $(this).attr('href').split('#')[1]
-			if $('.highlights').hasMod 'active'
-				$('.highlights').mod 'active', false
-			if $('.mnos').hasMod 'active'
-				$('.mnos').mod 'active', false
 			e.preventDefault()
 		$('body').removeClass 'open'
+		if $('.highlights').hasMod 'active'
+			$('.highlights').mod 'active', false
+		if $('.mnos').hasMod 'active'
+			$('.mnos').mod 'active', false
 
+			
 	$('.list__title').click (e)->
 		index = $(this).parents('.list__item').index()
 		setActiveMarker index + 1

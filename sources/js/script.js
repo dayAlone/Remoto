@@ -439,15 +439,15 @@
     $('.toolbar .nav__item, .nav--modal .nav__item').on('click', function(e) {
       if (typeof $.fn.pagepiling.moveTo === 'function') {
         $.fn.pagepiling.moveTo($(this).attr('href').split('#')[1]);
-        if ($('.highlights').hasMod('active')) {
-          $('.highlights').mod('active', false);
-        }
-        if ($('.mnos').hasMod('active')) {
-          $('.mnos').mod('active', false);
-        }
         e.preventDefault();
       }
-      return $('body').removeClass('open');
+      $('body').removeClass('open');
+      if ($('.highlights').hasMod('active')) {
+        $('.highlights').mod('active', false);
+      }
+      if ($('.mnos').hasMod('active')) {
+        return $('.mnos').mod('active', false);
+      }
     });
     $('.list__title').click(function(e) {
       var index;
