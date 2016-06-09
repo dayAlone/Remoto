@@ -154,7 +154,7 @@ false);
         <div class="modal-content">
             <a href="#" data-dismiss="modal" class="modal__close"><img src="/layout/images/svg/close.svg" alt=""></a>
             <h2 class="modal__title">INFRACTRUCTURE OF REMOTO WIFI</h2>
-
+                <img src="/layout/images/infractructure.jpg" alt="" />
             </div>
         </div>
     </div>
@@ -165,7 +165,7 @@ false);
         <div class="modal-content">
             <a href="#" data-dismiss="modal" class="modal__close"><img src="/layout/images/svg/close.svg" alt=""></a>
             <h2 class="modal__title">How does it work</h2>
-
+                <img src="/layout/images/how.jpg" alt="" />
             </div>
         </div>
     </div>
