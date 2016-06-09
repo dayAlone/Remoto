@@ -5090,6 +5090,28 @@ svg g {
 .highlight__content p b,
 .mno__content p b {
   font-weight: 900;
+  text-transform: uppercase;
+  font-size: 102%;
+}
+.highlight__content big,
+.mno__content big {
+  font-size: 18px;
+  font-family: 'GothamPro';
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width: 1170px) {
+  .highlight__content big,
+  .mno__content big {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .highlight__content big,
+  .mno__content big {
+    font-size: 23px;
+  }
 }
 .highlight .text,
 .mno .text,
@@ -5234,26 +5256,6 @@ svg g {
 .highlight__link:hover,
 .mno__link:hover {
   color: #fd9127;
-}
-.highlight big,
-.mno big {
-  font-size: 18px;
-  font-family: 'GothamPro';
-  margin-bottom: 15px;
-  display: inline-block;
-  width: 100%;
-}
-@media (min-width: 1170px) {
-  .highlight big,
-  .mno big {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1600px) {
-  .highlight big,
-  .mno big {
-    font-size: 23px;
-  }
 }
 .highlight__list,
 .mno__list {
