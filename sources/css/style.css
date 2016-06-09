@@ -2307,6 +2307,10 @@ svg g {
 .highlight big,
 .mno big {
   font-size: 18px;
+  font-family: 'GothamPro';
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 100%;
 }
 @media (min-width: 1170px) {
   .highlight big,
@@ -2325,6 +2329,27 @@ svg g {
   padding-left: 0;
   list-style: none;
   font-family: 'GothamPro';
+}
+@media (min-width: 992px) {
+  .highlight__list--half,
+  .mno__list--half {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .highlight__list--half li,
+  .mno__list--half li {
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+  }
 }
 .highlight__list li,
 .mno__list li {

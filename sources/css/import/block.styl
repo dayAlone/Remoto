@@ -603,6 +603,10 @@
             color orange
     big
         font-size 18px
+        font-family: $gotham
+        margin-bottom 15px
+        display inline-block
+        width: 100%
         @media (min-width: scr_lg)
             font-size 20px
         @media (min-width: 1600px)
@@ -611,6 +615,12 @@
         padding-left 0
         list-style none
         font-family: $gotham
+        &--half
+            @media (min-width: scr_md)
+                display flex
+                justify-content: space-between
+                li
+                    flex: 1 1 50%
         li
 
             margin-bottom 15px
