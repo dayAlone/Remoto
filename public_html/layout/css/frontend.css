@@ -5073,7 +5073,7 @@ svg g {
 .mno__content p {
   font-size: 14px;
   line-height: 1.3;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 @media (min-width: 1170px) {
   .highlight__content p,
@@ -5086,6 +5086,10 @@ svg g {
   .mno__content p {
     font-size: 17px;
   }
+}
+.highlight__content p b,
+.mno__content p b {
+  font-weight: 900;
 }
 .highlight .text,
 .mno .text,
@@ -5415,6 +5419,10 @@ svg g {
 .highlight[data-nav='black'] .text,
 .mno[data-nav='black'] .text {
   color: #000;
+}
+.highlight[data-nav='black'] .text p,
+.mno[data-nav='black'] .text p {
+  color: rgba(0,0,0,0.7);
 }
 .highlight[data-nav='black'] .highlight__link,
 .mno[data-nav='black'] .mno__link {

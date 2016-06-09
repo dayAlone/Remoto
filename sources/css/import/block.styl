@@ -543,7 +543,9 @@
                 font-size 15px
             @media (min-width: 1600px)
                 font-size 17px
-            margin-bottom 15px
+            margin-bottom 20px
+            b
+                font-weight 900
     .text, &__nav
         width: 100%
         @media (min-width: scr_sm)
@@ -695,6 +697,9 @@
     &[data-nav='black']
         .title, .text
             color black
+        .text
+            p
+                color alpha(black, .7)
     &[data-nav='black']
         & ^[0]__link
             color black
