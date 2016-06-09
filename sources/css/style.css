@@ -2337,6 +2337,12 @@ svg g {
     display: -ms-flexbox;
     display: box;
     display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -o-box-pack: justify;
     -ms-flex-pack: justify;
     -webkit-justify-content: space-between;
