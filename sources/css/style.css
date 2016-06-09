@@ -2304,6 +2304,22 @@ svg g {
 .mno__link:hover {
   color: #fd9127;
 }
+.highlight big,
+.mno big {
+  font-size: 18px;
+}
+@media (min-width: 1170px) {
+  .highlight big,
+  .mno big {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .highlight big,
+  .mno big {
+    font-size: 23px;
+  }
+}
 .highlight__list,
 .mno__list {
   padding-left: 0;
