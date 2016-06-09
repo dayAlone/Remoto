@@ -2515,6 +2515,10 @@ svg g {
 .mno[data-nav='black'] .text p {
   color: rgba(0,0,0,0.7);
 }
+.highlight[data-nav='black'] .text p big,
+.mno[data-nav='black'] .text p big {
+  color: #000;
+}
 .highlight[data-nav='black'] .highlight__link,
 .mno[data-nav='black'] .mno__link {
   color: #000;
