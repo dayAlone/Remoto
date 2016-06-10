@@ -49,7 +49,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
         <div class="block__content">
             <h3><?=COption::GetOptionString("grain.customsettings","main_title") ?></h3>
             <h1>Remoto WiFi</h1>
-            <p><?=COption::GetOptionString("grain.customsettings","main_text") ?>)</p>
+            <p><?=COption::GetOptionString("grain.customsettings","main_text") ?></p>
             <a href="#about" class="button">learn more</a>
             <a href="http://www.bright-box.eu" target="_blank"><img src="/layout/images/bright.png" width="171" class="bright"></a>
             <?
