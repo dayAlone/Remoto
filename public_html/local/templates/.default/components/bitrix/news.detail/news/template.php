@@ -2,7 +2,7 @@
 $item = $arResult;
 $s = end($arResult['SECTION']['PATH']);
 ?>
-	<div class="news__date">25.03.2016</div>
+	<?if(strlen($item['ACTIVE_FROM']) > 0):?><div class="news__date"><?=$item['ACTIVE_FROM']?></div><?endif;?>
 	<div class="news__title news__title--big"><?=$item['NAME']?></div>
 	<div class="text__divider"></div>
 	<?if($item["DETAIL_PICTURE"]):?>

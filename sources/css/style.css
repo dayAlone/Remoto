@@ -3600,8 +3600,18 @@ a.articles__title .articles__name:hover span:hover {
   font-family: 'GothamPro';
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 45px;
+  font-size: 25px;
   margin-bottom: 35px;
+}
+@media (min-width: 768px) {
+  .modal__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .modal__title {
+    font-size: 45px;
+  }
 }
 .form .parsley-errors-list {
   display: none;

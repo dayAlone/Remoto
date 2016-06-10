@@ -83,7 +83,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                 <div class='previews'>
                     <a href="#Infractructure" data-toggle='modal' class="preview">
                         <div style="background-image: url(/layout/images/preview-inf.jpg)" class="preview__image"></div>
-                        <div class="preview__text">infractructure of&nbsp;remoto wifi</div>
+                        <div class="preview__text">Infrastructure of&nbsp;remoto wifi</div>
                     </a>
                 </div>
             </div>
