@@ -6364,6 +6364,7 @@ a.articles__title .articles__name:hover span:hover {
 @media (min-width: 1170px) {
   .spec__list {
     font-size: 14px;
+    line-height: 18px;
   }
 }
 .spec__list li {
