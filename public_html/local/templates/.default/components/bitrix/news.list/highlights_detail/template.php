@@ -23,7 +23,7 @@ $articles = function($a) {
                 class="<?=$class?> <?=$class?>--<?=$item['CODE']?>"
                 <? if ($item['PROPERTIES']['LOGO']['VALUE_XML_ID'] == 'color'): ?>data-logo='color'<?endif;?>
                 <? if ($item['PROPERTIES']['NAV']['VALUE_XML_ID'] == 'black'): ?>data-nav='black'<?endif;?>
-                style="<?
+                pre-style="<?
                     if (intval($item['PROPERTIES']['BG_IMAGE']['VALUE']) > 0):
                         echo "background-image: url(".CFile::GetPath($item['PROPERTIES']['BG_IMAGE']['VALUE']).");";
                     endif;
@@ -33,15 +33,15 @@ $articles = function($a) {
                 ?>">
                 <? if ($item['DETAIL_PICTURE']['SMALL']):?>
                     <img
-                        src="<?=$item['DETAIL_PICTURE']['SMALL']['src']?>"
-                        srcset="<?=$item['DETAIL_PICTURE']['SMALL']['src']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"
+                        pre-src="<?=$item['DETAIL_PICTURE']['SMALL']['src']?>"
+                        pre-srcset="<?=$item['DETAIL_PICTURE']['SMALL']['src']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"
                         class="<?=$class?>__image hidden-xs <?=implode(' ', array_map($image, $item['PROPERTIES']['IMAGE']['VALUE_XML_ID']));?>">
                 <?endif;?>
                 <div class="<?=$class?>__content">
                     <? if ($item['DETAIL_PICTURE']['SMALL']):?>
                         <img
-                            src="<?=$item['DETAIL_PICTURE']['SMALL']['src']?>"
-                            srcset="<?=$item['DETAIL_PICTURE']['SMALL']['src']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"
+                            pre-src="<?=$item['DETAIL_PICTURE']['SMALL']['src']?>"
+                            pre-srcset="<?=$item['DETAIL_PICTURE']['SMALL']['src']?> 1x, <?=$item['DETAIL_PICTURE']['SRC']?> 2x"
                             class="<?=$class?>__image visible-xs <?=implode(' ', array_map($image, $item['PROPERTIES']['IMAGE']['VALUE_XML_ID']));?>">
                     <?endif;?>
                     <h2 class="title" style="<?

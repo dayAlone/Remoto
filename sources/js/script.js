@@ -1,5 +1,5 @@
 (function() {
-  var checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, markers, moveHighlights, setActiveMarker, spinOptions;
+  var activeHighlights, checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
 
   spinOptions = {
     lines: 13,
@@ -300,6 +300,19 @@
     return moveHighlights(true, type);
   };
 
+  activeHighlights = function(type) {
+    $('.' + type).mod('active', true);
+    return initImages($('.' + type));
+  };
+
+  initImages = function(block) {
+    return $.each(['pre-srcset', 'pre-src', 'pre-style'], function(key, el) {
+      return block.find("[" + el + "]").each(function(key, el) {
+        return $(el).attr(el.replace('pre-', ''), $(el).attr(el));
+      });
+    });
+  };
+
   $(document).ready(function() {
     var anchors, hash;
     $('.modal').on('shown.bs.modal', function(e) {
@@ -423,7 +436,7 @@
       return e.preventDefault();
     });
     $('a.features__item').on('click', function(e) {
-      $('.highlights').mod('active', true);
+      activeHighlights('highlights');
       goToHighlights($($(this).attr('href')).index(), 'highlights');
       return e.preventDefault();
     });
@@ -431,7 +444,7 @@
       var el;
       el = $($(this).attr('href'));
       if (el.hasClass('mno')) {
-        $('.mnos').mod('active', true);
+        activeHighlights('mnos');
         goToHighlights($($(this).attr('href')).index(), 'mnos');
         return e.preventDefault();
       }
@@ -468,12 +481,12 @@
           $.fn.pagepiling.moveTo(hash.split('#')[1]);
         }
         if ($(hash).hasClass('highlight')) {
-          $('.highlights').mod('active', true);
+          activeHighlights('highlights');
           goToHighlights($(hash).index(), 'highlights');
           $.fn.pagepiling.moveTo(3);
         }
         if ($(hash).hasClass('mno')) {
-          $('.mnos').mod('active', true);
+          activeHighlights('mnos');
           goToHighlights($(hash).index(), 'mnos');
           $.fn.pagepiling.moveTo(4);
         }

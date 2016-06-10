@@ -226,6 +226,15 @@ goToHighlights = (index, type = 'highlights') ->
 	$(".#{type}__items").data 'index', index
 	moveHighlights(true, type)
 
+activeHighlights = (type)->
+	$('.' + type).mod 'active', true
+	initImages $('.' + type)
+
+initImages = (block) ->
+	$.each ['pre-srcset', 'pre-src', 'pre-style'], (key, el)->
+		block.find("[#{el}]").each (key, el)->
+			$(el).attr el.replace('pre-', ''), $(el).attr el
+
 $(document).ready ->
 
 	$('.modal').on 'shown.bs.modal', (e)->
@@ -353,14 +362,14 @@ $(document).ready ->
 		e.preventDefault()
 
 	$('a.features__item').on 'click', (e) ->
-		$('.highlights').mod 'active', true
+		activeHighlights 'highlights'
 		goToHighlights $($(this).attr('href')).index(), 'highlights'
 		e.preventDefault()
 
 	$('.articles a').on 'click', (e) ->
 		el = $($(this).attr('href'))
 		if el.hasClass 'mno'
-			$('.mnos').mod 'active', true
+			activeHighlights 'mnos'
 			goToHighlights $($(this).attr('href')).index(), 'mnos'
 			e.preventDefault()
 
@@ -374,7 +383,6 @@ $(document).ready ->
 		if $('.mnos').hasMod 'active'
 			$('.mnos').mod 'active', false
 
-			
 	$('.list__title').click (e)->
 		index = $(this).parents('.list__item').index()
 		setActiveMarker index + 1
@@ -392,12 +400,12 @@ $(document).ready ->
 				$.fn.pagepiling.moveTo hash.split('#')[1]
 
 			if $(hash).hasClass('highlight')
-				$('.highlights').mod 'active', true
+				activeHighlights 'highlights'
 				goToHighlights $(hash).index(), 'highlights'
 				$.fn.pagepiling.moveTo 3
 
 			if $(hash).hasClass('mno')
-				$('.mnos').mod 'active', true
+				activeHighlights 'mnos'
 				goToHighlights $(hash).index(), 'mnos'
 				$.fn.pagepiling.moveTo 4
 
