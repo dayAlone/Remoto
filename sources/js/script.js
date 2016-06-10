@@ -1,5 +1,5 @@
 (function() {
-  var activeHighlights, checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
+  var activeHighlights, checkColors, checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
 
   spinOptions = {
     lines: 13,
@@ -313,6 +313,15 @@
     });
   };
 
+  checkColors = function(next) {
+    $('.toolbar__nav').toggleClass('nav--black', next.data('nav') === 'black');
+    if ($(window).width() >= 768) {
+      $('.toolbar__trigger').mod('black', next.data('nav') === 'black');
+    }
+    $('.toolbar__logo').mod('color', next.data('logo') === 'color');
+    return $('#pp-nav').toggleClass('black', next.data('dots') === 'black');
+  };
+
   $(document).ready(function() {
     var anchors, hash;
     $('.modal').on('shown.bs.modal', function(e) {
@@ -389,12 +398,7 @@
             var next;
             next = $(".block:nth-child(" + nextIndex + ")");
             if (!$('.highlights').hasMod('active')) {
-              $('.toolbar__nav').toggleClass('nav--black', next.data('nav') === 'black');
-              if ($(window).width() >= 768) {
-                $('.toolbar__trigger').mod('black', next.data('nav') === 'black');
-              }
-              $('.toolbar__logo').mod('color', next.data('logo') === 'color');
-              $('#pp-nav').toggleClass('black', next.data('dots') === 'black');
+              checkColors(next);
             }
             $('.toolbar .nav__item, .nav--modal .nav__item').mod('active', false);
             return $(".nav__item[href*='" + (next.attr('id')) + "']").addClass('nav__item--active');
@@ -452,6 +456,7 @@
     $('.toolbar .nav__item, .nav--modal .nav__item').on('click', function(e) {
       if (typeof $.fn.pagepiling.moveTo === 'function') {
         $.fn.pagepiling.moveTo($(this).attr('href').split('#')[1]);
+        checkColors($($(this).attr('href')));
         e.preventDefault();
       }
       $('body').removeClass('open');

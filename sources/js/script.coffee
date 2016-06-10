@@ -235,6 +235,14 @@ initImages = (block) ->
 		block.find("[#{attr}]").each (key, el)->
 			$(el).attr attr.replace('pre-', ''), $(el).attr attr
 
+checkColors = (next)->
+	$('.toolbar__nav').toggleClass 'nav--black', next.data('nav') == 'black'
+	if $(window).width() >= 768
+		$('.toolbar__trigger').mod 'black', next.data('nav') == 'black'
+	$('.toolbar__logo').mod 'color', next.data('logo') == 'color'
+	$('#pp-nav').toggleClass 'black', next.data('dots') == 'black'
+
+
 $(document).ready ->
 
 	$('.modal').on 'shown.bs.modal', (e)->
@@ -254,7 +262,6 @@ $(document).ready ->
 		if url
 			$.get url, (data) ->
 				text.html data
-
 
 	$('.modal').on 'hidden.bs.modal', (e)->
 		$(this).find('.text').html ''
@@ -313,15 +320,7 @@ $(document).ready ->
 				delay 300, ->
 					next = $(".block:nth-child(#{nextIndex})")
 					if !$('.highlights').hasMod 'active'
-
-						$('.toolbar__nav').toggleClass 'nav--black', next.data('nav') == 'black'
-
-						if $(window).width() >= 768
-							$('.toolbar__trigger').mod 'black', next.data('nav') == 'black'
-
-						$('.toolbar__logo').mod 'color', next.data('logo') == 'color'
-
-						$('#pp-nav').toggleClass 'black', next.data('dots') == 'black'
+						checkColors next
 
 					$('.toolbar .nav__item, .nav--modal .nav__item').mod 'active', false
 					$(".nav__item[href*='#{next.attr('id')}']").addClass 'nav__item--active'
@@ -376,6 +375,7 @@ $(document).ready ->
 	$('.toolbar .nav__item, .nav--modal .nav__item').on 'click', (e)->
 		if typeof $.fn.pagepiling.moveTo == 'function'
 			$.fn.pagepiling.moveTo $(this).attr('href').split('#')[1]
+			checkColors $($(this).attr('href'))
 			e.preventDefault()
 		$('body').removeClass 'open'
 		if $('.highlights').hasMod 'active'
