@@ -306,9 +306,9 @@
   };
 
   initImages = function(block) {
-    return $.each(['pre-srcset', 'pre-src', 'pre-style'], function(key, el) {
-      return block.find("[" + el + "]").each(function(key, el) {
-        return $(el).attr(el.replace('pre-', ''), $(el).attr(el));
+    return $.each(['pre-srcset', 'pre-src', 'pre-style'], function(key, attr) {
+      return block.find("[" + attr + "]").each(function(key, el) {
+        return $(el).attr(attr.replace('pre-', ''), $(el).attr(attr));
       });
     });
   };

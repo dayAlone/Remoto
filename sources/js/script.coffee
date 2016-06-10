@@ -231,9 +231,9 @@ activeHighlights = (type)->
 	initImages $('.' + type)
 
 initImages = (block) ->
-	$.each ['pre-srcset', 'pre-src', 'pre-style'], (key, el)->
-		block.find("[#{el}]").each (key, el)->
-			$(el).attr el.replace('pre-', ''), $(el).attr el
+	$.each ['pre-srcset', 'pre-src', 'pre-style'], (key, attr)->
+		block.find("[#{attr}]").each (key, el)->
+			$(el).attr attr.replace('pre-', ''), $(el).attr attr
 
 $(document).ready ->
 
