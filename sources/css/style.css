@@ -1257,7 +1257,7 @@ svg g {
   display: -ms-flexbox !important;
   display: box !important;
   display: flex !important;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   min-height: 100vh;
   padding: 90px 20px;
@@ -2554,6 +2554,7 @@ svg g {
 }
 .toolbar__logo img {
   max-width: 106px;
+  -ms-interpolation-mode: bicubic;
 }
 @media (min-width: 768px) {
   .toolbar__logo img {
