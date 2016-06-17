@@ -3543,16 +3543,19 @@ a.articles__title .articles__name:hover span:hover {
   font-size: 16px;
   padding-top: 15px;
 }
-.modal .text img {
+.modal .text .text__image {
   max-width: 100%;
 }
 @media (min-width: 768px) {
-  .modal .text img {
+  .modal .text .text__image {
     float: right;
     margin-bottom: 30px;
     margin-left: 30px;
     max-width: 50%;
   }
+}
+.modal .text img {
+  max-width: 100%;
 }
 .modal .text a {
   color: #fd9127;

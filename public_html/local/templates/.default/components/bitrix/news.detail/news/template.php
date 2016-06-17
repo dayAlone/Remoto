@@ -9,6 +9,8 @@ $s = end($arResult['SECTION']['PATH']);
 		<img src="<?=$item["DETAIL_PICTURE"]['SRC']?>" class="text__image text__image--right text__image--medium">
 	<?endif;?>
 	<?=$item["~DETAIL_TEXT"]?>
-	<?foreach ($arResult["PROPS"] as $key => $el): ?>
-		<img src="<?=$el['big']?>" alt="" class='text__image '/>
-	<?endforeach; ?>
+	<div class="center">
+		<?foreach ($item["PROPS"]['PHOTOS'] as $key => $el): ?>
+			<img src="<?=$el['value']?>" alt="" class='text__image '/>
+		<?endforeach; ?>
+	</div>
