@@ -162,7 +162,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                     );
                 ?>
                 <p>
-                    <br/><small style="font-size: 9px; color: rgba(0, 0, 0, .6)">* Networt features can be changed by the requirements of MNO's network</small>
+                    <br/><small style="font-size: 11px; color: rgba(0, 0, 0, .6)">* Networt features can be changed by the requirements of MNO's network</small>
                 </p>
             </div>
         </div>
