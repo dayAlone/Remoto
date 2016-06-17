@@ -157,7 +157,8 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 				url: '/layout/images/point-orange.png',
 				scaledSize: new google.maps.Size(18, 24)
 			}
-			title: el.name
+			title: el.name,
+			clickable: $(".list__item:nth-child(#{key + 1})").length > 0
 		})
 		marker.addListener 'click', ->
 			setActiveMarker key + 1
