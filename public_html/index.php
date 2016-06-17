@@ -75,7 +75,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
             <img src="/layout/images/slide-2-image.png" alt="" class="block__image">
             <div class="text">
                 <div class='text__content'>
-                    <h2 class="title"> <span>Now every car<br/></span>can be smart</h2>
+                    <h2 class="title"> <span>Now every car<br/></span>can be smart <span>and connected</span></h2>
                     <p><?=COption::GetOptionString("grain.customsettings","about") ?></p>
                     <?/*<a href="#How" data-toggle='modal' class="button button--white">how does it work</a>*/?>
                     <br>
@@ -161,6 +161,9 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                         false
                     );
                 ?>
+                <p>
+                    * Networt features can be changed by the requirements of MNO's network
+                </p>
             </div>
         </div>
     </div>
