@@ -8,5 +8,6 @@ $APPLICATION->IncludeComponent("bitrix:news.detail","news",Array(
 	"SET_TITLE"     => "N",
 	"CACHE_TYPE"    => "A",
 	"CACHE_TIME"    => "36000",
+	"PROPERTY_CODE" => Array("PHOTOS"),
 ));
 ?>
