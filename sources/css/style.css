@@ -2169,7 +2169,7 @@ svg g {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   margin-bottom: 80px;
-  min-height: 900px;
+  min-height: 950px;
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
@@ -2177,6 +2177,9 @@ svg g {
 @media (min-width: 768px) {
   .highlight__content,
   .mno__content {
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
     margin-bottom: 0;
     padding-bottom: 0;
   }
@@ -2551,6 +2554,22 @@ svg g {
 .highlight[data-nav='black'] .highlight__link,
 .mno[data-nav='black'] .mno__link {
   color: #000;
+}
+@media (max-width: 767px) {
+  .mno--your-company-branding-on-device .mno__content {
+    min-height: 800px;
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
+  }
+}
+@media (max-width: 767px) {
+  .mno--increasing-your-customer-base .mno__content {
+    min-height: 550px;
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
+  }
 }
 .toolbar {
   position: fixed;

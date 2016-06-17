@@ -534,9 +534,10 @@
     &__content
         justify-content: space-between
         margin-bottom 80px
-        min-height: 900px
+        min-height: 950px
         min-height: min-content
         @media (min-width: scr_sm)
+            min-height: min-content
             margin-bottom 0
             padding-bottom 0
         @media (min-width: scr_sm) and (max-width: scr_md - 1px)
@@ -714,3 +715,16 @@
     &[data-nav='black']
         & ^[0]__link
             color black
+
+
+.mno
+    &--your-company-branding-on-device
+        & ^[0]__content
+            @media (max-width: scr_sm - 1px)
+                min-height: 800px
+                min-height: min-content
+    &--increasing-your-customer-base
+        & ^[0]__content
+            @media (max-width: scr_sm - 1px)
+                min-height: 550px
+                min-height: min-content
