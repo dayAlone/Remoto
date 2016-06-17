@@ -19,7 +19,7 @@ function images_sort($a, $b)
 }
 foreach ($arResult["PROPERTIES"] as $key => $prop):
     switch ($prop['CODE']):
-        case "GALLERY":
+        case "PHOTOS":
             $gallery     = array();
             $description = $prop['DESCRIPTION'];
             if(is_array($prop['VALUE'])):
