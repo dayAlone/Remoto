@@ -6,7 +6,7 @@ $s = end($arResult['SECTION']['PATH']);
 	<?foreach ($item["PROPERTIES"]["IMAGES"]['VALUE'] as $img):
 		$small = CFile::ResizeImageGet($img, Array("width" => 800, "height" => 700), BX_RESIZE_IMAGE_PROPORTIONAL, false, false, false, 80);?>
       <img
-	  	src="<?=$small['src']?>"
+	  	src="<?=CFile::GetPath($img)?>"
 		srcset="<?=$small['src']?> 1x, <?=CFile::GetPath($img)?> 2x"
 		alt="" />
     <?endforeach;?>
