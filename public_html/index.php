@@ -72,7 +72,9 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
     </div>
     <div id="about" data-nav="white" data-logo="white" data-dots="black" class="block block--about">
         <div class="block__content">
-            <img src="/layout/images/slide-2-image.png" alt="" class="block__image">
+            <img
+                src="/layout/images/slide-2-image-1x.png" alt="" class="block__image"
+                src-set="/layout/images/slide-2-image-1x.png 1x, /layout/images/slide-2-image-2x.png 2x">
             <div class="text">
                 <div class='text__content'>
                     <h2 class="title"> <span>Now every car<br/></span>can be smart <span>and connected</span></h2>
