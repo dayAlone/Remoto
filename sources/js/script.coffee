@@ -333,9 +333,11 @@ $(document).ready ->
 	else
 		$('body').on 'scroll', _.throttle checkScroll, 300
 
+	$(document).on 'click', (e)->
+		console.log e.target
 
 	$('.highlight__link, .mno__link').on 'click', (e)->
-
+		alert()
 		type = 'highlights'
 		if $(this).parents('.mnos').length > 0
 			type = 'mnos'
