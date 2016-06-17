@@ -3863,6 +3863,22 @@ svg g {
     background-image: url("../images/plugins/fotorama@2x.png");
   }
 }
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: 'GothamPro';
+  text-align: center;
+  padding: 15px 0;
+  margin-right: -20px;
+  margin-left: -20px;
+  font-weight: bold;
+  margin-top: -2px;
+  position: relative;
+  z-index: 20;
+  letter-spacing: 3px;
+}
 .nav {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4818,18 +4834,18 @@ svg g {
 @media (min-width: 768px) {
   .block--specs .block__image {
     max-height: 30vh;
-    max-width: 55%;
+    max-width: 55vw;
   }
 }
 @media (min-width: 992px) {
   .block--specs .block__image {
-    max-width: 40%;
+    max-width: 40vw;
     max-height: none;
   }
 }
 @media (min-width: 1170px) {
   .block--specs .block__image {
-    max-width: 50%;
+    max-width: 50vw;
   }
 }
 .block--specs .text {
@@ -6723,14 +6739,14 @@ a.articles__title .articles__name:hover span:hover {
 }
 .list__title {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'GothamPro';
   text-transform: uppercase;
   color: #fff;
 }
 @media (min-width: 1170px) {
   .list__title {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 .list__title span {

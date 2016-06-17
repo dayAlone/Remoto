@@ -46,7 +46,7 @@ if($result['status'] == 'ok') {
 
 		if ($result['status'] == 'ok') {
 
-			$emails = COption::GetOptionString("grain.customsettings", 'feedback');
+			$emails = COption::GetOptionString("grain.customsettings", $_REQUEST['to']);
 
 			$rsSites = CSite::GetByID(SITE_ID);
 		    $arSite  = $rsSites->Fetch();

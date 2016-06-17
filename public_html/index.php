@@ -253,6 +253,9 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                 false
             );
         ?>
+        <div class="visible-xs footer">
+            &copy; <?=date('Y')?> bright box
+        </div>
 
     </div>
 </div>
