@@ -6867,6 +6867,16 @@ a.articles__title .articles__name:hover span:hover {
   line-height: 1.2;
   color: #000;
 }
+@media (min-width: 1170px) {
+  .news__text {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1600px) {
+  .news__text {
+    font-size: 20px;
+  }
+}
 .news__text:focus {
   color: #000;
 }
