@@ -11,6 +11,6 @@ $s = end($arResult['SECTION']['PATH']);
 	<?=$item["~DETAIL_TEXT"]?>
 	<div class="center">
 		<?foreach ($item["PROPS"]['PHOTOS'] as $key => $el): ?>
-			<img src="<?=$el['value']?>" alt="" class='text__image '/>
+			<img src="<?=$el['value']?>" alt=""/>
 		<?endforeach; ?>
 	</div>
