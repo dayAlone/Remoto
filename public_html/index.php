@@ -164,7 +164,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--index');
                     );
                 ?>
                 <p>
-                    <small style="font-size: 11px; color: rgba(0, 0, 0, .6)">* Network features can be changed by the requirements of MNO's network</small>
+                    <small style="font-size: 11px; color: rgba(0, 0, 0, .6)">* Network features can be changed by the requirements of MNO</small>
                 </p>
             </div>
         </div>
