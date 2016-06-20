@@ -154,7 +154,7 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 			position: new google.maps.LatLng(c[0], c[1]),
 			map: map,
 			icon: {
-				url: '/layout/images/point-orange.png',
+				url: $(".list__item:nth-child(#{key + 1})").length > 0 ? '/layout/images/point-orange.png' : '/layout/images/point-gray.png',
 				scaledSize: new google.maps.Size(18, 24)
 			}
 			title: el.name,
