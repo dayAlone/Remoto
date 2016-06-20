@@ -80,13 +80,16 @@
             border-bottom 1px solid orange
             padding-bottom 5px
             margin-bottom 5px
+        @media (min-width: scr_lg) and (min-height: 740px)
             font-size 23px
     &__text
         margin-bottom -5px
-        font-size 16px
+        font-size 14px
         display none
         @media (min-width: scr_lg)
             display block
+        @media (min-width: scr_lg) and (min-height: 740px)
+            font-size 16px
     &__content
         max-width: calc(100% - 70px)
         text-align left

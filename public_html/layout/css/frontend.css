@@ -4712,6 +4712,11 @@ svg g {
   .block--mno .block__content {
     margin: 0;
     border-radius: 30px 30px 0 0;
+    padding: 55px 45px 50px;
+  }
+}
+@media (min-width: 1170px) and (min-height: 740px) {
+  .block--mno .block__content {
     padding: 85px 45px 50px;
   }
 }
@@ -4956,9 +4961,9 @@ svg g {
 }
 @media (min-width: 768px) {
   .block--contacts .block__content {
-    min-height: -webkit-min-content;
-    min-height: -moz-min-content;
-    min-height: min-content;
+    min-height: -webkit-min-content !important;
+    min-height: -moz-min-content !important;
+    min-height: min-content !important;
     max-height: none;
     padding-top: 60px;
     -o-box-align: end;
@@ -5823,6 +5828,11 @@ svg g {
 }
 @media (min-width: 1170px) {
   .title {
+    font-size: 43px;
+  }
+}
+@media (min-width: 1170px) and (min-height: 730px) {
+  .title {
     font-size: 46px;
   }
 }
@@ -6057,17 +6067,26 @@ svg g {
     border-bottom: 1px solid #fd9127;
     padding-bottom: 5px;
     margin-bottom: 5px;
+  }
+}
+@media (min-width: 1170px) and (min-height: 740px) {
+  .features__title {
     font-size: 23px;
   }
 }
 .features__text {
   margin-bottom: -5px;
-  font-size: 16px;
+  font-size: 14px;
   display: none;
 }
 @media (min-width: 1170px) {
   .features__text {
     display: block;
+  }
+}
+@media (min-width: 1170px) and (min-height: 740px) {
+  .features__text {
+    font-size: 16px;
   }
 }
 .features__content {
@@ -6395,7 +6414,7 @@ a.articles__title .articles__name:hover span:hover {
   margin-bottom: 2px;
   margin-top: 24px;
 }
-@media (min-width: 1170px) {
+@media (min-width: 1170px) and (min-height: 730px) {
   .spec__title {
     font-size: 17px;
   }
@@ -6408,7 +6427,7 @@ a.articles__title .articles__name:hover span:hover {
   padding-left: 0;
   list-style: none;
 }
-@media (min-width: 1170px) {
+@media (min-width: 1170px) and (min-height: 730px) {
   .spec__list {
     font-size: 14px;
     line-height: 18px;
