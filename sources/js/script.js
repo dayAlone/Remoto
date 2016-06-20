@@ -192,16 +192,18 @@
     map = new window.google.maps.Map(mapElement, mapSettings);
     coords = $('.map').data('coords');
     coords.map(function(el, key) {
-      var c, marker, ref;
+      var c, img, marker;
       c = el.coords;
+      img = '/layout/images/point-orange.png';
+      if ($(".list__item:nth-child(" + (key + 1) + ")").length > 0) {
+        img = '/layout/images/point-gray.png';
+      }
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(c[0], c[1]),
         map: map,
         icon: {
-          url: (ref = $(".list__item:nth-child(" + (key + 1) + ")").length > 0) != null ? ref : {
-            '/layout/images/point-orange.png': '/layout/images/point-gray.png',
-            scaledSize: new google.maps.Size(18, 24)
-          }
+          url: img,
+          scaledSize: new google.maps.Size(18, 24)
         },
         title: el.name,
         clickable: $(".list__item:nth-child(" + (key + 1) + ")").length > 0
