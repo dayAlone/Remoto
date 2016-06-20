@@ -224,14 +224,19 @@
       $('.list__item').mod('active', false);
       $(".list__item:nth-child(" + index + ")").addClass('list__item--active');
       return markers.map(function(el, key) {
+        var img;
         if (key === index - 1) {
           return el.setIcon({
             url: '/layout/images/point-white.png',
             scaledSize: new google.maps.Size(18, 24)
           });
         } else {
+          img = '/layout/images/point-orange.png';
+          if ($(".list__item:nth-child(" + (key + 1) + ")").length === 0) {
+            img = '/layout/images/point-gray.png';
+          }
           return el.setIcon({
-            url: '/layout/images/point-orange.png',
+            url: img,
             scaledSize: new google.maps.Size(18, 24)
           });
         }

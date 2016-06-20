@@ -181,8 +181,11 @@ setActiveMarker = (index) ->
 					url: '/layout/images/point-white.png',
 					scaledSize: new google.maps.Size(18, 24)
 			else
+				img = '/layout/images/point-orange.png'
+				if $(".list__item:nth-child(#{key + 1})").length == 0
+					img = '/layout/images/point-gray.png'
 				el.setIcon
-					url: '/layout/images/point-orange.png',
+					url: img,
 					scaledSize: new google.maps.Size(18, 24)
 
 checkScroll = ->
