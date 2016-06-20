@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <?
     $APPLICATION->SetAdditionalCSS("/layout/css/frontend.css", true);
     $APPLICATION->AddHeadScript('/layout/js/frontend.js');
