@@ -195,7 +195,7 @@
       var c, img, marker;
       c = el.coords;
       img = '/layout/images/point-orange.png';
-      if ($(".list__item:nth-child(" + (key + 1) + ")").length > 0) {
+      if ($(".list__item:nth-child(" + (key + 1) + ")").length === 0) {
         img = '/layout/images/point-gray.png';
       }
       marker = new google.maps.Marker({

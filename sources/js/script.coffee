@@ -151,7 +151,7 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 	coords.map (el, key) ->
 		c = el.coords
 		img = '/layout/images/point-orange.png'
-		if $(".list__item:nth-child(#{key + 1})").length > 0
+		if $(".list__item:nth-child(#{key + 1})").length == 0
 			img = '/layout/images/point-gray.png'
 		marker = new google.maps.Marker({
 			position: new google.maps.LatLng(c[0], c[1]),
