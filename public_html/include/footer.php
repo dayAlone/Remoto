@@ -5,7 +5,8 @@ array(
     "MENU_CACHE_TYPE"    => "A",
     "ROOT_MENU_TYPE"     => "top",
     "MAX_LEVEL"          => "1",
-    "CLASS"              => "nav--modal"
+    "CLASS"              => "nav--modal",
+    "AFTER"              => '<a href="#Request" data-toggle="modal" class="toolbar__button">Request a proposal</a>'
 ),
 false);
 ?>

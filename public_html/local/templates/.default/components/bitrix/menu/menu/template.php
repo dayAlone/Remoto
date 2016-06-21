@@ -7,5 +7,6 @@ if($arParams['SHOW']=="Y"):
 	$APPLICATION->ShowViewContent('menu');
 endif;
 ?>
+<?=html_entity_decode($arParams['AFTER'])?>
 </nav>
 <?endif;?>
