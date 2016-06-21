@@ -1008,6 +1008,7 @@ svg g {
   -ms-flex-item-align: center;
   position: relative;
   z-index: 20;
+  font-size: 14px;
   margin-top: 20px;
 }
 @media (min-width: 768px) {
