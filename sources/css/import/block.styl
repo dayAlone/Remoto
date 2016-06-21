@@ -394,8 +394,14 @@
             @media (min-width: scr_md)
                 flex-wrap: nowrap
         & ^[0]__image
-
-
+            .is-android &
+                max-width: 100%
+                @media (min-width: scr_sm)
+                    max-width: 55%
+                @media (min-width: scr_md)
+                    max-width: 40%
+                @media (min-width: scr_lg)
+                    max-width: 50%
             @media (min-width: scr_sm)
                 max-height: 30vh
                 max-width: 55vw
@@ -404,6 +410,7 @@
                 max-height: none
             @media (min-width: scr_lg)
                 max-width: 50vw
+
         .text
             color black
             max-width: none

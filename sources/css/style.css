@@ -1927,6 +1927,24 @@ svg g {
     flex-wrap: nowrap;
   }
 }
+.is-android .block--specs .block__image {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .is-android .block--specs .block__image {
+    max-width: 55%;
+  }
+}
+@media (min-width: 992px) {
+  .is-android .block--specs .block__image {
+    max-width: 40%;
+  }
+}
+@media (min-width: 1170px) {
+  .is-android .block--specs .block__image {
+    max-width: 50%;
+  }
+}
 @media (min-width: 768px) {
   .block--specs .block__image {
     max-height: 30vh;
