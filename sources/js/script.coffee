@@ -296,15 +296,20 @@ $(document).ready ->
 
 	$('.fotorama').on 'fotorama:ready', (e, fotorama)->
 		if $.browser.android
-			fotorama.resize({
-				width: $('.block__content').width()
-				})
+			fotorama.resize({ width: $('.block__content').width() })
+			$('.map__block').width $(window).width()
 
 	initHighlights('highlights')()
 	initHighlights('mnos')()
 
-	$(window).on 'resize', _.throttle initHighlights('highlights')
-	$(window).on 'resize', _.throttle initHighlights('mnos')
+	$(window).on 'resize', _.throttle initHighlights('highlights'), 300
+	$(window).on 'resize', _.throttle initHighlights('mnos'), 300
+
+	$(window).on 'resize', _.throttle (->
+		if $.browser.android
+			$('.fotorama').data('fotorama').resize({ width: $('.block__content').width() })
+			$('.map__block').width $(window).width()
+	), 300
 
 	$.getScript 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap&language=en'
 

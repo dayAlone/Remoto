@@ -379,15 +379,24 @@
     });
     $('.fotorama').on('fotorama:ready', function(e, fotorama) {
       if ($.browser.android) {
-        return fotorama.resize({
+        fotorama.resize({
           width: $('.block__content').width()
         });
+        return $('.map__block').width($(window).width());
       }
     });
     initHighlights('highlights')();
     initHighlights('mnos')();
-    $(window).on('resize', _.throttle(initHighlights('highlights')));
-    $(window).on('resize', _.throttle(initHighlights('mnos')));
+    $(window).on('resize', _.throttle(initHighlights('highlights'), 300));
+    $(window).on('resize', _.throttle(initHighlights('mnos'), 300));
+    $(window).on('resize', _.throttle((function() {
+      if ($.browser.android) {
+        $('.fotorama').data('fotorama').resize({
+          width: $('.block__content').width()
+        });
+        return $('.map__block').width($(window).width());
+      }
+    }), 300));
     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap&language=en');
     if ($(window).width() > 600) {
       $('.toolbar__logo').on('click', function(e) {
