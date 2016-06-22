@@ -6032,10 +6032,16 @@ svg g {
   .features__item--small {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 33.333333%;
-    -ms-flex: 1 1 33.333333%;
-    flex: 1 1 33.333333%;
-    max-width: calc(33.333333% - 20px);
+    -webkit-flex: 1 1 calc(33.333333% - 20px);
+    -ms-flex: 1 1 calc(33.333333% - 20px);
+    flex: 1 1 calc(33.333333% - 20px);
+  }
+  .features__item--small .msie-11 {
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 31.333333%;
+    -ms-flex: 1 1 31.333333%;
+    flex: 1 1 31.333333%;
   }
 }
 .features__item--small .features__title {
