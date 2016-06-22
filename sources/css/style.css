@@ -3102,9 +3102,9 @@ svg g {
   .msie-11 .features__item {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 47%;
-    -ms-flex: 1 1 47%;
-    flex: 1 1 47%;
+    -webkit-flex: 1 1 40%;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
   }
 }
 @media (min-width: 1170px) {
@@ -3130,9 +3130,9 @@ svg g {
   .features__item--small .msie-11 {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 31.333333%;
-    -ms-flex: 1 1 31.333333%;
-    flex: 1 1 31.333333%;
+    -webkit-flex: 1 1 27%;
+    -ms-flex: 1 1 27%;
+    flex: 1 1 27%;
   }
 }
 .features__item--small .features__title {
@@ -3326,9 +3326,9 @@ svg g {
   .articles__item .msie-11 {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 47%;
-    -ms-flex: 1 1 47%;
-    flex: 1 1 47%;
+    -webkit-flex: 1 1 40%;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
   }
 }
 @media (min-width: 992px) {
@@ -3343,9 +3343,9 @@ svg g {
   .articles__item .msie-11 {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 17%;
-    -ms-flex: 1 1 17%;
-    flex: 1 1 17%;
+    -webkit-flex: 1 1 15%;
+    -ms-flex: 1 1 15%;
+    flex: 1 1 15%;
   }
 }
 @media (min-width: 1170px) {
@@ -3509,9 +3509,9 @@ a.articles__title .articles__name:hover span:hover {
   .msie-11 .articles--half .articles__item {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 47%;
-    -ms-flex: 1 1 47%;
-    flex: 1 1 47%;
+    -webkit-flex: 1 1 40%;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
   }
 }
 @media (min-width: 1170px) {
