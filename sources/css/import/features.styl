@@ -16,9 +16,11 @@
         color white
         t border
         padding 17px 15px 13px
-        flex: 1 1 calc(100% - 20px)
+        flex: 1 1 100%
+        max-width: calc(100% - 20px)
         @media (min-width: scr_sm)
-            flex: 1 1 calc(50% - 20px)
+            flex: 1 1 50%
+            max-width: calc(50% - 20px)
         @media (min-width: scr_lg)
             padding 17px 15px
         &:hover
@@ -28,7 +30,8 @@
 
             padding 13px 15px
             @media (min-width: scr_sm)
-                flex: 1 1 calc(33% - 20px)
+                flex: 1 1 33.333333%
+                max-width: calc(33.333333% - 20px)
             & ^[0]__title
 
                 border 0

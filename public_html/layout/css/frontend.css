@@ -5989,17 +5989,19 @@ svg g {
   padding: 17px 15px 13px;
   -o-box-flex: 1;
   box-flex: 1;
-  -webkit-flex: 1 1 calc(100% - 20px);
-  -ms-flex: 1 1 calc(100% - 20px);
-  flex: 1 1 calc(100% - 20px);
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  max-width: calc(100% - 20px);
 }
 @media (min-width: 768px) {
   .features__item {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 calc(50% - 20px);
-    -ms-flex: 1 1 calc(50% - 20px);
-    flex: 1 1 calc(50% - 20px);
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: calc(50% - 20px);
   }
 }
 @media (min-width: 1170px) {
@@ -6018,9 +6020,10 @@ svg g {
   .features__item--small {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 calc(33% - 20px);
-    -ms-flex: 1 1 calc(33% - 20px);
-    flex: 1 1 calc(33% - 20px);
+    -webkit-flex: 1 1 33.333333%;
+    -ms-flex: 1 1 33.333333%;
+    flex: 1 1 33.333333%;
+    max-width: calc(33.333333% - 20px);
   }
 }
 .features__item--small .features__title {
@@ -6336,9 +6339,10 @@ a.articles__title .articles__name:hover span:hover {
 .articles--half .articles__item {
   -o-box-flex: 1;
   box-flex: 1;
-  -webkit-flex: 1 1 calc(100% - 40px);
-  -ms-flex: 1 1 calc(100% - 40px);
-  flex: 1 1 calc(100% - 40px);
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  max-width: calc(100% - 40px);
   margin-top: 20px;
 }
 @media (min-width: 768px) {
@@ -6346,18 +6350,20 @@ a.articles__title .articles__name:hover span:hover {
     margin-top: 15px;
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 calc(100% - 40px);
-    -ms-flex: 1 1 calc(100% - 40px);
-    flex: 1 1 calc(100% - 40px);
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: calc(100% - 40px);
   }
 }
 @media (min-width: 992px) {
   .articles--half .articles__item {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 calc(50% - 40px);
-    -ms-flex: 1 1 calc(50% - 40px);
-    flex: 1 1 calc(50% - 40px);
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: calc(50% - 40px);
   }
 }
 @media (min-width: 1170px) {

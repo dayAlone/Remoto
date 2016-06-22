@@ -77,13 +77,16 @@
     &--half
         margin-top -15px
         & ^[0]__item
-            flex 1 1 calc(100% - 40px)
+            flex 1 1 100%
+            max-width: calc(100% - 40px)
             margin-top 20px
             @media (min-width: scr_sm)
                 margin-top 15px
-                flex 1 1 calc(100% - 40px)
+                flex 1 1 100%
+                max-width: calc(100% - 40px)
             @media (min-width: scr_md)
-                flex 1 1 calc(50% - 40px)
+                flex 1 1 50%
+                max-width: calc(50% - 40px)
             @media (min-width: scr_lg)
                 margin-top 30px
 
