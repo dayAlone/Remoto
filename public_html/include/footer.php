@@ -74,7 +74,7 @@ false);
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">All fields marked * are have to be filled</div>
+                        <div class="col-xs-12">* Required field</div>
                     </div>
                 </form>
             </div>
@@ -133,7 +133,7 @@ false);
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">All fields marked * are have to be filled</div>
+                        <div class="col-xs-12">* Required field</div>
                     </div>
                 </form>
             </div>
