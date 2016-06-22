@@ -397,6 +397,7 @@
         return $('.map__block').width($(window).width());
       }
     }), 300));
+    $('html').addClass($.browser.name + '-' + $.browser.versionNumber);
     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap&language=en');
     if ($(window).width() > 600) {
       $('.toolbar__logo').on('click', function(e) {

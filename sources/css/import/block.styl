@@ -6,9 +6,13 @@
     transform: translateX(100%)
     overflow hidden
     pointer-events: none
+    .msie-11 &
+        display none
     &--active
         transform: translateX(0%)
         pointer-events: all
+        .msie-11 &
+            display block
     &__wrap
         position fixed
         size 100%

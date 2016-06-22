@@ -4051,12 +4051,20 @@ svg g {
   overflow: hidden;
   pointer-events: none;
 }
+.msie-11 .highlights,
+.msie-11 .mnos {
+  display: none;
+}
 .highlights--active,
 .mnos--active {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
   pointer-events: all;
+}
+.msie-11 .highlights--active,
+.msie-11 .mnos--active {
+  display: block;
 }
 .highlights__wrap,
 .mnos__wrap {
