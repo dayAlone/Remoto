@@ -377,6 +377,13 @@
       $('body').toggleClass('open');
       return e.preventDefault();
     });
+    $('.fotorama').on('fotorama:ready', function(e, fotorama) {
+      if ($.browser.android) {
+        return fotorama.resize({
+          width: $('.block__content').width()
+        });
+      }
+    });
     initHighlights('highlights')();
     initHighlights('mnos')();
     $(window).on('resize', _.throttle(initHighlights('highlights')));

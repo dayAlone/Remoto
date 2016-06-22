@@ -294,6 +294,12 @@ $(document).ready ->
 		e.preventDefault()
 
 
+	$('.fotorama').on 'fotorama:ready', (e, fotorama)->
+		if $.browser.android
+			fotorama.resize({
+				width: $('.block__content').width()
+				})
+
 	initHighlights('highlights')()
 	initHighlights('mnos')()
 
