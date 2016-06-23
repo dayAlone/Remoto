@@ -44,8 +44,8 @@
     zoom = 3;
     center = new window.google.maps.LatLng(34.6917358, 32.9934606);
     if ($.browser.mobile) {
-      zoom = 2;
-      center = new window.google.maps.LatLng(44.2754310525103, 43.5986555);
+      zoom = 1;
+      center = new window.google.maps.LatLng(43.2168818, 76.6639822);
     }
     mapSettings = {
       zoom: zoom,
