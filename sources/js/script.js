@@ -40,14 +40,19 @@
   end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd';
 
   this.initMap = function() {
-    var coords, map, mapElement, mapSettings;
-    console.log('initMap');
+    var center, coords, map, mapElement, mapSettings, zoom;
+    zoom = 3;
+    center = new window.google.maps.LatLng(34.6917358, 32.9934606);
+    if ($.browser.mobile) {
+      zoom = 2;
+      center = new window.google.maps.LatLng(44.2754310525103, 43.5986555);
+    }
     mapSettings = {
-      zoom: 3,
+      zoom: zoom,
       scrollwheel: false,
       mapTypeControl: false,
       streetViewControl: false,
-      center: new window.google.maps.LatLng(34.6917358, 32.9934606),
+      center: center,
       styles: [
         {
           'featureType': 'all',
@@ -110,7 +115,7 @@
             {
               'color': '#000000'
             }, {
-              'lightness': 20
+              'lightness': 24
             }
           ]
         }, {
