@@ -3151,9 +3151,9 @@ svg g {
   .msie-11 .features__item--small {
     -o-box-flex: 1;
     box-flex: 1;
-    -webkit-flex: 1 1 27%;
-    -ms-flex: 1 1 27%;
-    flex: 1 1 27%;
+    -webkit-flex: 1 1 20%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
   }
 }
 .features__item--small .features__title {
@@ -3177,6 +3177,8 @@ svg g {
 }
 .features__item--small .features__icon {
   width: 36px;
+  max-width: 36px;
+  max-height: 36px;
 }
 .features__divider {
   -o-box-flex: 1;
