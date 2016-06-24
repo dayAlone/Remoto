@@ -5022,9 +5022,7 @@ svg g {
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
-    min-height: -webkit-min-content !important;
-    min-height: -moz-min-content !important;
-    min-height: min-content !important;
+    min-height: 0;
     max-height: 110px;
     -o-box-align: end;
     -ms-flex-align: end;
