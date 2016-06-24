@@ -87,7 +87,7 @@
     @media (min-width: scr_sm)
         height: 100vh
         min-height: 600px
-        padding: 70px 40px
+        padding: 80px 40px 30px
     @media (min-width: 1600px)
         padding: 130px 70px 90px
     &.pp-section
@@ -159,6 +159,7 @@
     &--home
         background-color #5d3426
         background-image url(/layout/images/bg.1.jpg)
+        padding: 80px 40px 90px
         & ^[0]__content
             text-align center
 
@@ -166,15 +167,19 @@
             @media (min-width: scr_sm)
                 text-align left
                 align-items: flex-start
+
         .bright
             margin-top 20px
             max-width: 100px
             @media (min-width: scr_sm)
                 position absolute
-                bottom 0
+
                 left 0
                 margin-bottom 0
                 max-width: none
+        .customers, .bright
+            @media (min-width: scr_sm)
+                bottom -50px
         h1
 
             font-family: $gotham
@@ -400,6 +405,7 @@
             flex-direction: row
             flex-wrap: wrap
             align-items: center
+            align-self: center
             @media (min-width: scr_md)
                 flex-wrap: nowrap
         & ^[0]__image
@@ -430,7 +436,7 @@
             @media (min-width: scr_lg)
                 max-width: calc(50% - 40px)
             p
-                margin-bottom 40px
+                margin-bottom 0px
                 font-size 16px
                 @media (min-width: scr_lg)
                     font-size 20px
@@ -558,7 +564,9 @@
         min-height: 950px
         min-height: min-content
         @media (min-width: scr_sm)
+            min-height: 0
             min-height: min-content
+
             margin-bottom 0
             padding-bottom 0
         @media (min-width: scr_sm) and (max-width: scr_md - 1px)
@@ -649,6 +657,8 @@
             margin 0 8px
             @media (min-width: scr_lg)
                 top 2px
+                .msedge-12 &, .msedge-13 &
+                    top 0
         &:hover
             color orange
 

@@ -4012,6 +4012,12 @@ svg g {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.msedge-12 .nav__item,
+.msedge-12 .toolbar__button,
+.msedge-13 .nav__item,
+.msedge-13 .toolbar__button {
+  padding: 8px 20px 7px;
+}
 @media (min-width: 1600px) {
   .nav__item,
   .toolbar__button {
@@ -4211,7 +4217,7 @@ svg g {
   .mno {
     height: 100vh;
     min-height: 600px;
-    padding: 70px 40px;
+    padding: 80px 40px 30px;
   }
 }
 @media (min-width: 1600px) {
@@ -4389,6 +4395,7 @@ svg g {
 .block--home {
   background-color: #5d3426;
   background-image: url("/layout/images/bg.1.jpg");
+  padding: 80px 40px 90px;
 }
 .block--home .block__content {
   text-align: center;
@@ -4413,10 +4420,15 @@ svg g {
 @media (min-width: 768px) {
   .block--home .bright {
     position: absolute;
-    bottom: 0;
     left: 0;
     margin-bottom: 0;
     max-width: none;
+  }
+}
+@media (min-width: 768px) {
+  .block--home .customers,
+  .block--home .bright {
+    bottom: -50px;
   }
 }
 .block--home h1 {
@@ -4858,6 +4870,9 @@ svg g {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
 }
 @media (min-width: 992px) {
   .block--specs .block__content {
@@ -4924,7 +4939,7 @@ svg g {
   }
 }
 .block--specs .text p {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   font-size: 16px;
 }
 @media (min-width: 1170px) {
@@ -5151,6 +5166,7 @@ svg g {
 @media (min-width: 768px) {
   .highlight__content,
   .mno__content {
+    min-height: 0;
     min-height: -webkit-min-content;
     min-height: -moz-min-content;
     min-height: min-content;
@@ -5346,6 +5362,12 @@ svg g {
   .highlight__link span,
   .mno__link span {
     top: 2px;
+  }
+  .msedge-12 .highlight__link span,
+  .msedge-12 .mno__link span,
+  .msedge-13 .highlight__link span,
+  .msedge-13 .mno__link span {
+    top: 0;
   }
 }
 .highlight__link:hover,
@@ -6074,6 +6096,10 @@ svg g {
   color: #fd9127;
   font-size: 12px;
 }
+.msedge-12 .features__item--small .features__title,
+.msedge-13 .features__item--small .features__title {
+  margin-top: 0;
+}
 @media (min-width: 768px) {
   .features__item--small .features__title {
     font-size: 8px;
@@ -6149,7 +6175,7 @@ svg g {
     border-bottom: 1px solid #fd9127;
     padding-bottom: 5px;
     margin-bottom: 5px;
-    font-size: 23px;
+    font-size: 22px;
   }
 }
 .features__text {
@@ -6274,7 +6300,7 @@ svg g {
     flex: 1 1 15%;
   }
 }
-@media (min-width: 1170px) {
+@media (min-width: 1170px) and (min-height: 750px) {
   .articles__item {
     font-size: 15px;
   }
