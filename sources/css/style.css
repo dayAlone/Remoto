@@ -3177,6 +3177,8 @@ svg g {
 }
 .features__item--small .features__icon {
   width: 36px;
+}
+.features__item--small .features__icon img {
   max-width: 36px;
   max-height: 36px;
 }
