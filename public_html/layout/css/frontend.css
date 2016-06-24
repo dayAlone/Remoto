@@ -4701,7 +4701,7 @@ svg g {
     padding-top: 95px;
   }
 }
-@media (min-width: 768px) and (min-height: 650px) {
+@media (min-width: 768px) and (min-height: 700px) {
   .block--mno {
     padding-top: 120px;
   }
@@ -4741,11 +4741,6 @@ svg g {
     margin: 0;
     border-radius: 30px 30px 0 0;
     padding: 35px 45px 30px;
-  }
-}
-@media (min-width: 1170px) and (min-height: 650px) {
-  .block--mno .block__content {
-    padding: 55px 45px 50px;
   }
 }
 @media (min-width: 1170px) and (min-height: 740px) {
@@ -5030,14 +5025,15 @@ svg g {
     min-height: -webkit-min-content !important;
     min-height: -moz-min-content !important;
     min-height: min-content !important;
-    max-height: 100px;
+    max-height: 110px;
     -o-box-align: end;
     -ms-flex-align: end;
     -webkit-align-items: flex-end;
     align-items: flex-end;
+    padding-top: 0;
   }
 }
-@media (min-width: 768px) and (min-height: 650px) {
+@media (min-width: 768px) and (min-height: 700px) {
   .block--contacts .block__content {
     padding-top: 60px;
     max-height: 180px;
@@ -5849,6 +5845,7 @@ svg g {
 }
 .partners {
   position: relative;
+  margin-top: 0;
 }
 @media (max-width: 767px) {
   .partners {
@@ -6580,10 +6577,10 @@ a.articles__title .articles__name:hover span:hover {
     width: 100%;
     left: 0;
     margin: 0;
-    height: calc(100% - 230px);
+    height: calc(100% - 200px);
   }
 }
-@media (min-width: 768px) and (min-height: 650px) {
+@media (min-width: 768px) and (min-height: 700px) {
   .map {
     height: calc(100% - 300px);
   }
@@ -6884,7 +6881,7 @@ a.articles__title .articles__name:hover span:hover {
   font-size: 16px;
   border-top: 1px solid #fd9127;
 }
-@media (min-width: 1170px) and (min-height: 650px) {
+@media (min-width: 1170px) and (min-height: 700px) {
   .list__content {
     font-size: 20px;
   }
@@ -6916,7 +6913,7 @@ a.articles__title .articles__name:hover span:hover {
   text-transform: uppercase;
   color: #fff;
 }
-@media (min-width: 1170px) and (min-height: 650px) {
+@media (min-width: 1170px) and (min-height: 700px) {
   .list__title {
     font-size: 24px;
   }
