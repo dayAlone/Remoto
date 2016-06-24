@@ -14,10 +14,14 @@
         padding-top 10px
         @media (min-width: 600px)
             max-height: calc(100vh - 250px)
+            .msie-11 &
+                max-height: 80vh
             overflow hidden
             max-width: 95%
         @media (min-width: scr_lg)
             max-height: calc(100vh - 280px)
+            .msie-11 &
+                max-height: 80vh
     &__wrap
         padding-bottom 0px
     &:after, &:before

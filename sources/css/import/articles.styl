@@ -28,6 +28,8 @@
             font-size 17px
     &__icon
         size 44px
+        min-width: 44px
+        min-height: 44px
         background-color orange
         display flex
         justify-content: center
@@ -53,6 +55,8 @@
         font-size 16px
 
         flex: 1 1 calc(100% - 50px)
+        .msie-11 &
+            flex: 1 1 100%
         @media (min-width: scr_lg) and (min-height: 750px)
             font-size 18px
         @media (min-width: 1600px)
