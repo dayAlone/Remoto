@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Main",
+        "#home",
+        array(),
+        array(),
+        ""
+    ),
+    Array(
+        "About",
+        "#about",
+        array(),
+        array(),
+        ""
+    ),
+    Array(
+        "Highlights",
+        "#highlights",
+        array(),
+        array(),
+        ""
+    ),
+    Array(
+        "Remoto for MNO",
+        "#mno",
+        array(),
+        array(),
+        ""
+    ),
+    Array(
+        "Tech specs",
+        "#specs",
+        array(),
+        array(),
+        ""
+    ),
+    Array(
+        "News & events",
+        "#news",
+        array(),
+        array(),
+        ""
+    ),
+    Array(
+        "Contacts",
+        "#contacts",
+        array(),
+        array(),
+        ""
+    )
+);
+?>
