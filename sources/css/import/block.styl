@@ -617,71 +617,20 @@
                 font-size: 20px
             @media (min-width: scr_hd)
                 font-size: 24px
-        .how
-            display: flex
+
+    &--testimonials
+        background-image url(../images/bg.testimonials.jpg)
+        background-size cover
+        & ^[0]__content
+            align-items: center
             width: 100%
-            max-width: 1400px
-            font-family: 'GothamPro'
-            margin-top 25px
-            flex-wrap: wrap;
-            @media (min-width: scr_sm)
-                justify-content: space-between
-            @media (min-width: scr_hd)
-                margin-top 50px
-            &__item
-
-                text-align center
-                display: flex
-                flex-direction: column
-                align-items: center
-                justify-content: space-between
-                margin-bottom 20px
-                @media (min-width: scr_sm)
-                    margin-bottom 0
-                    flex-basis: (100 / 3)%
-                img
-                    max-width: 95%
-                    max-height: 95%
-            &__image
-                flex 1
-                display: flex
-                align-items: center
-                justify-content: center
-                width: 100%
-                margin-bottom 20px
-                @media (min-width: scr_hd)
-                    margin-bottom 40px
-            &__num
-
-                border-radius: 50%
-                background-color black
-                color white
-                font-weight 900
-
-                display: flex
-                justify-content: center
-                align-items: center
-
-                margin-bottom 10px
-                font-size 19px
-                size 30px
-                padding-top 2px
-                @media (min-width: scr_md)
-                    padding-top 4px
-                    font-size 30px
-                    size 50px
-                @media (min-width: scr_hd)
-                    margin-bottom 15px
-            &__name
-                font-size 20px
-                font-weight 900
-                font-size 14px
-                @media (min-width: scr_sm)
-                    font-size 13px
-                @media (min-width: scr_md)
-                    font-size: 18px
-                @media (min-width: scr_hd)
-                    font-size: 20px
+            justify-content: center
+        .text
+            width: 100%
+        .title
+            text-align center
+            &:before
+                display none
 
 .slick
     &-arrow

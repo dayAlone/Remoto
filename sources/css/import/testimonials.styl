@@ -1,0 +1,135 @@
+.testimonials
+    width: 100%
+    max-width: 100%
+    position relative
+    @media (min-width: scr_sm)
+        padding: 0 20px
+    @media (min-width: scr_md)
+        padding: 0 40px
+    &__item
+        text-align center
+        display: flex
+        align-items: center
+        flex-direction: column
+
+        @media (min-width: scr_sm)
+            padding: 0 35px
+        &:focus
+            outline 0
+    &__image
+        background-color #fff
+
+        background-size cover
+        border-radius: 50%
+        margin-bottom 5px
+        display inline-block
+        size 90px
+
+        @media (min-width: scr_md)
+            size 100px
+        @media (min-width: scr_hd)
+            size 120px
+    &__name
+        color white
+        border-line(alpha(@color, .5))
+        font-weight 900
+        font-family 'GothamPro'
+        display inline
+        font-size 15px
+        @media (min-width: scr_hd)
+            font-size 17px
+    &__title
+
+        color black
+        font-weight 900
+        font-family 'GothamPro'
+
+        position relative
+        padding-top 25px
+        margin-top 25px
+        margin-bottom 15px
+        font-size 16px
+        @media (min-width: scr_md)
+            font-size 18px
+        @media (min-width: scr_hd)
+            font-size 24px
+        &:before
+            content ""
+            width: 45px
+            height: 4px
+            background-color #ed4f2e
+            position absolute
+            top 0
+            left 50%
+            transform: translateX(-50%)
+    &__text
+        color black
+        font-size 14px
+        @media (min-width: scr_md)
+            font-size 16px
+        @media (min-width: scr_hd)
+            font-size 18px
+    .slick
+        &-arrow
+            position absolute
+            top 0
+
+            width: 20px
+
+
+            cursor: pointer;
+            height: 34px
+            margin-top -17px
+            top 50px
+            @media (min-width: scr_sm)
+                top 50%
+            @media (min-width: scr_hd)
+                height: 40px
+                margin-top -30px
+            &:before, &:after
+                content ""
+                position absolute
+                width: 2px
+                background-color white
+                height 20px
+                @media (min-width: scr_md)
+                    height 37px
+                @media (min-width: scr_hd)
+                    height 57px
+                top 50%
+                transition: .3s background
+            &:hover
+                &:before, &:after
+                    background-color red_orange
+        &-prev
+            left: 0px
+            @media (min-width: scr_sm)
+                left: -22px
+            @media (min-width: scr_md)
+                left: -35px
+            @media (min-width: scr_hd)
+                left -50px
+            &:before, &:after
+                left 0
+            &:before
+                transform: translateY(0%) rotate(-45deg)
+                transform-origin: top left
+            &:after
+                transform: translateY(-103%) rotate(45deg)
+                transform-origin: bottom left
+        &-next
+            right: 0px
+            @media (min-width: scr_sm)
+                right: -22px
+            @media (min-width: scr_md)
+                right: -35px
+            @media (min-width: scr_hd)
+                right: -50px
+            &:before, &:after
+                right 0
+            &:before
+                transform: translateY(0%) rotate(45deg)
+                transform-origin: top right
+            &:after
+                transform: translateY(-103%) rotate(-45deg)
+                transform-origin: bottom right

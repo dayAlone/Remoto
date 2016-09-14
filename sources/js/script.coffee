@@ -311,7 +311,6 @@ $(document).ready ->
 		$('body').toggleClass 'open'
 		e.preventDefault()
 
-
 	$('.fotorama').on 'fotorama:ready', (e, fotorama)->
 		if $.browser.android
 			fotorama.resize({ width: $('.block__content').width() })
@@ -467,3 +466,30 @@ $(document).ready ->
 			else if data.status == "error"
 				$('input[name=captcha_word]').addClass('parsley-error')
 				getCaptcha()
+
+	$('.testimonials__slider').slick
+		speed: 500
+		cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
+		loop: true
+		nextArrow: '<div class="slick-next"></div>'
+		prevArrow: '<div class="slick-prev"></div>'
+		responsive: [
+				{
+					breakpoint: 2800,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 1170,
+					settings: {
+						slidesToShow: 2
+					}
+				}
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1
+					}
+				}
+			]

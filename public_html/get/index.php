@@ -84,6 +84,28 @@ $APPLICATION->SetPageProperty('body_class', 'page--get');
             </div>
         </div>
     </div>
+    <div id="testimonials" data-nav="white" data-logo="white" data-dots="white" class="block block--testimonials">
+        <div class="block__content">
+            <div class="text">
+                <h2 class="title">Testimonials</h2>
+                <?
+                    $APPLICATION->IncludeComponent("bitrix:news.list", "testimonials",
+                        array(
+                            "IBLOCK_ID"            => "18",
+                            "NEWS_COUNT"           => "99",
+                            "SORT_BY1"             => "SORT",
+                            "SORT_ORDER1"          => "ASC",
+                            "CACHE_TYPE"           => "A",
+                            "SET_TITLE"            => "N",
+                            "PROPERTY_CODE"        => array('TITLE', 'LINK')
+                        ),
+                        false
+                    );
+                ?>
+            </div>
+        </div>
+
+    </div>
     <div id="specs" data-nav="black" data-logo="color" data-dots="black" class="block block--specs">
         <div class="block__content">
             {GALLERY:64}

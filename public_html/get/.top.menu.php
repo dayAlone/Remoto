@@ -23,7 +23,7 @@ $aMenuLinks = Array(
     ),
     Array(
         "Testimonials",
-        "#mno",
+        "#testimonials",
         array(),
         array(),
         ""
