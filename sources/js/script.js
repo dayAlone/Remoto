@@ -1,5 +1,5 @@
 (function() {
-  var activeHighlights, checkColors, checkNewsScroll, checkScroll, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
+  var activeHighlights, checkColors, checkNewsScroll, checkScroll, checkSizes, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
 
   spinOptions = {
     lines: 13,
@@ -337,6 +337,24 @@
     return $('#pp-nav').toggleClass('black', next.data('dots') === 'black');
   };
 
+  checkSizes = function() {
+    $('.block').elem('video').find('video').each(function(key, el) {
+      var p;
+      $(el).removeAttr('style');
+      console.log($(el).height(), $(window).height());
+      if ($(el).height() + 30 < $(window).height()) {
+        p = $(el).width() / $(el).height();
+        return $(el).height($(window).height()).width($(window).height() * p);
+      }
+    });
+    if ($.browser.android) {
+      $('.fotorama').data('fotorama').resize({
+        width: $('.block__content').width()
+      });
+      return $('.map__block').width($(window).width());
+    }
+  };
+
   $(document).ready(function() {
     var anchors, hash;
     $('.modal').on('shown.bs.modal', function(e) {
@@ -394,14 +412,8 @@
     initHighlights('mnos')();
     $(window).on('resize', _.throttle(initHighlights('highlights'), 300));
     $(window).on('resize', _.throttle(initHighlights('mnos'), 300));
-    $(window).on('resize', _.throttle((function() {
-      if ($.browser.android) {
-        $('.fotorama').data('fotorama').resize({
-          width: $('.block__content').width()
-        });
-        return $('.map__block').width($(window).width());
-      }
-    }), 300));
+    $(window).on('resize', _.throttle(checkSizes, 300));
+    checkSizes();
     $('html').addClass($.browser.name + '-' + $.browser.versionNumber);
     $.getScript('https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap&language=en');
     if ($(window).width() > 600) {

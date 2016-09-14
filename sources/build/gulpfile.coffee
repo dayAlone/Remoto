@@ -209,29 +209,29 @@ gulp.task 'default', ->
 		proxy:
 			target: "http://rmt.local"
 
-	gulp.watch "#{path.js.sources}/**/*.coffee", ->
+	gulp.watch "#{path.js.sources}/**/*.coffee", { interval: 500 }, ->
 		sequence 'js_front', 'reload_js'
 
-	gulp.watch "#{path.css.sources}/**/*.styl", ->
+	gulp.watch "#{path.css.sources}/**/*.styl", { interval: 500 }, ->
 		sequence 'css_front', 'reload_css'
 
-	gulp.watch "#{sources}/images/svg/**/*.svg", ->
+	gulp.watch "#{sources}/images/svg/**/*.svg", { interval: 500 }, ->
 		sequence 'svg_mini'
 
-	gulp.watch ["#{path.html}**/*.jade"], ->
+	gulp.watch ["#{path.html}**/*.jade"], { interval: 500 }, ->
 		sequence 'html', 'reload'
 
-	gulp.watch [ "#{sources}/images/**/*.jpg", "#{sources}/images/**/*.png" ], ->
+	gulp.watch [ "#{sources}/images/**/*.jpg", "#{sources}/images/**/*.png" ], { interval: 500 }, ->
 		sequence 'img_mini'
 
-	gulp.watch ["./public_html/**/*.php",'!./public_html/bitrix/**'], { 'dot' : true }, ->
+	gulp.watch ["./public_html/**/*.php",'!./public_html/bitrix/**'], { interval: 500, 'dot' : true }, ->
 		sequence 'reload'
 
-	gulp.watch ["#{path.css.sources}/bootstrap/bootstrap.less", "./sources/build/plugins.json"], ->
+	gulp.watch ["#{path.css.sources}/bootstrap/bootstrap.less", "./sources/build/plugins.json"], { interval: 500 }, ->
 		sequence 'css_bootstrap', 'css_plugins', 'copy', 'css_front', 'reload'
 
-	gulp.watch ["./sources/build/gulpfile.coffee"], ->
+	gulp.watch ["./sources/build/gulpfile.coffee"], { interval: 500 }, ->
 		sequence 'js_plugins', 'js_front', 'css_bootstrap', 'css_plugins', 'copy', 'css_front', 'reload'
 
-	gulp.watch ["./bower_components/**/*.js"], ->
+	gulp.watch ["./bower_components/**/*.js"], { interval: 500 }, ->
 		sequence 'js_plugins', 'js_front', 'reload'

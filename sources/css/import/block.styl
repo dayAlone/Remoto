@@ -36,11 +36,11 @@
         display none
         @media (min-width: scr_md)
             display flex
-        @media (min-width: 1600px)
+        @media (min-width: scr_hd)
             padding 0 70px
         @media (min-width: scr_md) and (max-height: 780px)
             display none
-        @media (min-width: 1600px) and (max-height: 830px)
+        @media (min-width: scr_hd) and (max-height: 830px)
             display none
 
         .nav__item
@@ -58,7 +58,7 @@
             padding 2px 15px 0
             white-space: normal
             border-radius: 0
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 11px
             &--active, &:hover
                 box-shadow: inset 0 0 0 1px orange
@@ -88,7 +88,7 @@
         height: 100vh
         min-height: 600px
         padding: 80px 40px 30px
-    @media (min-width: 1600px)
+    @media (min-width: scr_hd)
         padding: 130px 70px 90px
     &.pp-section
         position absolute
@@ -131,8 +131,9 @@
             padding-bottom: 56.25%
             transform: translateX(-50%)
             position absolute
-            top 0
+            top 0%
             left 50%
+            width: 100%
         &:after
             position absolute
             size 100%
@@ -160,6 +161,8 @@
         background-color #5d3426
         background-image url(/layout/images/bg.1.jpg)
         padding: 80px 40px 90px
+        @media (min-width: scr_hd)
+            padding: 80px 60px 90px
         & ^[0]__content
             text-align center
 
@@ -173,7 +176,6 @@
             max-width: 100px
             @media (min-width: scr_sm)
                 position absolute
-
                 left 0
                 margin-bottom 0
                 max-width: none
@@ -192,13 +194,19 @@
             display inline-block
             margin-bottom 20px
             font-size 40px
+            span
+                color orange
+
+
             @media (min-width: scr_sm)
                 font-size 82px
                 border-bottom 1px solid alpha(white, .5)
+
             @media (min-width: scr_lg)
                 font-size 100px
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 120px
+
         h3
             color orange
             text-transform uppercase
@@ -215,14 +223,14 @@
                 font-size 22px
             @media (min-width: scr_lg)
                 font-size 27px
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 32px
         p
 
             line-height 1.2
             margin-bottom 15px
             font-size 15px
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 24px
             br
                 @media (max-width: scr_sm - 1px)
@@ -232,6 +240,66 @@
                 font-size 22px
             @media (min-width: scr_lg)
                 font-size 24px
+        .page--get &
+            @media (max-width: scr_sm - 1px)
+                padding: 80px 20px 90px
+            & ^[0]__content
+                @media (max-width: scr_sm - 1px)
+                    align-items: flex-start
+            &:after
+                content ""
+                position absolute
+                bottom 0
+                left 0
+                width: 100%
+
+                background-color orange
+                @media (max-width: scr_sm - 1px)
+                    height: 70px
+                @media (min-width: scr_sm)
+                    height: 100px
+                @media (min-width: scr_lg)
+                    height: 130px
+            .customers, .bright
+                @media (max-width: scr_sm - 1px)
+                    position absolute
+                    left 0px
+                    bottom -70px
+                @media (min-width: scr_sm)
+                    bottom -63px
+                @media (min-width: scr_md)
+                    bottom -65px
+                @media (min-width: scr_lg)
+                    bottom -50px
+            h1
+                margin-bottom 30px
+                line-height .9
+                text-align left
+                font-size 32px
+                @media (min-width: scr_sm)
+                    border 0
+                    font-size 55px
+                @media (min-width: scr_md)
+                    font-size 70px
+                @media (min-width: scr_lg)
+                    font-size 80px
+                @media (min-width: scr_hd)
+                    font-size 105px
+
+            .highlight__image
+                top auto
+                @media (max-width: scr_sm - 1px)
+                    bottom -80px
+                    position absolute
+                    max-width: 57%
+                    right: -10px
+                @media (min-width: scr_sm)
+                    bottom 150px
+                @media (min-width: scr_md)
+                    bottom -70px
+                @media (min-width: scr_lg)
+                    margin-right 30px
+
     &--about
         background-color orange
         background-image url(/layout/images/bg.2.jpg)
@@ -240,7 +308,7 @@
                 flex-direction: row
                 align-items: center
         & ^[0]__image
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 max-width: 40%
         .text
             color black
@@ -249,7 +317,7 @@
                 padding-left 40px
             @media (min-width: scr_lg)
                 max-width: 45%
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 width: 60%
                 max-width: 60%
                 display: flex
@@ -281,7 +349,6 @@
                     margin-bottom 0px
                 @media (min-width: scr_lg) and (min-height: 700px)
                     font-size 20px
-
     &--highlights
         background-color #0c0d0d
         background-image url(/layout/images/highlights-image.jpg)
@@ -522,6 +589,99 @@
                 margin-left 60px
             @media (min-width: scr_lg)
                 margin-left 100px
+    &--how
+        background-color white
+        color black
+        & ^[0]__content
+            align-items: center
+            justify-content: center
+        .title
+            color black
+            text-align center
+            margin-bottom 10px
+            @media (min-width: scr_lg)
+                font-size: 45px
+            @media (min-width: scr_hd)
+                font-size: 60px
+            &:before
+                display none
+            span
+                color orange
+        h3
+            font-weight 900
+            font-family: 'GothamPro'
+            text-align center
+            margin-top 5px
+            font-size 16px
+            @media (min-width: scr_md)
+                font-size: 20px
+            @media (min-width: scr_hd)
+                font-size: 24px
+        .how
+            display: flex
+            width: 100%
+            max-width: 1400px
+            font-family: 'GothamPro'
+            margin-top 25px
+            flex-wrap: wrap;
+            @media (min-width: scr_sm)
+                justify-content: space-between
+            @media (min-width: scr_hd)
+                margin-top 50px
+            &__item
+
+                text-align center
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-between
+                margin-bottom 20px
+                @media (min-width: scr_sm)
+                    margin-bottom 0
+                    flex-basis: (100 / 3)%
+                img
+                    max-width: 95%
+                    max-height: 95%
+            &__image
+                flex 1
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 100%
+                margin-bottom 20px
+                @media (min-width: scr_hd)
+                    margin-bottom 40px
+            &__num
+
+                border-radius: 50%
+                background-color black
+                color white
+                font-weight 900
+
+                display: flex
+                justify-content: center
+                align-items: center
+
+                margin-bottom 10px
+                font-size 19px
+                size 30px
+                padding-top 2px
+                @media (min-width: scr_md)
+                    padding-top 4px
+                    font-size 30px
+                    size 50px
+                @media (min-width: scr_hd)
+                    margin-bottom 15px
+            &__name
+                font-size 20px
+                font-weight 900
+                font-size 14px
+                @media (min-width: scr_sm)
+                    font-size 13px
+                @media (min-width: scr_md)
+                    font-size: 18px
+                @media (min-width: scr_hd)
+                    font-size: 20px
 
 .slick
     &-arrow
@@ -532,10 +692,8 @@
 .highlight, .mno
     transition: .3s transform
     will-change: transform
-
     background-color black
     box-shadow: 0 0 50px alpha(black ,.2)
-
     overflow auto
     max-height: 100vh
     min-width: 100vw
@@ -550,7 +708,7 @@
         overflow hidden
     @media (min-width: scr_lg) and (min-height: 750px)
         padding: 90px 40px
-    @media (min-width: 1600px)
+    @media (min-width: scr_hd)
         padding: 130px 70px
 
     .title
@@ -576,7 +734,7 @@
             line-height 1.3
             @media (min-width: scr_lg) and (min-height: 750px)
                 font-size 15px
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 17px
             margin-bottom 20px
             b
@@ -592,7 +750,7 @@
             width: 100%
             @media (min-width: scr_lg) and (min-height: 750px)
                 font-size 20px
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 23px
     .text, &__nav
         width: 100%
@@ -602,7 +760,7 @@
         @media (min-width: scr_lg)
             width: 60%
             max-width: 700px
-        @media (min-width: 1600px)
+        @media (min-width: scr_hd)
             width: 70%
             max-width: 900px
     &__nav
@@ -661,7 +819,6 @@
                     top 0
         &:hover
             color orange
-
     &__list
         padding-left 0
         list-style none
@@ -681,7 +838,7 @@
             font-size 18px
             @media (min-width: scr_lg) and (min-height: 750px)
                 font-size 20px
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 font-size 23px
             &:before
                 content ""
@@ -707,7 +864,7 @@
             transform: translateX(-50%)
         @media (min-width: scr_lg)
             left calc(85% - 70px)
-        @media (min-width: 1600px)
+        @media (min-width: scr_hd)
             left calc(85% - 100px)
             max-width: 40vw
         &--center
@@ -715,7 +872,6 @@
                 bottom 50%
                 transform: translateY(50%) translateX(-50%)
         &--right
-
             @media (max-width: scr_sm - 1px)
                 max-height: none
                 max-width: calc(100% + 40px)
@@ -733,7 +889,7 @@
                 left auto
                 bottom 50%
                 transform: translateY(50%)
-            @media (min-width: 1600px)
+            @media (min-width: scr_hd)
                 max-width: 60vw
     &[data-nav='black']
         .title, .text
@@ -746,7 +902,6 @@
     &[data-nav='black']
         & ^[0]__link
             color black
-
 
 .mno
     &--your-company-branding-on-device

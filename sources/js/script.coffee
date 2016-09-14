@@ -253,6 +253,20 @@ checkColors = (next)->
 	$('.toolbar__logo').mod 'color', next.data('logo') == 'color'
 	$('#pp-nav').toggleClass 'black', next.data('dots') == 'black'
 
+checkSizes = ->
+	$('.block').elem('video').find('video').each (key, el)->
+		$(el).removeAttr 'style'
+		console.log $(el).height(), $(window).height()
+		if $(el).height() + 30 < $(window).height()
+			p = $(el).width() / $(el).height()
+			$(el)
+				.height $(window).height()
+				.width $(window).height() * p
+
+
+	if $.browser.android
+		$('.fotorama').data('fotorama').resize({ width: $('.block__content').width() })
+		$('.map__block').width $(window).width()
 
 $(document).ready ->
 
@@ -309,11 +323,9 @@ $(document).ready ->
 	$(window).on 'resize', _.throttle initHighlights('highlights'), 300
 	$(window).on 'resize', _.throttle initHighlights('mnos'), 300
 
-	$(window).on 'resize', _.throttle (->
-		if $.browser.android
-			$('.fotorama').data('fotorama').resize({ width: $('.block__content').width() })
-			$('.map__block').width $(window).width()
-	), 300
+	$(window).on 'resize', _.throttle checkSizes, 300
+
+	checkSizes()
 
 	$('html').addClass $.browser.name + '-' + $.browser.versionNumber
 

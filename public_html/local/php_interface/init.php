@@ -178,14 +178,15 @@ function OnEndBufferContentHandler(&$content)
 {
 	if(!strstr($_SERVER['SCRIPT_NAME'], 'bitrix/admin')):
 		$pattern = '/{GALLERY:(\d*|\s\d*)}/i';
+
 		if(preg_match($pattern, $content, $matches, false, false)):
 			ob_start();
 				global $APPLICATION;
 				$APPLICATION->IncludeComponent("bitrix:news.detail","slider", Array(
-					"IBLOCK_ID"     => "8",
+					"IBLOCK_ID"     => SITE_ID === 's1' ? "8" : '9',
 					"ELEMENT_ID"    => $matches[1],
 					"CHECK_DATES"   => "N",
-					"IBLOCK_TYPE"   => "content",
+					"IBLOCK_TYPE"   => SITE_ID === 's1' ? "content" : 'get',
 					"SET_TITLE"     => "N",
 					"PROPERTY_CODE" => Array("IMAGES"),
 					"CACHE_TYPE"    => "A",
