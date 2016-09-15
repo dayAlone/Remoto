@@ -6538,8 +6538,9 @@ svg g {
   background-color: #fd6020;
 }
 .button--red:hover {
-  background-color: #fd9127;
-  border-color: #fd9127;
+  background-color: #fff;
+  border-color: #fff;
+  color: #fd6020;
 }
 .button--black,
 .button--black:focus {
