@@ -30738,6 +30738,7 @@ $('#el').spin('flower', 'red');
       $("." + type + " .nav__item:nth-child(" + (index + 1) + ")").addClass('nav__item--active');
       $('.toolbar__logo').mod('color', el.data('logo') === 'color');
       $('.toolbar__nav').toggleClass('nav--black', el.data('nav') === 'black');
+      $('.toolbar__socials').toggleClass('toolbar__socials--black', el.data('nav') === 'black');
       if ($(window).width() >= 768) {
         $('.toolbar__trigger').mod('black', el.data('nav') === 'black');
       }
@@ -30780,6 +30781,7 @@ $('#el').spin('flower', 'red');
 
   checkColors = function(next) {
     $('.toolbar__nav').toggleClass('nav--black', next.data('nav') === 'black');
+    $('.toolbar__socials').toggleClass('toolbar__socials--black', next.data('nav') === 'black');
     if ($(window).width() >= 768) {
       $('.toolbar__trigger').mod('black', next.data('nav') === 'black');
     }
@@ -30921,6 +30923,7 @@ $('#el').spin('flower', 'red');
       } else if ($(this).hasMod('back')) {
         $('.' + type).mod('active', false);
         $('.toolbar__nav').toggleClass('nav--black', false);
+        $('.toolbar__socials').toggleClass('toolbar__socials--black', false);
         $('.toolbar__logo').mod('color', false);
       }
       return e.preventDefault();

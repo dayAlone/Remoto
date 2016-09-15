@@ -299,7 +299,6 @@
                     bottom -70px
                 @media (min-width: scr_lg)
                     margin-right 30px
-
     &--about
         background-color orange
         background-image url(/layout/images/bg.2.jpg)
@@ -617,7 +616,6 @@
                 font-size: 20px
             @media (min-width: scr_hd)
                 font-size: 24px
-
     &--testimonials
         background-image url(../images/bg.testimonials.jpg)
         background-size cover
@@ -631,7 +629,83 @@
             text-align center
             &:before
                 display none
-
+    &--order
+        background-color #5d75aa
+        background-image url(/layout/images/bg.order.jpg)
+        background-size cover
+        & ^[0]__content
+            align-items: center
+            width: 100%
+            justify-content: center
+        .text
+            width: 100%
+        .title
+            text-align center
+            margin-bottom 10px
+            &:before
+                display none
+        h3, h4, h5
+            width: 100%
+            text-align center
+            max-width: 1100px
+            padding: 0 40px
+            margin: 0 auto
+            font-family: 'GothamPro'
+        h3
+            font-weight 900
+            text-transform uppercase
+            @media (min-width: scr_hd)
+                font-size 27px
+        h4
+            font-weight 900
+            position relative
+            margin-top 25px
+            padding-top 30px
+            margin-bottom 40px
+            @media (min-width: scr_hd)
+                font-size 24px
+            &:before
+                content: ""
+                position absolute
+                width: 69px
+                height: 7px
+                background-color: #ff9102
+                top 0
+                left 50%
+                transform: translateX(-50%)
+        h5
+            font-weight 300
+            @media (min-width: scr_hd)
+                font-size 24px
+        .subscribe
+            margin: 10px auto 50px
+            display block
+            text-align center
+            &__email
+                border 0
+                padding: 2px 20px 0
+                font-size 18px
+                width: calc(100% - 40px)
+                max-width: 698px
+                height: 50px
+                background-color: white
+                color black
+            &__button
+                width: calc(100% - 40px)
+                max-width: 274px
+                height: 68px
+                background-color: #ff9102
+                border-radius: 34px
+                border 0
+                margin-top 30px
+                font-size 24px
+                color white
+                font-weight 900
+                text-transform uppercase
+                font-family 'GothamPro'
+                transition: .3s background
+                &:hover
+                    background-color red_orange
 .slick
     &-arrow
         position absolute

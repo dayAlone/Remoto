@@ -113,6 +113,7 @@ $APPLICATION->SetPageProperty('body_class', 'page--get');
             <h2 class="title hidden-md hidden-lg">technical <span>specifications</span></h2>
             <div class="text">
                 <h2 class="title visible-md visible-lg">technical <span>specifications</span></h2>
+
                 <?
                     $APPLICATION->IncludeComponent("bitrix:news.list", "spec",
                         array(
@@ -130,6 +131,21 @@ $APPLICATION->SetPageProperty('body_class', 'page--get');
                 <p>
                     <small style="font-size: 11px; color: rgba(0, 0, 0, .6)">* Network features can be changed by the requirements of MNO</small>
                 </p>
+            </div>
+        </div>
+    </div>
+    <div id="order" data-nav="white" data-logo="white" data-dots="white" class="block block--order">
+        <div class="block__content">
+            <div class="text">
+                <h2 class="title">pre-order now</h2>
+                <h3>Remoto WiFI will be launched soon - be first to own one</h3>
+                <h4>Are you interested in Remoto WiFi and would like to make your car smart and connected? Please enter your e-mail address below and we will send you coupon for a discount 20% and URL to order Remoto WiFi.</h4>
+                <div class="subscribe">
+                    <input type="email" name="email" value="" placeholder="Your e-mail" class="subscribe__email"><br/>
+                    <button class="subscribe__button" type="submit" name="button">subscribe</button>
+                </div>
+                <h5>Remoto WiFi will be only available with embedded SIM card from a partner telecom provider. Remoto WiFi will be available soon to order at operator's stores worldwide.</h5>
+
             </div>
         </div>
     </div>

@@ -39,6 +39,15 @@
             ),
             false);
             ?>
-            <a href="#Request" data-toggle="modal" class="toolbar__button hidden-xs">Request a proposal</a><a href="#" class="toolbar__trigger"><svg width="40" height="29" viewBox="0 0 40 29" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="nav" fill="#FEFEFE"><path id="Fill-1" d="M0 4h40V0H0z"/><path id="Fill-2" d="M0 29h40v-4H0z"/><path id="Fill-3" d="M0 16h40v-4H0z"/></g></g></svg></a>
+            <?= SITE_ID === 's1' ? '<a href="#Request" data-toggle="modal" class="toolbar__button hidden-xs">Request a proposal</a>' : '' ?>
+            <? if (SITE_ID === 's2'):?>
+                <div class="toolbar__socials">
+                    <a href="<?=COption::GetOptionString("grain.customsettings", 'get_fb')?>" class='toolbar__social'><?=svg('social-fb')?></a>
+                    <a href="<?=COption::GetOptionString("grain.customsettings", 'get_inst')?>" class='toolbar__social'><?=svg('social-inst')?></a>
+                    <a href="<?=COption::GetOptionString("grain.customsettings", 'get_tw')?>" class='toolbar__social'><?=svg('social-tw')?></a>
+                    <a href="<?=COption::GetOptionString("grain.customsettings", 'get_gp')?>" class='toolbar__social'><?=svg('social-gp')?></a>
+                </div>
+            <?endif;?>
+            <a href="#" class="toolbar__trigger"><svg width="40" height="29" viewBox="0 0 40 29" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="nav" fill="#FEFEFE"><path id="Fill-1" d="M0 4h40V0H0z"/><path id="Fill-2" d="M0 29h40v-4H0z"/><path id="Fill-3" d="M0 16h40v-4H0z"/></g></g></svg></a>
         </div>
     </div>

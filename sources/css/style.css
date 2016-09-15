@@ -2379,6 +2379,116 @@ svg g {
 .block--testimonials .title:before {
   display: none;
 }
+.block--order {
+  background-color: #5d75aa;
+  background-image: url("/layout/images/bg.order.jpg");
+  background-size: cover;
+}
+.block--order .block__content {
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.block--order .text {
+  width: 100%;
+}
+.block--order .title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.block--order .title:before {
+  display: none;
+}
+.block--order h3,
+.block--order h4,
+.block--order h5 {
+  width: 100%;
+  text-align: center;
+  max-width: 1100px;
+  padding: 0 40px;
+  margin: 0 auto;
+  font-family: 'GothamPro';
+}
+.block--order h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+@media (min-width: 1600px) {
+  .block--order h3 {
+    font-size: 27px;
+  }
+}
+.block--order h4 {
+  font-weight: 900;
+  position: relative;
+  margin-top: 25px;
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+@media (min-width: 1600px) {
+  .block--order h4 {
+    font-size: 24px;
+  }
+}
+.block--order h4:before {
+  content: "";
+  position: absolute;
+  width: 69px;
+  height: 7px;
+  background-color: #ff9102;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.block--order h5 {
+  font-weight: 300;
+}
+@media (min-width: 1600px) {
+  .block--order h5 {
+    font-size: 24px;
+  }
+}
+.block--order .subscribe {
+  margin: 10px auto 50px;
+  display: block;
+  text-align: center;
+}
+.block--order .subscribe__email {
+  border: 0;
+  padding: 2px 20px 0;
+  font-size: 18px;
+  width: calc(100% - 40px);
+  max-width: 698px;
+  height: 50px;
+  background-color: #fff;
+  color: #000;
+}
+.block--order .subscribe__button {
+  width: calc(100% - 40px);
+  max-width: 274px;
+  height: 68px;
+  background-color: #ff9102;
+  border-radius: 34px;
+  border: 0;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'GothamPro';
+  transition: 0.3s background;
+}
+.block--order .subscribe__button:hover {
+  background-color: #fd6020;
+}
 .slick-arrow {
   position: absolute;
   bottom: 0;
@@ -3033,6 +3143,41 @@ svg g {
 .toolbar__button:hover {
   background-color: #fd9127;
   color: #fff;
+}
+.toolbar__social {
+  margin-left: 5px;
+  line-height: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.toolbar__socials {
+  height: 30px;
+  width: 106px;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .toolbar__socials {
+    width: 144px;
+  }
+}
+@media (min-width: 1600px) {
+  .toolbar__socials {
+    width: 182px;
+  }
+}
+.toolbar__social svg {
+  max-width: 100%;
+}
+.toolbar__social svg path {
+  transition: 0.3s fill;
+  fill: #fff;
+}
+.toolbar__socials--black .toolbar__social svg path {
+  fill: #000;
+}
+.toolbar__social:hover svg path {
+  fill: #fd6020;
 }
 .button {
   font-family: 'GothamPro';

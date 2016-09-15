@@ -95,3 +95,29 @@
         &:hover
             background-color orange
             color white
+
+    &__social
+        margin-left 5px
+        line-height 0
+        width: 30px
+        height: 30px
+        display inline-block
+        &s
+            height: 30px
+            width: 106px
+            text-align right
+            @media (min-width: scr_sm)
+                width: 144px
+            @media (min-width: scr_hd)
+                width: 182px
+
+        svg
+            max-width: 100%
+            path
+                transition: .3s fill
+                fill white
+                ^[1]s--black &
+                    fill black
+        &:hover
+            svg path
+                fill red_orange

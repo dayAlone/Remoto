@@ -222,9 +222,11 @@ moveHighlights = (set = true, type = 'highlights')->
 
 		$('.toolbar__logo').mod 'color', el.data('logo') == 'color'
 		$('.toolbar__nav').toggleClass 'nav--black', el.data('nav') == 'black'
+		$('.toolbar__socials').toggleClass 'toolbar__socials--black', el.data('nav') == 'black'
 		if $(window).width() >= 768
 			$('.toolbar__trigger').mod 'black', el.data('nav') == 'black'
 		$(".#{type}__nav").mod 'dark', el.data('nav') == 'black'
+
 
 initHighlights = (type = 'highlights') ->
 	return ->
@@ -248,6 +250,7 @@ initImages = (block) ->
 
 checkColors = (next)->
 	$('.toolbar__nav').toggleClass 'nav--black', next.data('nav') == 'black'
+	$('.toolbar__socials').toggleClass 'toolbar__socials--black', next.data('nav') == 'black'
 	if $(window).width() >= 768
 		$('.toolbar__trigger').mod 'black', next.data('nav') == 'black'
 	$('.toolbar__logo').mod 'color', next.data('logo') == 'color'
@@ -382,6 +385,7 @@ $(document).ready ->
 		else if $(this).hasMod 'back'
 			$('.' + type).mod 'active', false
 			$('.toolbar__nav').toggleClass 'nav--black', false
+			$('.toolbar__socials').toggleClass 'toolbar__socials--black', false
 			$('.toolbar__logo').mod 'color', false
 		e.preventDefault()
 
