@@ -4,7 +4,7 @@
         <?foreach ($arResult['ITEMS'] as $key => $item):?>
         <div>
             <div class='testimonials__item'>
-                <a href="<?=$item['PROPERTIES']['LINK']['VALUE']?>">
+                <a target='_blank' href="<?=$item['PROPERTIES']['LINK']['VALUE']?>">
                     <div class="testimonials__image" style='background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)'></div><br/>
                     <div class='testimonials__name'><?=$item['NAME']?></div>
                 </a>
