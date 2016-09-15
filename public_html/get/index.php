@@ -34,7 +34,7 @@ $APPLICATION->SetPageProperty('to', 'get');
         <div class="block__content">
             <h1><?=COption::GetOptionString("grain.customsettings", 'get_title')?></h1>
 
-            <a href="#about" class="button">learn more</a>
+            <a href="#how" class="button">learn more</a>
             <img src="/layout/images/get-intro.png" class="highlight__image highlight__image--right">
             <a href="http://www.bright-box.eu" target="_blank"><img src="/layout/images/bright-white.png" width="171" class="bright"></a>
         </div>
