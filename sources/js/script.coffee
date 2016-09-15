@@ -428,6 +428,12 @@ $(document).ready ->
 	$('.button').click (e)->
 		if $($(this).attr('href')).hasClass('block') && typeof $.fn.pagepiling.moveTo == 'function'
 			$.fn.pagepiling.moveTo $(this).attr('href').split('#')[1]
+			checkColors $($(this).attr('href'))
+			$('body').removeClass 'open'
+			if $('.highlights').hasMod 'active'
+				$('.highlights').mod 'active', false
+			if $('.mnos').hasMod 'active'
+				$('.mnos').mod 'active', false
 			e.preventDefault()
 
 	if window.location.hash
