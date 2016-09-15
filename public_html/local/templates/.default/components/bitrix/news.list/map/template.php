@@ -17,7 +17,7 @@ endforeach;
                 <a href="#" class="list__title"><span><?=$item['NAME']?></span></a>
                 <div class="list__content">
                     <? if (strlen($item['PROPERTIES']['ADDRESS']['VALUE']) > 0):?>
-                        <div class="list__address"><?=$item['PROPERTIES']['ADDRESS']['~VALUE']?></div>
+                        <div class="list__address"><?=html_entity_decode($item['PROPERTIES']['ADDRESS']['VALUE'])?></div>
                     <?endif;?>
                     <? if (strlen($item['PROPERTIES']['PHONE']['VALUE']) > 0):?>
                         <div class="list__phone"><?=$item['PROPERTIES']['PHONE']['VALUE']?></div>
