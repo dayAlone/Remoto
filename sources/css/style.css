@@ -3692,10 +3692,10 @@ svg g {
 .title--bottom:before {
   display: none;
 }
-.title--without {
+.page--get .title {
   margin-top: 0;
 }
-.title--without:before {
+.page--get .title:before {
   display: none;
 }
 .title span {

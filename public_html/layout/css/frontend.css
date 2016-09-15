@@ -287,7 +287,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -1712,7 +1711,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -6719,10 +6717,10 @@ svg g {
 .title--bottom:before {
   display: none;
 }
-.title--without {
+.page--get .title {
   margin-top: 0;
 }
-.title--without:before {
+.page--get .title:before {
   display: none;
 }
 .title span {
