@@ -161,9 +161,9 @@ $APPLICATION->SetPageProperty('to', 'get');
                 <div class="shares hidden-xs">
                     <div class="shares__title title">share<span class='hidden-sm hidden-md'> if you like</span></div>
                     <div class="shares__buttons">
-                        <a href="#" class="shares__link"><?=svg('social-fb')?></a>
-                        <a href="#" class="shares__link"><?=svg('social-tw')?></a>
-                        <a href="#" class="shares__link"><?=svg('social-gp')?></a>
+                        <a target='_blank' href="http://www.facebook.com/sharer.php?u=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-fb')?></a>
+                        <a target='_blank' href="https://twitter.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-tw')?></a>
+                        <a target='_blank' href="https://plus.google.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-gp')?></a>
                     </div>
                 </div>
             </div>
