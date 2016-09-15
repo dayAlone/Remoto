@@ -562,7 +562,16 @@
                 padding-top 60px
                 max-height: 180px
 
+        & ^[0]__wrap
+            width: 100%
+            display: flex
 
+            align-items: center
+            padding-bottom 10px
+            flex-direction: column
+            @media (min-width: scr_sm)
+                justify-content: space-between
+                flex-direction: row;
 
         .title
             color black
@@ -575,6 +584,57 @@
                 &:before
 
                     margin 0 auto 25px
+        .shares
+            display: flex
+            align-items: center
+            margin-left auto
+            padding: 35px 0 30px
+            justify-content: center
+            flex-direction: column;
+            &.visible-xs-flex
+                @media (min-width: scr_sm)
+                    display none
+            @media (min-width: scr_sm)
+                padding: 0
+                flex-direction: row;
+
+            &__title
+                padding-top 0
+                margin-top 0
+                color white
+                @media (min-width: scr_sm)
+                    margin-right 20px
+                &:before
+                    display none
+            &__link
+                border-radius: 50%
+                display inline-block
+                overflow hidden
+                line-height 0
+                position relative
+                margin: 10px 5px 0 5px
+                @media (min-width: scr_sm)
+                    margin: 0 0 0 5px
+                &:after
+                    content: ""
+                    position absolute
+                    size calc(100% - 4px)
+                    left 50%
+                    top 50%
+                    transform: translate3d(-50%, -50%, 0)
+                    border-radius: 50%
+                    background-color white
+                    z-index: -1
+                    transition: .3s background
+                svg
+                    size 40px
+                    path
+                        fill black
+                &:hover
+                    &:after
+                        background-color red_orange
+
+
 
         .button
             margin-bottom 10px
@@ -588,6 +648,13 @@
                 margin-left 60px
             @media (min-width: scr_lg)
                 margin-left 100px
+            .page--get &
+                @media (min-width: scr_sm)
+                    margin-left 20px
+                @media (min-width: scr_md)
+                    margin-left 40px
+                @media (min-width: scr_lg)
+                    margin-left 40px
     &--how
         background-color white
         color black

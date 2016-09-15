@@ -17,6 +17,7 @@ $APPLICATION->SetPageProperty('to', 'get');
             "BACK"                 => "features",
             "FIELD_CODE"           => array('DETAIL_PICTURE', 'DETAIL_TEXT'),
             "PROPERTY_CODE"        => Array("LOGO", "NAV", "FEATURES", "FEATURES_TYPES", "IMAGE", "BG_IMAGE", "BG_COLOR", "TITLE_COLOR"),
+
         ),
         false
     );
@@ -155,7 +156,17 @@ $APPLICATION->SetPageProperty('to', 'get');
     </div>
     <div id="contacts" data-nav="white" data-logo="white" class="block block--contacts">
         <div class="block__content">
-            <h2 class="title">contact us</h2><a href="#Feedback" data-toggle="modal" class="button button--black">feedback</a>
+            <div class="block__wrap">
+                <h2 class="title title--without">contact us</h2><a href="#Feedback" data-toggle="modal" class="button button--black">ask a question</a>
+                <div class="shares hidden-xs">
+                    <div class="shares__title title">share<span class='hidden-sm hidden-md'> if you like</span></div>
+                    <div class="shares__buttons">
+                        <a href="#" class="shares__link"><?=svg('social-fb')?></a>
+                        <a href="#" class="shares__link"><?=svg('social-tw')?></a>
+                        <a href="#" class="shares__link"><?=svg('social-gp')?></a>
+                    </div>
+                </div>
+            </div>
         </div>
         <?
             $APPLICATION->IncludeComponent("bitrix:news.list", "map",
@@ -173,6 +184,14 @@ $APPLICATION->SetPageProperty('to', 'get');
                 false
             );
         ?>
+        <div class="shares visible-xs-flex">
+            <div class="shares__title title">share<br/><span class='hidden-sm hidden-md'> if you like</span></div>
+            <div class="shares__buttons">
+                <a target='_blank' href="http://www.facebook.com/sharer.php?u=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-fb')?></a>
+                <a target='_blank' href="https://twitter.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-tw')?></a>
+                <a target='_blank' href="https://plus.google.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-gp')?></a>
+            </div>
+        </div>
         <div class="visible-xs footer">
             &copy; <?=date('Y')?> bright box
         </div>
