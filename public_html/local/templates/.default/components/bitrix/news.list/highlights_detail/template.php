@@ -73,6 +73,7 @@ $articles = function($a) {
                                     <? endif;?>
                                 </div>
                             <?endforeach;?>
+                            <?=html_entity_decode($arParams['AFTER'])?>
                         </div>
                     </div>
                     <div class="<?=$class?>__nav">

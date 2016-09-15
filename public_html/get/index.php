@@ -17,7 +17,7 @@ $APPLICATION->SetPageProperty('to', 'get');
             "BACK"                 => "features",
             "FIELD_CODE"           => array('DETAIL_PICTURE', 'DETAIL_TEXT'),
             "PROPERTY_CODE"        => Array("LOGO", "NAV", "FEATURES", "FEATURES_TYPES", "IMAGE", "BG_IMAGE", "BG_COLOR", "TITLE_COLOR"),
-
+            "AFTER"                => '<a href="#Feedback" data-toggle="modal" class="button button--red xxl-margin-top">Get it now!</a>'
         ),
         false
     );
