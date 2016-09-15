@@ -34,7 +34,7 @@ $APPLICATION->SetPageProperty('to', 'get');
     </div>
     <div id="how" data-nav="black" data-logo="color" data-dots="black" class="block block--how">
         <div class="block__content">
-            <h2 class="title">
+            <h2 class="title title--without">
                 Get connected! <span>Easy as 1-2-3</span>
             </h2>
             <h3>Remoto WiFi is easy to install in any car since 1996. Follow 3 steps:</h3>
@@ -57,7 +57,7 @@ $APPLICATION->SetPageProperty('to', 'get');
     <div id="features" data-nav="white" data-logo="color" class="block block--highlights">
         <div class="block__content">
             <div class="text">
-                <h2 class="title"> <span>remoto wifi</span>features</h2>
+                <h2 class="title title--without"> <span>remoto wifi</span>features</h2>
                 <p><?=COption::GetOptionString("grain.customsettings","features") ?></p>
                 <?
                     $APPLICATION->IncludeComponent("bitrix:news.list", "features",
@@ -82,7 +82,7 @@ $APPLICATION->SetPageProperty('to', 'get');
     <div id="testimonials" data-nav="white" data-logo="white" data-dots="white" class="block block--testimonials">
         <div class="block__content">
             <div class="text">
-                <h2 class="title">Testimonials</h2>
+                <h2 class="title title--without">Testimonials</h2>
                 <?
                     $APPLICATION->IncludeComponent("bitrix:news.list", "testimonials",
                         array(
@@ -105,9 +105,9 @@ $APPLICATION->SetPageProperty('to', 'get');
         <div class="block__content">
             {GALLERY:64}
 
-            <h2 class="title hidden-md hidden-lg">technical <span>specifications</span></h2>
+            <h2 class="title title--without hidden-md hidden-lg">technical <span>specifications</span></h2>
             <div class="text">
-                <h2 class="title visible-md visible-lg">technical <span>specifications</span></h2>
+                <h2 class="title title--without visible-md visible-lg">technical <span>specifications</span></h2>
 
                 <?
                     $APPLICATION->IncludeComponent("bitrix:news.list", "spec",
@@ -132,7 +132,7 @@ $APPLICATION->SetPageProperty('to', 'get');
     <div id="order" data-nav="white" data-logo="white" data-dots="white" class="block block--order">
         <div class="block__content">
             <div class="text">
-                <h2 class="title">pre-order <span>now</span></h2>
+                <h2 class="title title--without">pre-order <span>now</span></h2>
                 <h3>Remoto WiFI will be launched soon - be first to own one</h3>
                 <h4>Are you interested in Remoto WiFi and would like to make your car smart and connected? Please enter your e-mail address below and we will send you coupon for a discount 20% and URL to order Remoto WiFi.</h4>
                 <form class="subscribe"  data-parsley-validate>
