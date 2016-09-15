@@ -31010,7 +31010,6 @@ $('#el').spin('flower', 'red');
       e.preventDefault();
       request = $(this).serialize();
       return $.post('/include/send.php', request, function(data) {
-        console.log(data);
         data = $.parseJSON(data);
         if (data.status === "ok") {
           $('.form__action').hide().addClass('hidden');
@@ -31022,7 +31021,7 @@ $('#el').spin('flower', 'red');
         }
       });
     });
-    return $('.testimonials__slider').slick({
+    $('.testimonials__slider').slick({
       speed: 500,
       cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
       loop: true,
@@ -31046,6 +31045,14 @@ $('#el').spin('flower', 'red');
           }
         }
       ]
+    });
+    return $('.subscribe').submit(function(e) {
+      var request;
+      e.preventDefault();
+      request = $(this).serialize();
+      return $.post('/include/subscribe.php', request, function(data) {
+        return $('.subscribe').mod('success', true);
+      });
     });
   });
 

@@ -1,6 +1,7 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty('body_class', 'page--index');
+$APPLICATION->SetPageProperty('to', 'feedback');
 ?>
 <?
     $APPLICATION->IncludeComponent("bitrix:news.list", "highlights_detail",

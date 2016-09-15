@@ -99,20 +99,27 @@
     &__social
         margin-left 5px
         line-height 0
-        width: 30px
-        height: 30px
+
         display inline-block
+        size 25px
+        @media (min-width: scr_lg)
+            size 30px
         &s
-            height: 30px
+
             width: 106px
             text-align right
+            margin-left auto
+            height: 25px
             @media (min-width: scr_sm)
-                width: 144px
+                width: 154px
+            @media (min-width: scr_lg)
+                height: 30px
+                margin-left 0
             @media (min-width: scr_hd)
                 width: 182px
 
         svg
-            max-width: 100%
+            max-height: 100%
             path
                 transition: .3s fill
                 fill white

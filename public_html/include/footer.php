@@ -20,7 +20,7 @@ false);
             </div>
             <div class='form__action'>
                 <form data-parsley-validate class="form">
-                    <input type="hidden" name="to" value='request'>
+                    <input type="hidden" name="to" value='<?=$APPLICATION->GetPageProperty("to")?>'>
                     <div class="row">
                         <div class="col-xs-12">
                             <input type="text" placeholder="Your name *" name="name" required class="form__input">

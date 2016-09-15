@@ -461,7 +461,6 @@ $(document).ready ->
 		e.preventDefault()
 		request = $(this).serialize()
 		$.post '/include/send.php', request, (data) ->
-			console.log data
 			data = $.parseJSON(data)
 			if data.status == "ok"
 				$('.form__action').hide().addClass 'hidden'
@@ -497,3 +496,9 @@ $(document).ready ->
 					}
 				}
 			]
+
+	$('.subscribe').submit (e)->
+		e.preventDefault()
+		request = $(this).serialize()
+		$.post '/include/subscribe.php', request, (data) ->
+			$('.subscribe').mod 'success', true

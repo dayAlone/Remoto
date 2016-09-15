@@ -41,7 +41,7 @@
             ?>
             <?= SITE_ID === 's1' ? '<a href="#Request" data-toggle="modal" class="toolbar__button hidden-xs">Request a proposal</a>' : '' ?>
             <? if (SITE_ID === 's2'):?>
-                <div class="toolbar__socials">
+                <div class="toolbar__socials hidden-xs">
                     <a href="<?=COption::GetOptionString("grain.customsettings", 'get_fb')?>" class='toolbar__social'><?=svg('social-fb')?></a>
                     <a href="<?=COption::GetOptionString("grain.customsettings", 'get_inst')?>" class='toolbar__social'><?=svg('social-inst')?></a>
                     <a href="<?=COption::GetOptionString("grain.customsettings", 'get_tw')?>" class='toolbar__social'><?=svg('social-tw')?></a>
