@@ -23,7 +23,7 @@ $APPLICATION->SetPageProperty('to', 'get');
 ?>
 <div class="blocks">
     <div id="home" data-nav="white" data-logo="white" class="block block--home">
-        <div class="block__video hidden">
+        <div class="block__video">
             <video autoplay="autoplay" loop="">
                 <source src="/layout/video/remotowifi.mp4" type="video/mp4"/>
                 <source src="/layout/video/remotowifi.ogv" type="video/ogg"/>
