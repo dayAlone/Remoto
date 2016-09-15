@@ -3418,8 +3418,14 @@ svg g {
   margin-left: 5px;
   line-height: 0;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 768px) {
+  .toolbar__social {
+    width: 25px;
+    height: 25px;
+  }
 }
 @media (min-width: 1170px) {
   .toolbar__social {
@@ -3428,13 +3434,17 @@ svg g {
   }
 }
 .toolbar__socials {
-  width: 106px;
-  text-align: right;
   margin-left: auto;
   height: 25px;
+  text-align: center;
+  width: 100%;
+  z-index: 4;
+  margin-top: 30px;
 }
 @media (min-width: 768px) {
   .toolbar__socials {
+    margin-top: 0;
+    text-align: right;
     width: 154px;
   }
 }

@@ -101,16 +101,22 @@
         line-height 0
 
         display inline-block
-        size 25px
+        size 30px
+        @media (min-width: scr_sm)
+            size 25px
         @media (min-width: scr_lg)
             size 30px
         &s
 
-            width: 106px
-            text-align right
             margin-left auto
             height: 25px
+            text-align center
+            width: 100%
+            z-index: 4
+            margin-top 30px
             @media (min-width: scr_sm)
+                margin-top 0
+                text-align right
                 width: 154px
             @media (min-width: scr_lg)
                 height: 30px
