@@ -17,20 +17,13 @@ $APPLICATION->SetPageProperty('to', 'get');
             "BACK"                 => "features",
             "FIELD_CODE"           => array('DETAIL_PICTURE', 'DETAIL_TEXT'),
             "PROPERTY_CODE"        => Array("LOGO", "NAV", "FEATURES", "FEATURES_TYPES", "IMAGE", "BG_IMAGE", "BG_COLOR", "TITLE_COLOR"),
-            "AFTER"                => '<a href="#Feedback" data-toggle="modal" class="button button--red xxl-margin-top">Get it now!</a>'
+            "AFTER"                => '<a href="#order" class="button button--red xxl-margin-top">Get it now!</a>'
         ),
         false
     );
 ?>
 <div class="blocks">
     <div id="home" data-nav="white" data-logo="white" class="block block--home">
-        <div class="block__video">
-            <video autoplay="autoplay" loop="">
-                <source src="/layout/video/remotowifi.mp4" type="video/mp4"/>
-                <source src="/layout/video/remotowifi.ogv" type="video/ogg"/>
-                <source src="/layout/video/remotowifi.webm" type="video/webm"/>
-            </video>
-        </div>
         <div class="block__content">
             <h1><?=COption::GetOptionString("grain.customsettings", 'get_title')?></h1>
 

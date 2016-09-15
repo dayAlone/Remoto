@@ -4637,6 +4637,9 @@ svg g {
     font-size: 24px;
   }
 }
+.page--get .block--home {
+  background-image: url("/layout/images/bg.get.jpg");
+}
 @media (max-width: 767px) {
   .page--get .block--home {
     padding: 80px 20px 90px;
