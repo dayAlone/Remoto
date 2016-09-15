@@ -57,7 +57,7 @@ $APPLICATION->SetPageProperty('to', 'get');
     <div id="features" data-nav="white" data-logo="color" class="block block--highlights">
         <div class="block__content">
             <div class="text">
-                <h2 class="title"> <span>Main </span>features</h2>
+                <h2 class="title"> <span>remoto wifi</span>features</h2>
                 <p><?=COption::GetOptionString("grain.customsettings","features") ?></p>
                 <?
                     $APPLICATION->IncludeComponent("bitrix:news.list", "features",
