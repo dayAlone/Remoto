@@ -138,7 +138,7 @@ $APPLICATION->SetPageProperty('to', 'get');
                 <form class="subscribe"  data-parsley-validate>
                     <div class="subscribe__success">Thank you for your request. We will get back to you soon!</div>
                     <div class="subscribe__form">
-                        <input type="email" name="email" required value="" placeholder="Your e-mail" class="subscribe__email"><br/>
+                        <input data-parsley-type-message="Please enter valid e-mail" type="email" name="email" required value="" placeholder="Your e-mail" class="subscribe__email"><br/>
                         <button class="subscribe__button" type="submit" name="button">subscribe</button>
                     </div>
                 </form>

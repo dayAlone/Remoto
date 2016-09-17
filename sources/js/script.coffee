@@ -151,6 +151,7 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 		]
 	mapElement = document.getElementById('map')
 	map = new window.google.maps.Map(mapElement, mapSettings)
+	strictBounds = new google.maps.LatLngBounds(new google.maps.LatLng(85, -180), new google.maps.LatLng(-85, 180))
 	coords = $('.map').data 'coords'
 	coords.map (el, key) ->
 		c = el.coords
@@ -170,7 +171,27 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 		marker.addListener 'click', ->
 			setActiveMarker key + 1
 		markers.push marker
+	google.maps.event.addListener map, 'dragend', ->
+		if strictBounds.contains(map.getCenter())
+			return
+		c = map.getCenter()
+		x = c.lng()
+		y = c.lat()
+		maxX = strictBounds.getNorthEast().lng()
+		maxY = strictBounds.getNorthEast().lat()
+		minX = strictBounds.getSouthWest().lng()
+		minY = strictBounds.getSouthWest().lat()
 
+		if x < minX
+			x = minX
+		if x > maxX
+			x = maxX
+		if y < minY
+			y = minY
+		if y > maxY
+			y = maxY
+
+		map.setCenter(new google.maps.LatLng(y, x))
 	markers[0].setIcon
 		url: '/layout/images/point-white.png',
 		scaledSize: new google.maps.Size(18, 24)
@@ -265,6 +286,9 @@ checkSizes = ->
 				.height $(window).height()
 				.width $(window).height() * p
 
+	if $.browser.mobile
+		$('.block, .highlight, .mno').css
+			minHeight: $(window).height()
 
 	if $.browser.android
 		$('.fotorama').data('fotorama').resize({ width: $('.block__content').width() })

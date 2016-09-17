@@ -82,7 +82,7 @@
     overflow hidden
 
     position relative
-    min-height: 100vh
+    min-height: 90vh
     padding: 90px 20px
     @media (min-width: scr_sm)
         height: 100vh
@@ -247,6 +247,8 @@
             & ^[0]__content
                 @media (max-width: scr_sm - 1px)
                     align-items: flex-start
+                    justify-content: flex-start;
+                    padding-top 15%
             &:after
                 content ""
                 position absolute
@@ -590,9 +592,11 @@
             align-items: center
             margin-left auto
             padding: 35px 0 30px
+
             justify-content: center
             flex-direction: column;
             &.visible-xs-flex
+                width: 100%
                 @media (min-width: scr_sm)
                     display none
             @media (min-width: scr_sm)
@@ -784,6 +788,16 @@
                 margin: 10px auto 50px
             .parsley-errors-list
                 display none
+                &.filled
+                    padding-top 10px
+                    padding-bottom 0
+                    margin-bottom -20px
+                    display block
+                    padding-left 0
+                    text-align center
+                    list-style: none
+                    color white
+                    font-size 15px
             &__success
                 font-family: 'GothamPro'
                 font-size 240%

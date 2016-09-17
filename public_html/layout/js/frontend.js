@@ -32637,7 +32637,7 @@ $('#el').spin('flower', 'red');
   end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd';
 
   this.initMap = function() {
-    var center, coords, map, mapElement, mapSettings, zoom;
+    var center, coords, map, mapElement, mapSettings, strictBounds, zoom;
     zoom = 3;
     center = new window.google.maps.LatLng(34.6917358, 32.9934606);
     if ($.browser.mobile) {
@@ -32792,6 +32792,7 @@ $('#el').spin('flower', 'red');
     };
     mapElement = document.getElementById('map');
     map = new window.google.maps.Map(mapElement, mapSettings);
+    strictBounds = new google.maps.LatLngBounds(new google.maps.LatLng(85, -180), new google.maps.LatLng(-85, 180));
     coords = $('.map').data('coords');
     coords.map(function(el, key) {
       var c, img, marker;
@@ -32814,6 +32815,32 @@ $('#el').spin('flower', 'red');
         return setActiveMarker(key + 1);
       });
       return markers.push(marker);
+    });
+    google.maps.event.addListener(map, 'dragend', function() {
+      var c, maxX, maxY, minX, minY, x, y;
+      if (strictBounds.contains(map.getCenter())) {
+        return;
+      }
+      c = map.getCenter();
+      x = c.lng();
+      y = c.lat();
+      maxX = strictBounds.getNorthEast().lng();
+      maxY = strictBounds.getNorthEast().lat();
+      minX = strictBounds.getSouthWest().lng();
+      minY = strictBounds.getSouthWest().lat();
+      if (x < minX) {
+        x = minX;
+      }
+      if (x > maxX) {
+        x = maxX;
+      }
+      if (y < minY) {
+        y = minY;
+      }
+      if (y > maxY) {
+        y = maxY;
+      }
+      return map.setCenter(new google.maps.LatLng(y, x));
     });
     return markers[0].setIcon({
       url: '/layout/images/point-white.png',
@@ -32945,6 +32972,11 @@ $('#el').spin('flower', 'red');
         return $(el).height($(window).height()).width($(window).height() * p);
       }
     });
+    if ($.browser.mobile) {
+      $('.block, .highlight, .mno').css({
+        minHeight: $(window).height()
+      });
+    }
     if ($.browser.android) {
       $('.fotorama').data('fotorama').resize({
         width: $('.block__content').width()
