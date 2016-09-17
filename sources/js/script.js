@@ -243,7 +243,7 @@
       if (y > maxY) {
         y = maxY;
       }
-      return map.setCenter(new google.maps.LatLng(y, x));
+      return map.setCenter(mapSettings.center);
     });
     return markers[0].setIcon({
       url: '/layout/images/point-white.png',

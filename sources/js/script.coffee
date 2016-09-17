@@ -191,7 +191,7 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 		if y > maxY
 			y = maxY
 
-		map.setCenter(new google.maps.LatLng(y, x))
+		map.setCenter(mapSettings.center)
 	markers[0].setIcon
 		url: '/layout/images/point-white.png',
 		scaledSize: new google.maps.Size(18, 24)
