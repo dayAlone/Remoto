@@ -259,7 +259,6 @@ checkColors = (next)->
 checkSizes = ->
 	$('.block').elem('video').find('video').each (key, el)->
 		$(el).removeAttr 'style'
-		console.log $(el).height(), $(window).height()
 		if $(el).height() + 30 < $(window).height()
 			p = $(el).width() / $(el).height()
 			$(el)
@@ -270,6 +269,25 @@ checkSizes = ->
 	if $.browser.android
 		$('.fotorama').data('fotorama').resize({ width: $('.block__content').width() })
 		$('.map__block').width $(window).width()
+
+checkHash = ->
+	if window.location.hash
+		hash = window.location.hash
+		if hash.length > 0
+			if $(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo == 'function'
+				$.fn.pagepiling.moveTo hash.split('#')[1]
+				$('.highlights').mod 'active', false
+				$('.mnos').mod 'active', false
+
+			if $(hash).hasClass('highlight')
+				activeHighlights 'highlights'
+				goToHighlights $(hash).index(), 'highlights'
+				$.fn.pagepiling.moveTo 3
+
+			if $(hash).hasClass('mno')
+				activeHighlights 'mnos'
+				goToHighlights $(hash).index(), 'mnos'
+				$.fn.pagepiling.moveTo 4
 
 $(document).ready ->
 
@@ -329,6 +347,7 @@ $(document).ready ->
 
 	checkSizes()
 
+
 	$('html').addClass $.browser.name + '-' + $.browser.versionNumber
 
 	$.getScript 'https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap&language=en'
@@ -351,12 +370,18 @@ $(document).ready ->
 			animateAnchor: false
 			afterRender: ->
 				$(window).off('hashchange')
-			afterLoad: ->
+			afterLoad: (anchorLink, index) ->
 				$(window).off('hashchange')
+				checkHash()
+				next = $(".block:nth-child(#{index})")
+				$('body').data 'slide', next.attr 'id'
 			onLeave: (index, nextIndex, direction) ->
 				$(window).off('hashchange')
+				next = $(".block:nth-child(#{nextIndex})")
+				current = $(".block:nth-child(#{index})")
+				$('body').data 'slide', next.attr 'id'
 				delay 300, ->
-					next = $(".block:nth-child(#{nextIndex})")
+
 					if !$('.highlights').hasMod 'active'
 						checkColors next
 
@@ -376,7 +401,6 @@ $(document).ready ->
 			type = 'mnos'
 
 		index = $(this).parents('.' + type.slice(0, type.length - 1)).index()
-		console.log type, index
 
 		if $(this).hasMod 'next'
 			goToHighlights index + 1, type
@@ -436,21 +460,6 @@ $(document).ready ->
 				$('.mnos').mod 'active', false
 			e.preventDefault()
 
-	if window.location.hash
-		hash = window.location.hash
-		if hash.length > 0
-			if $(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo == 'function'
-				$.fn.pagepiling.moveTo hash.split('#')[1]
-
-			if $(hash).hasClass('highlight')
-				activeHighlights 'highlights'
-				goToHighlights $(hash).index(), 'highlights'
-				$.fn.pagepiling.moveTo 3
-
-			if $(hash).hasClass('mno')
-				activeHighlights 'mnos'
-				goToHighlights $(hash).index(), 'mnos'
-				$.fn.pagepiling.moveTo 4
 
 	$('.tabs__item').on 'click', (e)->
 		e.preventDefault()
@@ -508,3 +517,19 @@ $(document).ready ->
 		request = $(this).serialize()
 		$.post '/include/subscribe.php', request, (data) ->
 			$('.subscribe').mod 'success', true
+
+	History.Adapter.bind window, 'hashchange anchorchange', ->
+		hash = window.location.hash
+		slide = '#' + $('body').data('slide')
+
+		if hash == '' && typeof $.fn.pagepiling.moveTo == 'function'
+			$.fn.pagepiling.moveTo 'home'
+
+		if slide != hash && $("#{hash}").hasClass 'block'
+			checkHash()
+
+		else if $(hash).hasClass('highlight') || $(hash).hasClass('mno')
+			checkHash()
+
+		else if slide == hash && ($('.highlights').hasMod('active') || $('.mnos').hasMod('active'))
+			checkHash()

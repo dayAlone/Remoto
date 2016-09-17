@@ -1,5 +1,5 @@
 (function() {
-  var activeHighlights, checkColors, checkNewsScroll, checkScroll, checkSizes, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
+  var activeHighlights, checkColors, checkHash, checkNewsScroll, checkScroll, checkSizes, delay, end, goToHighlights, initHighlights, initImages, markers, moveHighlights, setActiveMarker, spinOptions;
 
   spinOptions = {
     lines: 13,
@@ -343,7 +343,6 @@
     $('.block').elem('video').find('video').each(function(key, el) {
       var p;
       $(el).removeAttr('style');
-      console.log($(el).height(), $(window).height());
       if ($(el).height() + 30 < $(window).height()) {
         p = $(el).width() / $(el).height();
         return $(el).height($(window).height()).width($(window).height() * p);
@@ -357,8 +356,32 @@
     }
   };
 
+  checkHash = function() {
+    var hash;
+    if (window.location.hash) {
+      hash = window.location.hash;
+      if (hash.length > 0) {
+        if ($(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo === 'function') {
+          $.fn.pagepiling.moveTo(hash.split('#')[1]);
+          $('.highlights').mod('active', false);
+          $('.mnos').mod('active', false);
+        }
+        if ($(hash).hasClass('highlight')) {
+          activeHighlights('highlights');
+          goToHighlights($(hash).index(), 'highlights');
+          $.fn.pagepiling.moveTo(3);
+        }
+        if ($(hash).hasClass('mno')) {
+          activeHighlights('mnos');
+          goToHighlights($(hash).index(), 'mnos');
+          return $.fn.pagepiling.moveTo(4);
+        }
+      }
+    }
+  };
+
   $(document).ready(function() {
-    var anchors, hash;
+    var anchors;
     $('.modal').on('shown.bs.modal', function(e) {
       var text, url;
       getCaptcha();
@@ -435,14 +458,20 @@
         afterRender: function() {
           return $(window).off('hashchange');
         },
-        afterLoad: function() {
-          return $(window).off('hashchange');
+        afterLoad: function(anchorLink, index) {
+          var next;
+          $(window).off('hashchange');
+          checkHash();
+          next = $(".block:nth-child(" + index + ")");
+          return $('body').data('slide', next.attr('id'));
         },
         onLeave: function(index, nextIndex, direction) {
+          var current, next;
           $(window).off('hashchange');
+          next = $(".block:nth-child(" + nextIndex + ")");
+          current = $(".block:nth-child(" + index + ")");
+          $('body').data('slide', next.attr('id'));
           return delay(300, function() {
-            var next;
-            next = $(".block:nth-child(" + nextIndex + ")");
             if (!$('.highlights').hasMod('active')) {
               checkColors(next);
             }
@@ -465,7 +494,6 @@
         type = 'mnos';
       }
       index = $(this).parents('.' + type.slice(0, type.length - 1)).index();
-      console.log(type, index);
       if ($(this).hasMod('next')) {
         goToHighlights(index + 1, type);
       } else if ($(this).hasMod('prev')) {
@@ -534,24 +562,6 @@
         return e.preventDefault();
       }
     });
-    if (window.location.hash) {
-      hash = window.location.hash;
-      if (hash.length > 0) {
-        if ($(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo === 'function') {
-          $.fn.pagepiling.moveTo(hash.split('#')[1]);
-        }
-        if ($(hash).hasClass('highlight')) {
-          activeHighlights('highlights');
-          goToHighlights($(hash).index(), 'highlights');
-          $.fn.pagepiling.moveTo(3);
-        }
-        if ($(hash).hasClass('mno')) {
-          activeHighlights('mnos');
-          goToHighlights($(hash).index(), 'mnos');
-          $.fn.pagepiling.moveTo(4);
-        }
-      }
-    }
     $('.tabs__item').on('click', function(e) {
       e.preventDefault();
       $('.block__col').addClass('hidden-xs');
@@ -604,13 +614,28 @@
         }
       ]
     });
-    return $('.subscribe').submit(function(e) {
+    $('.subscribe').submit(function(e) {
       var request;
       e.preventDefault();
       request = $(this).serialize();
       return $.post('/include/subscribe.php', request, function(data) {
         return $('.subscribe').mod('success', true);
       });
+    });
+    return History.Adapter.bind(window, 'hashchange anchorchange', function() {
+      var hash, slide;
+      hash = window.location.hash;
+      slide = '#' + $('body').data('slide');
+      if (hash === '' && typeof $.fn.pagepiling.moveTo === 'function') {
+        $.fn.pagepiling.moveTo('home');
+      }
+      if (slide !== hash && $("" + hash).hasClass('block')) {
+        return checkHash();
+      } else if ($(hash).hasClass('highlight') || $(hash).hasClass('mno')) {
+        return checkHash();
+      } else if (slide === hash && ($('.highlights').hasMod('active') || $('.mnos').hasMod('active'))) {
+        return checkHash();
+      }
     });
   });
 
