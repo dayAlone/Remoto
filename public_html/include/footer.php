@@ -8,8 +8,7 @@ array(
     "CLASS"              => "nav--modal",
     "AFTER"              => SITE_ID === 's1' ?
                             '<a href="#Request" data-toggle="modal" class="toolbar__button">Request a proposal</a>' :
-                            '<a href="#Request" data-toggle="modal" class="toolbar__button">Request a proposal</a>
-                            <div class="toolbar__socials visible-xs">
+                            '<div class="toolbar__socials visible-xs">
                                 <a target="_blank" href="'.COption::GetOptionString("grain.customsettings", 'get_fb').'" class="toolbar__social">'.svg('social-fb').'</a>
                                 <a target="_blank" href="'.COption::GetOptionString("grain.customsettings", 'get_inst').'" class="toolbar__social">'.svg('social-inst').'</a>
                                 <a target="_blank" href="'.COption::GetOptionString("grain.customsettings", 'get_tw').'" class="toolbar__social">'.svg('social-tw').'</a>
