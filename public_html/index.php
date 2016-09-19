@@ -9,6 +9,7 @@ $APPLICATION->SetPageProperty('to', 'feedback');
             "IBLOCK_ID"            => "5",
             "NEWS_COUNT"           => "99",
             "CLASS"                => "highlight",
+            "FBLOCK"               => "6",
             "PARENT_SECTION"       => 9,
             "SORT_BY1"             => "SORT",
             "SORT_ORDER1"          => "ASC",
@@ -24,6 +25,7 @@ $APPLICATION->SetPageProperty('to', 'feedback');
         array(
             "IBLOCK_ID"            => "5",
             "NEWS_COUNT"           => "99",
+            "FBLOCK"               => "6",
             "CLASS"                => "mno",
             "ACTIVE"               => false,
             "PARENT_SECTION"       => 10,

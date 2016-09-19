@@ -179,7 +179,7 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 		mapMaxY = map.getBounds().getSouthWest().lat()
 		minY = strictBounds.getNorthEast().lat()
 		mapMinY = map.getBounds().getNorthEast().lat()
-		
+
 		if -1 * mapMinY < minY ||  -1 * mapMaxY > maxY
 			map.setCenter(mapSettings.center)
 	markers[0].setIcon
@@ -280,7 +280,7 @@ checkSizes = ->
 		$('.block, .highlight, .mno').css
 			minHeight: $(window).height()
 
-	if $.browser.android
+	if $.browser.mobile
 		$('.fotorama').data('fotorama').resize({ width: $('.block__content').width() })
 		$('.map__block').width $(window).width()
 

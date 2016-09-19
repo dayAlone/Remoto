@@ -9,6 +9,7 @@ $APPLICATION->SetPageProperty('to', 'get');
             "IBLOCK_ID"            => "12",
             "NEWS_COUNT"           => "99",
             "CLASS"                => "highlight",
+            "FBLOCK"               => "11",
             "PARENT_SECTION"       => 30,
             "SORT_BY1"             => "SORT",
             "SORT_ORDER1"          => "ASC",

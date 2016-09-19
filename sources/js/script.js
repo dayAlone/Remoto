@@ -366,7 +366,7 @@
         minHeight: $(window).height()
       });
     }
-    if ($.browser.android) {
+    if ($.browser.mobile) {
       $('.fotorama').data('fotorama').resize({
         width: $('.block__content').width()
       });
