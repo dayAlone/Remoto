@@ -8,7 +8,7 @@ foreach ($arResult['ITEMS'] as &$item) {
     endif;
 }
 $arSelect = Array("ID", "NAME", "PREVIEW_PICTURE", "PREVIEW_TEXT");
-$arFilter = Array("IBLOCK_ID"=>6, 'ID' => $items);
+$arFilter = Array("IBLOCK_ID"=>$arParams['FBLOCK'], 'ID' => $items);
 $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>50), $arSelect);
 $arResult['FEATURES'] = array();
 while($ob = $res->GetNextElement()){
