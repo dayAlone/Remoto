@@ -220,30 +220,16 @@
       return markers.push(marker);
     });
     google.maps.event.addListener(map, 'dragend', function() {
-      var c, maxX, maxY, minX, minY, x, y;
-      if (strictBounds.contains(map.getCenter())) {
-        return;
-      }
+      var c, mapMaxY, mapMinY, maxY, minY, y;
       c = map.getCenter();
-      x = c.lng();
       y = c.lat();
-      maxX = strictBounds.getNorthEast().lng();
-      maxY = strictBounds.getNorthEast().lat();
-      minX = strictBounds.getSouthWest().lng();
-      minY = strictBounds.getSouthWest().lat();
-      if (x < minX) {
-        x = minX;
+      maxY = strictBounds.getSouthWest().lat();
+      mapMaxY = map.getBounds().getSouthWest().lat();
+      minY = strictBounds.getNorthEast().lat();
+      mapMinY = map.getBounds().getNorthEast().lat();
+      if (-1 * mapMinY < minY || -1 * mapMaxY > maxY) {
+        return map.setCenter(mapSettings.center);
       }
-      if (x > maxX) {
-        x = maxX;
-      }
-      if (y < minY) {
-        y = minY;
-      }
-      if (y > maxY) {
-        y = maxY;
-      }
-      return map.setCenter(mapSettings.center);
     });
     return markers[0].setIcon({
       url: '/layout/images/point-white.png',
@@ -518,6 +504,7 @@
       });
     } else {
       $('body').on('scroll', _.throttle(checkScroll, 300));
+      checkHash();
     }
     $('.highlight__link, .mno__link').on('click', function(e) {
       var index, type;

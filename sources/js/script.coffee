@@ -172,26 +172,16 @@ end = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransit
 			setActiveMarker key + 1
 		markers.push marker
 	google.maps.event.addListener map, 'dragend', ->
-		if strictBounds.contains(map.getCenter())
-			return
 		c = map.getCenter()
-		x = c.lng()
 		y = c.lat()
-		maxX = strictBounds.getNorthEast().lng()
-		maxY = strictBounds.getNorthEast().lat()
-		minX = strictBounds.getSouthWest().lng()
-		minY = strictBounds.getSouthWest().lat()
 
-		if x < minX
-			x = minX
-		if x > maxX
-			x = maxX
-		if y < minY
-			y = minY
-		if y > maxY
-			y = maxY
-
-		map.setCenter(mapSettings.center)
+		maxY = strictBounds.getSouthWest().lat()
+		mapMaxY = map.getBounds().getSouthWest().lat()
+		minY = strictBounds.getNorthEast().lat()
+		mapMinY = map.getBounds().getNorthEast().lat()
+		
+		if -1 * mapMinY < minY ||  -1 * mapMaxY > maxY
+			map.setCenter(mapSettings.center)
 	markers[0].setIcon
 		url: '/layout/images/point-white.png',
 		scaledSize: new google.maps.Size(18, 24)
@@ -418,6 +408,7 @@ $(document).ready ->
 
 	else
 		$('body').on 'scroll', _.throttle checkScroll, 300
+		checkHash()
 
 	$('.highlight__link, .mno__link').on 'click', (e)->
 		type = 'highlights'
