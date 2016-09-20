@@ -9,7 +9,7 @@
             </div>
             <div class='how__num'><?=$key + 1?></div>
             <div class='how__name'><?=html_entity_decode($item['~NAME'])?></div>
-            <div class='how__description'><?=$item['~DESCRIPTION']?></div>
+            <div class='how__description'><?=$item['~PREVIEW_TEXT']?></div>
         </div>
     <?endforeach;?>
 </div>
