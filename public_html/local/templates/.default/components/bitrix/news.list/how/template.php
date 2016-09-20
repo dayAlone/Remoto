@@ -9,6 +9,7 @@
             </div>
             <div class='how__num'><?=$key + 1?></div>
             <div class='how__name'><?=$item['NAME']?></div>
+            <div class='how__description'><?=$item['~DESCRIPTION']?></div>
         </div>
     <?endforeach;?>
 </div>

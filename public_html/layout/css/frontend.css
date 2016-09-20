@@ -8185,6 +8185,10 @@ a.articles__title .articles__name:hover span:hover {
     font-size: 20px;
   }
 }
+.how__description {
+  width: 100%;
+  text-align: center;
+}
 .testimonials {
   width: 100%;
   max-width: 100%;
