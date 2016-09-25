@@ -379,20 +379,26 @@
     if (window.location.hash) {
       hash = window.location.hash;
       if (hash.length > 0) {
-        if ($(hash).hasClass('block') && typeof $.fn.pagepiling.moveTo === 'function') {
-          $.fn.pagepiling.moveTo(hash.split('#')[1]);
+        if ($(hash).hasClass('block')) {
+          if (typeof $.fn.pagepiling.moveTo === 'function') {
+            $.fn.pagepiling.moveTo(hash.split('#')[1]);
+          }
           $('.highlights').mod('active', false);
           $('.mnos').mod('active', false);
         }
         if ($(hash).hasClass('highlight')) {
           activeHighlights('highlights');
           goToHighlights($(hash).index(), 'highlights');
-          $.fn.pagepiling.moveTo(3);
+          if (typeof $.fn.pagepiling.moveTo === 'function') {
+            $.fn.pagepiling.moveTo(3);
+          }
         }
         if ($(hash).hasClass('mno')) {
           activeHighlights('mnos');
           goToHighlights($(hash).index(), 'mnos');
-          return $.fn.pagepiling.moveTo(4);
+          if (typeof $.fn.pagepiling.moveTo === 'function') {
+            return $.fn.pagepiling.moveTo(4);
+          }
         }
       }
     }
@@ -568,17 +574,19 @@
       return e.preventDefault();
     });
     $('.button').click(function(e) {
-      if ($($(this).attr('href')).hasClass('block') && typeof $.fn.pagepiling.moveTo === 'function') {
-        $.fn.pagepiling.moveTo($(this).attr('href').split('#')[1]);
+      if ($($(this).attr('href')).hasClass('block')) {
+        if (typeof $.fn.pagepiling.moveTo === 'function') {
+          $.fn.pagepiling.moveTo($(this).attr('href').split('#')[1]);
+          e.preventDefault();
+        }
         checkColors($($(this).attr('href')));
         $('body').removeClass('open');
         if ($('.highlights').hasMod('active')) {
           $('.highlights').mod('active', false);
         }
         if ($('.mnos').hasMod('active')) {
-          $('.mnos').mod('active', false);
+          return $('.mnos').mod('active', false);
         }
-        return e.preventDefault();
       }
     });
     $('.tabs__item').on('click', function(e) {
