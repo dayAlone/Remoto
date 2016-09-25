@@ -8107,11 +8107,6 @@ a.articles__title .articles__name:hover span:hover {
   max-height: 95%;
 }
 .how__image {
-  -o-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: box;
