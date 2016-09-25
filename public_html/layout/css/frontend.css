@@ -8085,14 +8085,17 @@ a.articles__title .articles__name:hover span:hover {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   margin-bottom: 20px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 @media (min-width: 768px) {
   .how__item {
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     margin-bottom: 0;
     -webkit-flex-basis: 33.333333333333336%;
     -ms-flex-preferred-size: 33.333333333333336%;
