@@ -162,6 +162,14 @@ $APPLICATION->SetPageProperty('to', 'get');
                 </div>
             </div>
         </div>
+        <div class="shares visible-xs-flex">
+            <div class="shares__title title">share<br/><span class='hidden-sm hidden-md'> if you like</span></div>
+            <div class="shares__buttons">
+                <a target='_blank' href="http://www.facebook.com/sharer.php?u=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-fb')?></a>
+                <a target='_blank' href="https://twitter.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-tw')?></a>
+                <a target='_blank' href="https://plus.google.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-gp')?></a>
+            </div>
+        </div>
         <?
             $APPLICATION->IncludeComponent("bitrix:news.list", "map",
                 array(
@@ -178,14 +186,7 @@ $APPLICATION->SetPageProperty('to', 'get');
                 false
             );
         ?>
-        <div class="shares visible-xs-flex">
-            <div class="shares__title title">share<br/><span class='hidden-sm hidden-md'> if you like</span></div>
-            <div class="shares__buttons">
-                <a target='_blank' href="http://www.facebook.com/sharer.php?u=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-fb')?></a>
-                <a target='_blank' href="https://twitter.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-tw')?></a>
-                <a target='_blank' href="https://plus.google.com/share?url=http://<?=$_SERVER['HTTP_HOST']?>" class="shares__link"><?=svg('social-gp')?></a>
-            </div>
-        </div>
+
         <div class="visible-xs footer">
             &copy; <?=date('Y')?> bright box
         </div>
